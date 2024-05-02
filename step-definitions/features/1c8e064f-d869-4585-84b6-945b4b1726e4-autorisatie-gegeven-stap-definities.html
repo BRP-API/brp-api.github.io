@@ -799,7 +799,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">75.00 %</td>
+                        <td class="percentage">100.00 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -808,7 +808,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Failed
                             </p>
                         </td>
-                        <td class="percentage">25.00 %</td>
+                        <td class="percentage">0.00 %</td>
                     
                     
                     </tr>
@@ -1125,14 +1125,10 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-                        <li>
-                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
-                        </li>
-                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">1</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
                         </li>
                     
 
@@ -1214,8 +1210,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
-                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -1236,8 +1232,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
-                                        <a href="#error1-2-error" data-toggle="collapse">+ Show Error</a>
-                                    
 
                                     
                                     
@@ -1252,28 +1246,6 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
-                            
-                                <div id="error1-2-error" class="scenario-step-collapse collapse">
-                                    <pre class=info>AssertionError: autorisatie: 000008,0,0,Haal Centraal,1,N,20201128,10120 10240 10310 80910 81110 81120 81130 81140 81180 81190 PANM03 PANM04 PANM05 PANM06 PAVP03 PAVP04 != 000008,0,0,Haal Centraal,1,N,20201128,10120 10240 10310 80910 81110 81120 81130 81140 PANM03 PANM04 PANM05 PANM06 PAVP03 PAVP04: expected [ '0', '0', '000008', '1', …(4) ] to deeply equal [ '0', '0', '000008', '1', …(4) ]
-    + expected - actual
-
-       "0"
-       "0"
-       "000008"
-       "1"
-    -  "10120 10240 10310 80910 81110 81120 81130 81140 81180 81190 PANM03 PANM04 PANM05 PANM06 PAVP03 PAVP04"
-    +  "10120 10240 10310 80910 81110 81120 81130 81140 PANM03 PANM04 PANM05 PANM06 PAVP03 PAVP04"
-       "20201128"
-       "Haal Centraal"
-       "N"
-     ]
-
-    at Proxy.equalInAnyOrder (/home/runner/work/brp-shared-dotnet/brp-shared-dotnet/node_modules/deep-equal-in-any-order/build/index.js:33:10)
-    at Proxy.methodWrapper (/home/runner/work/brp-shared-dotnet/brp-shared-dotnet/node_modules/chai/lib/chai/utils/addMethod.js:57:25)
-    at vergelijkActualMetExpectedStatements (/home/runner/work/brp-shared-dotnet/brp-shared-dotnet/features/step_definitions/docs-stepdefs.js:114:51)
-    at /home/runner/work/brp-shared-dotnet/brp-shared-dotnet/features/step_definitions/docs-stepdefs.js:141:17
-    at World.(anonymous) (/home/runner/work/brp-shared-dotnet/brp-shared-dotnet/features/step_definitions/docs-stepdefs.js:128:32)</pre>
-                                </div>
                             
 
                             
@@ -1316,7 +1288,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>INSERT INTO public.lo3_autorisatie(autorisatie_id,afnemer_code,geheimhouding_ind,verstrekkings_beperking,afnemer_naam,adres_vraag_bevoegdheid,ad_hoc_medium,tabel_regel_start_datum,ad_hoc_rubrieken) VALUES((SELECT COALESCE(MAX(autorisatie_id), 0)+1 FROM public.lo3_autorisatie),$1,$2,$3,$4,$5,$6,$7,$8) RETURNING *</td>
                                                     
-                                                        <td>000008,0,0,Haal Centraal,1,N,20201128,10120 10240 10310 80910 81110 81120 81130 81140 PANM03 PANM04 PANM05 PANM06 PAVP03 PAVP04</td>
+                                                        <td>000008,0,0,Haal Centraal,1,N,20201128,10120 10240 10310 80910 81110 81120 81130 81140 81180 81190 PANM03 PANM04 PANM05 PANM06 PAVP03 PAVP04</td>
                                                     
                                                 </tr>
                                             
@@ -1872,8 +1844,8 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            3,
-                            1,
+                            4,
+                            0,
                             0,
                             0,
                             0,
