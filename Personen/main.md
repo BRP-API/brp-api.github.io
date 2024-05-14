@@ -21,13 +21,16 @@ De volgende stappen helpen jou op weg om jouw applicatie van de juiste persoonsi
 2. Bedenk welke functie(s) en welke informatieproducten van de {{ site.apiname }} je wilt gebruiken. Hiervoor zal RvIG samen met u een aanvullend autorisatiebesluit opstellen. Voor gemeenten is dit niet nodig.
 3. Gebruik de [Getting Started] tutorial om te leren hoe je je eerste API call kunt doen!
 
+## Documentation
+De documentatie is alsvolgt opgebouwd:
+
+Concepten, die opheldering geven over alles wat belangrijk is om aan te kunnen sluiten
+Tutorials, ter introductie en verduidelijking hoe je de API kunt gebruiken
+Tooling, die je sneller op weg kan helpen met het aansluiten op de Personen API met de fields parameter 
+De API specificatie
+
 ## Planning en Roadmap
 De BRP API is live sinds mei 2023 en bestaat uit de onderdelen Personen, [Bewoning]({{ site.pagesBaseUrl }}/Haal-Centraal-BRP-bewoning){:target="_blank" rel="noopener"} en [Reisdocumenten]({{ site.pagesBaseUrl }}/Haal-Centraal-Reisdocumenten-bevragen){:target="_blank" rel="noopener"}. Rond 1 juli 2024 wordt [Verblijfplaatshistorie]({{ site.pagesBaseUrl }}/Haal-Centraal-BRP-historie-bevragen){:target="_blank" rel="noopener"} verwacht, waarmee je verblijfplaatsen van een persoon kunt opvragen op een peildatum of in een bepaalde periode. 
-
-## Aansluiten en voorwaarden
-Afnemers van de BRP met een autorisatiebesluit mogen de BRP API gebruiken. Iedere deelnemer sluit een convenant met RvIG. Voor de technische aansluiting is een API Gateway nodig. Aansluiten kan via Diginetwerk met gebruik van een TLS verbinding (PKIO certificaat) en een OAuth 2.0 token (OAuth 2.0 client credentials flow).
-
-Stuur een mail naar [info@RvIG](mailto:info@rvig) voor een kennismakingmakingsgesprek en onboarding. [Download]({{ site.onboardingUrl }}){:target="_blank" rel="noopener"} en lees het onboardingproces.
 
 ## Contact
 * Heb je een vraag? Neem contact op met de Product Owner [{{ site.PO-naam }}], [{{ site.PO-email }}](mailto:{{ site.PO-email }}) 
