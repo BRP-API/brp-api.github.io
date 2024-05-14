@@ -3,7 +3,7 @@ layout: page-with-side-nav
 title: BRP API 
 ---
 # Welkom bij de {{ site.apiname }}
-## Zoek en raadpleeg persoonsinformatie met de BRP API
+## Zoek en raadpleeg persoonsinformatie met de {{ site.apiname }}
 
 De {{ site.apiname }} biedt de mogelijkheid om zoek- en raadpleegfunctionaliteit van persoonsinformatie uit de Basisregistratie Personen (BRP) in te bouwen in taakapplicaties van jouw organisatie. Naast de vertrouwde persoonsgegevens levert {{ site.apiname }} ook informatieproducten:
 - Adressering: aanschrijfwijze, aanhef, een verwijzing naar een persoon in de lopende tekst van een brief, en adresregels die altijd passen op een vensterenvelop.
