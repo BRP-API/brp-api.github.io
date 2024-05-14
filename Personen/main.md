@@ -24,10 +24,10 @@ De volgende stappen helpen jou op weg om jouw applicatie van de juiste persoonsi
 ## Documentation
 De documentatie is alsvolgt opgebouwd:
 
-Concepten, die opheldering geven over alles wat belangrijk is om aan te kunnen sluiten
-Tutorials, ter introductie en verduidelijking hoe je de API kunt gebruiken
-Tooling, die je sneller op weg kan helpen met het aansluiten op de Personen API met de fields parameter 
-De API specificatie
+- Concepten, die opheldering geven over alles wat belangrijk is om aan te kunnen sluiten
+- Tutorials, ter introductie en verduidelijking hoe je de API kunt gebruiken
+- Tooling, die je sneller op weg kan helpen met het aansluiten op de Personen API met de fields parameter
+- API specificatie
 
 ## Planning en Roadmap
 De BRP API is live sinds mei 2023 en bestaat uit de onderdelen Personen, [Bewoning]({{ site.pagesBaseUrl }}/Haal-Centraal-BRP-bewoning){:target="_blank" rel="noopener"} en [Reisdocumenten]({{ site.pagesBaseUrl }}/Haal-Centraal-Reisdocumenten-bevragen){:target="_blank" rel="noopener"}. Rond 1 juli 2024 wordt [Verblijfplaatshistorie]({{ site.pagesBaseUrl }}/Haal-Centraal-BRP-historie-bevragen){:target="_blank" rel="noopener"} verwacht, waarmee je verblijfplaatsen van een persoon kunt opvragen op een peildatum of in een bepaalde periode. 
