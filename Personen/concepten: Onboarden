@@ -1,4 +1,4 @@
-## Aansluiten en voorwaarden
+#Aansluiten en voorwaarden
 
 Aansluiten mag alleen als jouw organisatie een [autorisatiebesluit](https://publicaties.rvig.nl/Besluiten_en_modelautorisaties/Besluiten/BRP_besluiten) heeft. Afnemers van de BRP met een autorisatiebesluit mogen de BRP API gebruiken. Iedere deelnemer sluit een convenant met RvIG. Voor de technische aansluiting is een API Gateway nodig. Aansluiten kan via Diginetwerk met gebruik van een TLS verbinding (PKIO certificaat) 
 
