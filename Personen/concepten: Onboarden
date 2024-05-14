@@ -1,1 +1,5 @@
+## Aansluiten en voorwaarden
 
+Afnemers van de BRP met een autorisatiebesluit mogen de BRP API gebruiken. Iedere deelnemer sluit een convenant met RvIG. Voor de technische aansluiting is een API Gateway nodig. Aansluiten kan via Diginetwerk met gebruik van een TLS verbinding (PKIO certificaat) 
+
+Stuur een mail naar [info@RvIG](mailto:info@rvig) voor een kennismakingmakingsgesprek en onboarding. [Download]({{ site.onboardingUrl }}){:target="_blank" rel="noopener"} en lees het onboardingproces.
