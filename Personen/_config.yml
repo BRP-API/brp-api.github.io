@@ -1,1 +1,63 @@
+baseurl: "/Haal-Centraal-BRP-bevragen"
+pagesBaseUrl: https://BRP-API.github.io
+repoUrl: https://github.com/BRP-API/Haal-Centraal-BRP-bevragen
+mainBranchUrl: https://github.com/BRP-API/Haal-Centraal-BRP-bevragen/blob/master
+devBranchUrl: https://github.com/BRP-API/Haal-Centraal-BRP-bevragen/blob/develop
+v1SpecUrl: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bevragen/v1.3.1/specificatie/genereervariant/openapi.yaml
+v2SpecUrl: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bevragen/master/specificatie/genereervariant/openapi.yaml
+v2DevSpecUrl: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bevragen/develop/specificatie/genereervariant/openapi.yaml
+v2GbaSpecUrl: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bevragen/master/specificatie/gba-genereervariant/openapi.yaml
+onboardingUrl: https://github.com/BRP-API/Haal-Centraal-BRP-bevragen/blob/master/docs/240507%20deelname%20BRP%20API%20v2.4.ppsx
+proefProxyUrl: https://proefomgeving.haalcentraal.nl
+persoonFieldsCsvUrl: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bevragen/master/features/fields-filtered-Persoon.csv
+persoonBeperktFieldsCsvUrl: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bevragen/master/features/fields-filtered-PersoonBeperkt.csv
+
+PO-email: cathy.dingemanse@rvig.nl
+CZ-email: melvin.lee@rvig.nl
+Tester-email: frank.samwel@rvig.nl
+
+apiname: "BRP API Personen"
+url: "http://localhost:4000"
+# M.b.v. de optionele variabele 'logo' kan een ander logo dan het VNG logo in de rechterbovenhoek geplaatst worden.
+# Het betreffende bestand zal dan wel in de folder '\assets\img' van het remote the 'VNG-Realisatie/jekyll-theme-haal-centraal' moeten worden geplaatst.
+# Met de variabele 'organisation-url' kan de link onder het logo worden bepaald.
+logo: "BZK_RIG_Logo_online_ex_pos_nl.png"
+organisation-url: "http://www.rvig.nl"
+# nav is t.b.v. generatie side-navigation menu.
+# Een 'title' zonder path of url genereert slechts een kopje.
+# 'path' vormt tezamen met de baseurl de url waarmee de 'href' wordt gevuld. 
+# Indien een 'url' voorradig dan wordt daarmee de 'href' gevuld en dient het path slechts om te bepalen welke link active is.
+# 'target: blank' zorgt er voor dat de link in een nieuw tabblad wordt geöpend.
+nav:
+  - title: BRP Personen Bevragen
+    subnav:
+      - title: Main
+        path: /
+      - title: Goals canvas
+        path: /goals-canvas
+  - title: Specificaties v. 2
+    subnav:
+      - title: Releasenotes
+        path: /releasenotes
+      - title: Getting started
+        path: /v2/getting-started
+      - title: User stories
+        path: /user-stories-prod
+      - title: Bevragen API
+        path: /v2/redoc
+      - title: Features overzicht
+        path: /v2/features-overzicht
+      - title: Features test overzicht
+        path: /features/index
+plugins:
+  - jekyll-redirect-from
+  - jekyll-remote-theme
+
+remote_theme: VNG-Realisatie/jekyll-theme-haal-centraal
+
+github: BRP-API/Haal-Centraal-BRP-bevragen
+
+theme: jekyll-theme-time-machine
+
+project_name: /Haal-Centraal-BRP-bevragen
 
