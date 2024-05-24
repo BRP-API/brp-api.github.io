@@ -27,17 +27,16 @@ title: Haal Centraal BRP Personen Bevragen
 </style>
 
 # Fields samenstellen
-Bij het gebruik van de {{ site.apiname }} moet in de fields parameter worden opgegeven welke gegevens je wilt ontvangen.
-Hieronder bieden we een tool om de waarde voor de fields parameter samen te stellen. Hiervoor selecteer je elk veld dat je wilt ontvangen.
+Bij de {{ site.apiname }} Personen en Reisdocumenten moet je met de fields parameter opgeven welke gegevens je wilt ontvangen. Met deze tool kun je heel gemakkelijk de waarde voor de fields parameter samenstellen, door elk veld dat je wilt ontvangen te selecteren.
 
 Meer details over hoe fields werkt lees je in het [feature overzicht](./features-overzicht#filteren-van-de-velden-van-de-gevonden-personen){:target="_blank" rel="noopener"}
 
-Sommige gegevens krijg je [automatisch geleverd](./features-overzicht#standaard-geleverde-velden), dus die hoef en mag je niet vragen.
+Sommige gegevens krijg je [automatisch geleverd](./features-overzicht#standaard-geleverde-velden). Die gegevens mag je niet vragen.
 
-Velden onder [verblijfplaatsBinnenland](./features-overzicht#filteren-van-verblijfplaats-velden){:target="_blank" rel="noopener"} en [adresseringBinnenland](./features-overzicht#filteren-van-adresregels-velden){:target="_blank" rel="noopener"} gebruik je wanneer je wel het adres wilt opvragen, maar niet geautoriseerd bent voor buitenlandse adressen.
+Is jouw organisatie of applicatie niet geautoriseerd voor buitenlandse adressen? Gebruik dan de velden onder [verblijfplaatsBinnenland](./features-overzicht#filteren-van-verblijfplaats-velden){:target="_blank" rel="noopener"} en [adresseringBinnenland](./features-overzicht#filteren-van-adresregels-velden){:target="_blank" rel="noopener"} om uitsluitend binnenlandse adressen op te halen.
 
-## 1. selecteer het zoektype
-Met fields mag je alleen vragen om gegevens die bij het vraagtype teruggegeven kunnen worden. Daarom selecteer je eerst het type vraag dat je wilt doen.
+## 1. selecteer het vraagtype
+Met fields mag je alleen vragen om gegevens die bij het zoek- of raadpleegtype teruggegeven kunnen worden. Daarom selecteer je eerst het type vraag dat je wilt doen.
 
 <select id="searchType" class="form-control" onchange="loadFieldsList()">
   <option value="Persoon">RaadpleegMetBurgerservicenummer</option>
