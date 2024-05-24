@@ -1,6 +1,6 @@
 ## Dataminimalisatie
 
-Ieder request bevat verplicht een fields parameter waarmee je aangeeft welke velden van de gevonden persoon of personen geleverd moeten worden. Om de privacy van de gevraagde personen te beschermen mag een afnemer uitsluitend die gegevens vragen waarvoor de organisatie doelbinding heeft/ geautoriseerd is EN *wat op dat moment in het proces nodig is* voor de uit te voeren taak. 
+Ieder request bevat verplicht een fields parameter waarmee je aangeeft welke velden van de gevonden persoon of personen geleverd moeten worden. Om de privacy van de gevraagde personen te beschermen mag een afnemer uitsluitend die gegevens vragen waarvoor de organisatie doelbinding heeft/ geautoriseerd is *en wat op dat moment in het proces nodig is* voor de uit te voeren taak. 
 
 Gebruik altijd de informatieproducten die de BRP API aanbiedt, en ga niet zelf met de onderliggende data aan de slag. Dan innoveert jouw applicatie automatisch mee met nieuwe wet- en regelgeving die door RvIG in het informatieproduct wordt ingebouwd. Met dataminimalisatie bescherm je niet alleen de privacy van onze burgers, maar draagt je ook bij aan verduurzaming. Hoe minder velden jouw applicatie vraagt, hoe minder de server en het netwerk worden belast.
 
