@@ -12,7 +12,7 @@ Zie de [fields](./features/fields.feature) en de [fields fout cases](./features/
 
 Het [fields-filtered-PersoonBeperkt.csv]({{ site.persoonBeperktFieldsCsvUrl }}){:target="_blank" rel="noopener"} bestand bevat een overzicht van de toegestane fields waarden voor de Zoek personen operaties. Voor de Raadpleeg persoon operatie kun je dit overzicht vinden in het [fields-filtered-Persoon.csv]({{ site.persoonFieldsCsvUrl }}){:target="_blank" rel="noopener"} bestand.
 
-Snel en foutloos fields samenstellen? Gebruik de [fields tool](./fields){:target="_blank" rel="noopener"}.
+Snel en foutloos fields samenstellen voor de BRP Personen API? Gebruik de [fields tool](./fields){:target="_blank" rel="noopener"}.
 
 ### Filteren van datum en waardetabel velden
 
