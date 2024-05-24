@@ -1,18 +1,18 @@
 ## Filteren van de velden van de gevonden personen
 
-Elke bevraging moet verplicht een fields parameter bevatten om aan te geven welke velden van de gevonden persoon/personen geleverd moet worden. Om de privacy van de gevraagde personen te beschermen mag een afnemer uitsluitend die velden vragen waarvoor hij doelbinding heeft en wat op dat moment nodig is voor de uit te voeren taak.
-Bijkomend voordeel van deze data minimalisatie is dat er ook wordt bijgedragen aan verduurzaming. Hoe minder velden er worden gevraagd, hoe minder de server en het netwerk worden belast.
+Ieder request bevat verplicht een fields parameter waarmee je aangeeft welke velden van de gevonden persoon of personen geleverd moeten worden. Om de privacy van de gevraagde personen te beschermen mag een afnemer uitsluitend die gegevens vragen waarvoor de organisatie doelbinding heeft/ geautoriseerd is EN *wat op dat moment in het proces nodig is* voor de uit te voeren taak. 
+Gebruik altijd de informatieproducten die de BRP API aanbiedt, en ga niet zelf met de onderliggende data aan de slag. Dan innoveert jouw applicatie automatisch mee met nieuwe wet- en regelgeving die door RvIG in het informatieproduct wordt ingebouwd. Met dataminimalisatie bescherm je niet alleen de privacy van onze burgers, maar draagt je ook bij aan verduurzaming. Hoe minder velden jouw applicatie vraagt, hoe minder de server en het netwerk worden belast.
 
-Een veld wordt gevraagd door het volledige pad van het betreffende veld op te geven in de fields parameter. Het volledige pad van een veld is de samenvoeging van de naam van het veld en de namen van zijn 'ouder' velden met een '.' karakter tussen de veld namen. Voorbeelden van volledige paden zijn:
+Je vraagt een veld door het volledige pad van het veld op te geven in de fields parameter. Het volledige pad van een veld is de samenvoeging van de naam van het veld en de namen van zijn 'ouder' velden met een '.' karakter tussen de veld namen. Voorbeelden van volledige paden zijn:
 
 - geboorte.datum (volledig pad van het geboortedatum veld van een persoon)
 - kinderen.naam.voornamen (volledig pad van het voornamen veld van de kinderen van een persoon)
 
 Zie de [fields](./features/fields.feature) en de [fields fout cases](./features/fields-fout-cases.feature) feature bestanden voor meer informatie en voorbeelden van het gebruik van veldpaden en de fields parameter. 
 
-Het [fields-filtered-PersoonBeperkt.csv]({{ site.persoonBeperktFieldsCsvUrl }}){:target="_blank" rel="noopener"} bestand bevat een overzicht van de toegestane fields waarden voor de Zoek personen operaties. Voor de Raadpleeg persoon operatie is de overzicht van toegestane fields waarden te vinden in het [fields-filtered-Persoon.csv]({{ site.persoonFieldsCsvUrl }}){:target="_blank" rel="noopener"} bestand.
+Het [fields-filtered-PersoonBeperkt.csv]({{ site.persoonBeperktFieldsCsvUrl }}){:target="_blank" rel="noopener"} bestand bevat een overzicht van de toegestane fields waarden voor de Zoek personen operaties. Voor de Raadpleeg persoon operatie kun je dit overzicht vinden in het [fields-filtered-Persoon.csv]({{ site.persoonFieldsCsvUrl }}){:target="_blank" rel="noopener"} bestand.
 
-Wil je dit snel en foutloos doen? Stel dan je fields eenvoudig samen met de [fields tool](./fields){:target="_blank" rel="noopener"}.
+Snel en foutloos fields samenstellen? Gebruik de [fields tool](./fields){:target="_blank" rel="noopener"}.
 
 ### Filteren van datum en waardetabel velden
 
