@@ -1,5 +1,5 @@
 ## De gemeente sluit aan
-Houd jij je bezig met de verstrekking van persoonsgegevens aan binnengemeentelijke afnemers? Of werk je aan een taaksysteem voor gemeenten? Bedenk dan dan de gemeente *de verstrekker* is van persoonsgegevens en informatieproducten aan binnengemeentelijke afnemers. De gemeente mag daarvoor de BRP-V raadplegen via de BRP API.
+Houd jij je bezig met de verstrekking van persoonsgegevens aan binnengemeentelijke afnemers? Of werk je aan een taaksysteem voor gemeenten? Bedenk dan dat een gemeente *de verstrekker* is van persoonsgegevens en informatieproducten aan binnengemeentelijke afnemers. De gemeente mag daarvoor de BRP-V raadplegen via de BRP API.
 Daarom is het belangrijk dat jouw gemeente regie voert op de aansluiting, de autorisaties van aangesloten taaksystemen, en beschikt over de logging en de protocollering van alle bevragingen.
 
 ## Veilig gebruik van de BRP API
