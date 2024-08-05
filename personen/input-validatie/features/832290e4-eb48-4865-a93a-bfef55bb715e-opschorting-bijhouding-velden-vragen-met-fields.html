@@ -722,7 +722,7 @@ input#darkCheck:checked ~ label>svg#moon {
             </div>
             <p class="navbar-text" style="float: left">Features Overview
             </p>
-            <p class="navbar-text">Reisdocumenten input validatie features</p>
+            <p class="navbar-text">Personen input validatie features</p>
         </div>
 
     </nav>
@@ -744,15 +744,15 @@ input#darkCheck:checked ~ label>svg#moon {
                 
             </div>
             <h1>Feature:
-                <small>Zoek met burgerservicenummer - fout cases</small>
+                <small>opschorting bijhouding velden vragen met fields</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    fout-cases.feature
+                    fields-opschorting-bijhouding.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    zoek-met-burgerservicenummer/fout-cases.feature</p>
+                    zoek-met-adresseerbaar-object-identificatie/fields-opschorting-bijhouding.feature</p>
             
         </div>
 
@@ -790,7 +790,7 @@ input#darkCheck:checked ~ label>svg#moon {
         <tr>
             <td class="chart">
                 <canvas id="scenario-chart"></canvas>
-                <div class="total">6</div>
+                <div class="total">12</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -875,7 +875,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>De burgerservicenummer parameter is niet opgegeven</small></h2>
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -926,7 +926,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Als </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        personen wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -986,7 +986,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>ZoekMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresseerbaarObjectIdentificatie</td>
+                                                    
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -995,7 +1004,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>opschortingBijhouding</td>
                                                     
                                                 </tr>
                                             
@@ -1111,7 +1120,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>detail</td>
                                                     
-                                                        <td>De foutieve parameter(s) zijn: burgerservicenummer.</td>
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
                                                     
                                                 </tr>
                                             
@@ -1129,7 +1138,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>instance</td>
                                                     
-                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
+                                                        <td>/haalcentraal/api/brp/personen</td>
                                                     
                                                 </tr>
                                             
@@ -1218,11 +1227,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>required</td>
+                                                        <td>fields</td>
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>fields[0]</td>
                                                     
-                                                        <td>Parameter is verplicht.</td>
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
                                                     
                                                 </tr>
                                             
@@ -1262,7 +1271,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>De opgegeven burgerservicenummer is een string met minder dan negen cijfers</small></h2>
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.reden mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1313,7 +1322,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Als </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        personen wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -1373,16 +1382,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>ZoekMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>12345678</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -1391,7 +1400,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>opschortingBijhouding.reden</td>
                                                     
                                                 </tr>
                                             
@@ -1507,7 +1516,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>detail</td>
                                                     
-                                                        <td>De foutieve parameter(s) zijn: burgerservicenummer.</td>
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
                                                     
                                                 </tr>
                                             
@@ -1525,7 +1534,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>instance</td>
                                                     
-                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
+                                                        <td>/haalcentraal/api/brp/personen</td>
                                                     
                                                 </tr>
                                             
@@ -1614,11 +1623,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>pattern</td>
+                                                        <td>fields</td>
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>fields[0]</td>
                                                     
-                                                        <td>Waarde voldoet niet aan patroon ^[0-9]{9}$.</td>
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
                                                     
                                                 </tr>
                                             
@@ -1658,7 +1667,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>De opgegeven burgerservicenummer is een string met meer dan negen cijfers</small></h2>
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.reden.code mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1709,7 +1718,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Als </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        personen wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -1769,16 +1778,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>ZoekMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>1234567890</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -1787,7 +1796,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>opschortingBijhouding.reden.code</td>
                                                     
                                                 </tr>
                                             
@@ -1903,7 +1912,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>detail</td>
                                                     
-                                                        <td>De foutieve parameter(s) zijn: burgerservicenummer.</td>
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
                                                     
                                                 </tr>
                                             
@@ -1921,7 +1930,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>instance</td>
                                                     
-                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
+                                                        <td>/haalcentraal/api/brp/personen</td>
                                                     
                                                 </tr>
                                             
@@ -2010,11 +2019,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>pattern</td>
+                                                        <td>fields</td>
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>fields[0]</td>
                                                     
-                                                        <td>Waarde voldoet niet aan patroon ^[0-9]{9}$.</td>
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
                                                     
                                                 </tr>
                                             
@@ -2054,7 +2063,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>De opgegeven burgerservicenummer is een string met een letter</small></h2>
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.reden.omschrijving mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -2105,7 +2114,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Als </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        personen wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -2165,16 +2174,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>ZoekMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>12345678X</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -2183,7 +2192,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>opschortingBijhouding.reden.omschrijving</td>
                                                     
                                                 </tr>
                                             
@@ -2299,7 +2308,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>detail</td>
                                                     
-                                                        <td>De foutieve parameter(s) zijn: burgerservicenummer.</td>
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
                                                     
                                                 </tr>
                                             
@@ -2317,7 +2326,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>instance</td>
                                                     
-                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
+                                                        <td>/haalcentraal/api/brp/personen</td>
                                                     
                                                 </tr>
                                             
@@ -2406,11 +2415,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>pattern</td>
+                                                        <td>fields</td>
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>fields[0]</td>
                                                     
-                                                        <td>Waarde voldoet niet aan patroon ^[0-9]{9}$.</td>
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
                                                     
                                                 </tr>
                                             
@@ -2450,7 +2459,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>zoeken met parameter uit ander zoektype</small></h2>
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.datum mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -2501,7 +2510,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Als </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        personen wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -2561,25 +2570,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>ZoekMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>123456789</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>reisdocumentnummer</td>
-                                                    
-                                                        <td>AB1234567</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -2588,7 +2588,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>opschortingBijhouding.datum</td>
                                                     
                                                 </tr>
                                             
@@ -2704,7 +2704,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>detail</td>
                                                     
-                                                        <td>De foutieve parameter(s) zijn: reisdocumentnummer.</td>
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
                                                     
                                                 </tr>
                                             
@@ -2722,7 +2722,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>instance</td>
                                                     
-                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
+                                                        <td>/haalcentraal/api/brp/personen</td>
                                                     
                                                 </tr>
                                             
@@ -2811,11 +2811,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>unknownParam</td>
+                                                        <td>fields</td>
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>fields[0]</td>
                                                     
-                                                        <td>Parameter is niet verwacht.</td>
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
                                                     
                                                 </tr>
                                             
@@ -2855,7 +2855,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>zoeken met niet gespecificeerde parameter</small></h2>
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.datum.type mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -2906,7 +2906,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Als </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        personen wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -2966,25 +2966,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>ZoekMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>123456789</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>geslachtsnaam</td>
-                                                    
-                                                        <td>Jansen</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -2993,7 +2984,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>opschortingBijhouding.datum.type</td>
                                                     
                                                 </tr>
                                             
@@ -3109,7 +3100,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>detail</td>
                                                     
-                                                        <td>De foutieve parameter(s) zijn: geslachtsnaam.</td>
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
                                                     
                                                 </tr>
                                             
@@ -3127,7 +3118,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>instance</td>
                                                     
-                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
+                                                        <td>/haalcentraal/api/brp/personen</td>
                                                     
                                                 </tr>
                                             
@@ -3216,11 +3207,2387 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>unknownParam</td>
+                                                        <td>fields</td>
                                                     
-                                                        <td>geslachtsnaam</td>
+                                                        <td>fields[0]</td>
                                                     
-                                                        <td>Parameter is niet verwacht.</td>
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tags fa-lg"></i>
+                            
+                                <span class="tag">@input-validatie</span>
+                            
+                                <span class="tag">@fout-case</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.datum.datum mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Als </span>
+
+                                    
+                                        personen wordt gezocht met de volgende parameters
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresseerbaarObjectIdentificatie</td>
+                                                    
+                                                        <td>0599010051001502</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>opschortingBijhouding.datum.datum</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>title</td>
+                                                    
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>status</td>
+                                                    
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/brp/personen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft de response invalidParams met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>code</th>
+                                                
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>fields[0]</td>
+                                                    
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tags fa-lg"></i>
+                            
+                                <span class="tag">@input-validatie</span>
+                            
+                                <span class="tag">@fout-case</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.datum.langFormaat mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Als </span>
+
+                                    
+                                        personen wordt gezocht met de volgende parameters
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresseerbaarObjectIdentificatie</td>
+                                                    
+                                                        <td>0599010051001502</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>opschortingBijhouding.datum.langFormaat</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>title</td>
+                                                    
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>status</td>
+                                                    
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/brp/personen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft de response invalidParams met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>code</th>
+                                                
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>fields[0]</td>
+                                                    
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tags fa-lg"></i>
+                            
+                                <span class="tag">@input-validatie</span>
+                            
+                                <span class="tag">@fout-case</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.datum.jaar mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Als </span>
+
+                                    
+                                        personen wordt gezocht met de volgende parameters
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresseerbaarObjectIdentificatie</td>
+                                                    
+                                                        <td>0599010051001502</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>opschortingBijhouding.datum.jaar</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>title</td>
+                                                    
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>status</td>
+                                                    
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/brp/personen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft de response invalidParams met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>code</th>
+                                                
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>fields[0]</td>
+                                                    
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tags fa-lg"></i>
+                            
+                                <span class="tag">@input-validatie</span>
+                            
+                                <span class="tag">@fout-case</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.datum.maand mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Als </span>
+
+                                    
+                                        personen wordt gezocht met de volgende parameters
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresseerbaarObjectIdentificatie</td>
+                                                    
+                                                        <td>0599010051001502</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>opschortingBijhouding.datum.maand</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>title</td>
+                                                    
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>status</td>
+                                                    
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/brp/personen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft de response invalidParams met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>code</th>
+                                                
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>fields[0]</td>
+                                                    
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tags fa-lg"></i>
+                            
+                                <span class="tag">@input-validatie</span>
+                            
+                                <span class="tag">@fout-case</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding.datum.onbekend mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Als </span>
+
+                                    
+                                        personen wordt gezocht met de volgende parameters
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresseerbaarObjectIdentificatie</td>
+                                                    
+                                                        <td>0599010051001502</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>opschortingBijhouding.datum.onbekend</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>title</td>
+                                                    
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>status</td>
+                                                    
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/brp/personen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft de response invalidParams met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>code</th>
+                                                
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>fields[0]</td>
+                                                    
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tags fa-lg"></i>
+                            
+                                <span class="tag">@input-validatie</span>
+                            
+                                <span class="tag">@fout-case</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Abstract Scenario: <small>veld opschortingBijhouding,burgerservicenummer mag niet worden gevraagd, omdat het automatisch wordt geleverd</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Als </span>
+
+                                    
+                                        personen wordt gezocht met de volgende parameters
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresseerbaarObjectIdentificatie</td>
+                                                    
+                                                        <td>0599010051001502</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>opschortingBijhouding,burgerservicenummer</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>title</td>
+                                                    
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>status</td>
+                                                    
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: fields[0].</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/brp/personen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft de response invalidParams met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>code</th>
+                                                
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>fields[0]</td>
+                                                    
+                                                        <td>Parameter bevat een niet toegestane veldnaam.</td>
                                                     
                                                 </tr>
                                             
@@ -3294,7 +5661,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            6,
+                            12,
                             0,
                             0,
                             0,
