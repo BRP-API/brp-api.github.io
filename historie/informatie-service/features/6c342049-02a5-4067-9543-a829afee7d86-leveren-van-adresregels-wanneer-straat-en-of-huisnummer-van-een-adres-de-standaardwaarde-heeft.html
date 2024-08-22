@@ -744,15 +744,15 @@ input#darkCheck:checked ~ label>svg#moon {
                 
             </div>
             <h1>Feature:
-                <small>RNI-deelnemer gegevens leveren voor verblijfplaatshistorie met periode</small>
+                <small>leveren van adresregels wanneer straat en/of huisnummer van een adres de standaardwaarde heeft</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    rni.feature
+                    onbekendwaardes.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    raadpleeg-verblijfplaats-met-periode/rni.feature</p>
+                    adres/onbekendwaardes.feature</p>
             
         </div>
 
@@ -790,7 +790,7 @@ input#darkCheck:checked ~ label>svg#moon {
         <tr>
             <td class="chart">
                 <canvas id="scenario-chart"></canvas>
-                <div class="total">1</div>
+                <div class="total">3</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -801,7 +801,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">0.00 %</td>
+                        <td class="percentage">100.00 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -810,7 +810,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Failed
                             </p>
                         </td>
-                        <td class="percentage">100.00 %</td>
+                        <td class="percentage">0.00 %</td>
                     
                     
                     </tr>
@@ -875,7 +875,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>In de periode heeft de persoon verblijfplaats buitenland met RNI-deelnemer gegevens</small></h2>
+                <h2>Abstract Scenario: <small>persoon heeft een adres met een straatnaam met standaardwaarde</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -887,20 +887,12 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-                        <li>
-                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">4</span>
-                        </li>
+
                     
 
                     
                         <li>
-                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
-                        </li>
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
                         </li>
                     
 
@@ -932,7 +924,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        landelijke tabel 'RNI-deelnemerstabel' heeft de volgende waarden
+                                        adres 'A1' heeft de volgende gegevens
                                         
                                     
 
@@ -980,9 +972,13 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>code</th>
+                                                    <th>gemeentecode (92.10)</th>
                                                 
-                                                    <th>omschrijving</th>
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>postcode (11.60)</th>
                                                 
                                             </tr>
 
@@ -990,9 +986,13 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>0201</td>
+                                                        <td>0800</td>
                                                     
-                                                        <td>Sociale Verzekeringsbank (inzake AOW, Anw en AKW)</td>
+                                                        <td>.</td>
+                                                    
+                                                        <td>88</td>
+                                                    
+                                                        <td>1234AB</td>
                                                     
                                                 </tr>
                                             
@@ -1018,10 +1018,10 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        de persoon met burgerservicenummer '000000012' is ingeschreven op een buitenlands adres met de volgende gegevens
+                                        de persoon met burgerservicenummer '000000012' is ingeschreven op adres 'A1' met de volgende gegevens
                                         
                                     
 
@@ -1071,15 +1071,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 
                                                     <th>gemeente van inschrijving (09.10)</th>
                                                 
-                                                    <th>datum aanvang adres buitenland (13.20)</th>
-                                                
-                                                    <th>land adres buitenland (13.10)</th>
-                                                
-                                                    <th>regel 1 adres buitenland (13.30)</th>
-                                                
-                                                    <th>rni-deelnemer (88.10)</th>
-                                                
-                                                    <th>omschrijving verdrag (88.20)</th>
+                                                    <th>datum aanvang adreshouding (10.30)</th>
                                                 
                                             </tr>
 
@@ -1087,17 +1079,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>1999</td>
+                                                        <td>0800</td>
                                                     
-                                                        <td>20070516</td>
-                                                    
-                                                        <td>6014</td>
-                                                    
-                                                        <td>Die Straße</td>
-                                                    
-                                                        <td>0201</td>
-                                                    
-                                                        <td>Artikel 45 EU-Werkingsverdrag (VWEU)</td>
+                                                        <td>20231014</td>
                                                     
                                                 </tr>
                                             
@@ -1116,8 +1100,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
-                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -1138,8 +1122,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
-                                        <a href="#error0-3-error" data-toggle="collapse">+ Show Error</a>
-                                    
 
                                     
                                     
@@ -1154,18 +1136,6 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
-                            
-                                <div id="error0-3-error" class="scenario-step-collapse collapse">
-                                    <pre class=info>AssertionError: http://localhost:8080/haalcentraal/api/brphistorie/verblijfplaatshistorie returns ECONNREFUSED: expected 'ECONNREFUSED' to not equal 'ECONNREFUSED'
-    + expected - actual
-
-
-    at sendRequest (/home/runner/work/historie-informatie-service/historie-informatie-service/features/step_definitions/requestHelpers.js:166:27)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async sendBevragenRequest (/home/runner/work/historie-informatie-service/historie-informatie-service/features/step_definitions/requestHelpers.js:183:12)
-    at async handleRequest (/home/runner/work/historie-informatie-service/historie-informatie-service/features/step_definitions/requestHelpers.js:198:24)
-    at async World.(anonymous) (/home/runner/work/historie-informatie-service/historie-informatie-service/features/step_definitions/als-stepdefs.js:36:5)</pre>
-                                </div>
                             
 
                             
@@ -1218,7 +1188,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>datumVan</td>
                                                     
-                                                        <td>2022-01-01</td>
+                                                        <td>2023-07-01</td>
                                                     
                                                 </tr>
                                             
@@ -1227,7 +1197,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>datumTot</td>
                                                     
-                                                        <td>2023-01-01</td>
+                                                        <td>2024-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -1246,8 +1216,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -1256,7 +1226,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response verblijfplaatsen met de volgende gegevens
+                                        heeft de response een verblijfplaats voorkomen met de volgende gegevens
                                         
                                     
 
@@ -1306,15 +1276,19 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 
                                                     <th>type</th>
                                                 
-                                                    <th>gemeenteVanInschrijving.code</th>
-                                                
-                                                    <th>gemeenteVanInschrijving.omschrijving</th>
-                                                
                                                     <th>datumVan.type</th>
                                                 
                                                     <th>datumVan.datum</th>
                                                 
                                                     <th>datumVan.langFormaat</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.code</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.omschrijving</th>
+                                                
+                                                    <th>functieAdres.code</th>
+                                                
+                                                    <th>functieAdres.omschrijving</th>
                                                 
                                             </tr>
 
@@ -1322,17 +1296,21 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>VerblijfplaatsBuitenland</td>
-                                                    
-                                                        <td>1999</td>
-                                                    
-                                                        <td>Registratie Niet Ingezetenen (RNI)</td>
+                                                        <td>Adres</td>
                                                     
                                                         <td>Datum</td>
                                                     
-                                                        <td>2007-05-16</td>
+                                                        <td>2023-10-14</td>
                                                     
-                                                        <td>16 mei 2007</td>
+                                                        <td>14 oktober 2023</td>
+                                                    
+                                                        <td>0800</td>
+                                                    
+                                                        <td>Hoogeloon, Hapert en Casteren</td>
+                                                    
+                                                        <td>W</td>
+                                                    
+                                                        <td>woonadres</td>
                                                     
                                                 </tr>
                                             
@@ -1351,8 +1329,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -1419,27 +1397,184 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>land.code</td>
+                                                        <td>korteStraatnaam</td>
                                                     
-                                                        <td>6014</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>land.omschrijving</td>
-                                                    
-                                                        <td>Verenigde Staten van Amerika</td>
+                                                        <td></td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>regel1</td>
+                                                        <td>huisnummer</td>
                                                     
-                                                        <td>Die Straße</td>
+                                                        <td>88</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>postcode</td>
+                                                    
+                                                        <td>1234AB</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tags fa-lg"></i>
+                            
+                                <span class="tag">@proxy</span>
+                            
+                                <span class="tag">@geen-protocollering</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Abstract Scenario: <small>persoon heeft een adres met een huisnummer met standaardwaarde</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        adres 'A1' heeft de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>gemeentecode (92.10)</th>
+                                                
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>postcode (11.60)</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>0800</td>
+                                                    
+                                                        <td>Jonkheer van Riemsdijkln</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                        <td>1234AB</td>
                                                     
                                                 </tr>
                                             
@@ -1458,8 +1593,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -1468,7 +1603,96 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">En </span>
 
                                     
-                                        heeft het verblijfplaats voorkomen de volgende 'adressering' gegevens
+                                        de persoon met burgerservicenummer '000000012' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>gemeente van inschrijving (09.10)</th>
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>0800</td>
+                                                    
+                                                        <td>20231014</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Als </span>
+
+                                    
+                                        verblijfplaatshistorie wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -1526,27 +1750,36 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>land.code</td>
+                                                        <td>type</td>
                                                     
-                                                        <td>6014</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>land.omschrijving</td>
-                                                    
-                                                        <td>Verenigde Staten van Amerika</td>
+                                                        <td>RaadpleegMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>adresregel1</td>
+                                                        <td>burgerservicenummer</td>
                                                     
-                                                        <td>Die Straße</td>
+                                                        <td>000000012</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumVan</td>
+                                                    
+                                                        <td>2023-07-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2024-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -1565,8 +1798,121 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response een verblijfplaats voorkomen met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>type</th>
+                                                
+                                                    <th>datumVan.type</th>
+                                                
+                                                    <th>datumVan.datum</th>
+                                                
+                                                    <th>datumVan.langFormaat</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.code</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.omschrijving</th>
+                                                
+                                                    <th>functieAdres.code</th>
+                                                
+                                                    <th>functieAdres.omschrijving</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>Adres</td>
+                                                    
+                                                        <td>Datum</td>
+                                                    
+                                                        <td>2023-10-14</td>
+                                                    
+                                                        <td>14 oktober 2023</td>
+                                                    
+                                                        <td>0800</td>
+                                                    
+                                                        <td>Hoogeloon, Hapert en Casteren</td>
+                                                    
+                                                        <td>W</td>
+                                                    
+                                                        <td>woonadres</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -1575,7 +1921,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">En </span>
 
                                     
-                                        heeft het verblijfplaats voorkomen de volgende 'rni' gegevens
+                                        heeft het verblijfplaats voorkomen de volgende 'verblijfadres' gegevens
                                         
                                     
 
@@ -1633,27 +1979,609 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>deelnemer.code</td>
+                                                        <td>korteStraatnaam</td>
                                                     
-                                                        <td>0201</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>deelnemer.omschrijving</td>
-                                                    
-                                                        <td>Sociale Verzekeringsbank (inzake AOW, Anw en AKW)</td>
+                                                        <td>Jonkheer van Riemsdijkln</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>omschrijvingVerdrag</td>
+                                                        <td>huisnummer</td>
                                                     
-                                                        <td>Artikel 45 EU-Werkingsverdrag (VWEU)</td>
+                                                        <td></td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>postcode</td>
+                                                    
+                                                        <td>1234AB</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tags fa-lg"></i>
+                            
+                                <span class="tag">@proxy</span>
+                            
+                                <span class="tag">@geen-protocollering</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Abstract Scenario: <small>persoon heeft een adres met straat en huisnummer met standaardwaarde</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        adres 'A1' heeft de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>gemeentecode (92.10)</th>
+                                                
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>postcode (11.60)</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>0800</td>
+                                                    
+                                                        <td>.</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                        <td>1234AB</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000012' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>gemeente van inschrijving (09.10)</th>
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>0800</td>
+                                                    
+                                                        <td>20231014</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Als </span>
+
+                                    
+                                        verblijfplaatshistorie wordt gezocht met de volgende parameters
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>type</td>
+                                                    
+                                                        <td>RaadpleegMetPeriode</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>burgerservicenummer</td>
+                                                    
+                                                        <td>000000012</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumVan</td>
+                                                    
+                                                        <td>2023-07-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2024-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response een verblijfplaats voorkomen met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>type</th>
+                                                
+                                                    <th>datumVan.type</th>
+                                                
+                                                    <th>datumVan.datum</th>
+                                                
+                                                    <th>datumVan.langFormaat</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.code</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.omschrijving</th>
+                                                
+                                                    <th>functieAdres.code</th>
+                                                
+                                                    <th>functieAdres.omschrijving</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>Adres</td>
+                                                    
+                                                        <td>Datum</td>
+                                                    
+                                                        <td>2023-10-14</td>
+                                                    
+                                                        <td>14 oktober 2023</td>
+                                                    
+                                                        <td>0800</td>
+                                                    
+                                                        <td>Hoogeloon, Hapert en Casteren</td>
+                                                    
+                                                        <td>W</td>
+                                                    
+                                                        <td>woonadres</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft het verblijfplaats voorkomen de volgende 'verblijfadres' gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>korteStraatnaam</td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>huisnummer</td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>postcode</td>
+                                                    
+                                                        <td>1234AB</td>
                                                     
                                                 </tr>
                                             
@@ -1727,8 +2655,8 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
+                            3,
                             0,
-                            1,
                             0,
                             0,
                             0,
