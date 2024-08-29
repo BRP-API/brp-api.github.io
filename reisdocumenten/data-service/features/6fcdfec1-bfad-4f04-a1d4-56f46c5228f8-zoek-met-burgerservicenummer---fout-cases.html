@@ -738,21 +738,21 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                             <span class="tag">@api</span>
                         
-                            <span class="tag">@geen-protocollering</span>
+                            <span class="tag">@fout-case</span>
                         
                     
                 
             </div>
             <h1>Feature:
-                <small>Soort reisdocument</small>
+                <small>Zoek met burgerservicenummer - fout cases</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    soort-reisdocument.feature
+                    fout-cases.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    raadpleeg-met-reisdocumentnummer/soort-reisdocument.feature</p>
+                    zoek-met-burgerservicenummer/fout-cases.feature</p>
             
         </div>
 
@@ -801,7 +801,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">100.00 %</td>
+                        <td class="percentage">0.00 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -810,7 +810,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Failed
                             </p>
                         </td>
-                        <td class="percentage">0.00 %</td>
+                        <td class="percentage">100.00 %</td>
                     
                     
                     </tr>
@@ -869,13 +869,13 @@ input#darkCheck:checked ~ label>svg#moon {
                             
                                 <span class="tag">@api</span>
                             
-                                <span class="tag">@geen-protocollering</span>
+                                <span class="tag">@fout-case</span>
                             
                         
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>soort reisdocument heeft de waarde PD</small></h2>
+                <h2>Scenario: <small>De burgerservicenummer parameter is niet opgegeven</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -887,13 +887,17 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-
+                        <li>
+                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">2</span>
+                        </li>
                     
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">2</span>
                         </li>
+                    
+
                     
 
                     
@@ -910,23 +914,21 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                 
                         
-                
-                        
                             <div class="scenario-step-container">
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
+                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
+                                    <span class="keyword highlight">Als </span>
 
                                     
-                                        adres 'A1' heeft de volgende gegevens
+                                        reisdocumenten wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -937,6 +939,8 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
                                     
 
+                                    
+                                        <a href="#error0-1-error" data-toggle="collapse">+ Show Error</a>
                                     
 
                                     
@@ -953,175 +957,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                         
                             
+                                <div id="error0-1-error" class="scenario-step-collapse collapse">
+                                    <pre class=info>AssertionError: http://localhost:8080/haalcentraal/api/reisdocumenten/reisdocumenten returns ECONNREFUSED: expected 'ECONNREFUSED' to not equal 'ECONNREFUSED'
+    + expected - actual
 
-                            
 
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>gemeentecode (92.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>0800</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
+    at sendRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:166:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async sendBevragenRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:183:12)
+    at async handleRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:198:24)
+    at async World.(anonymous) (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/als-stepdefs.js:36:5)</pre>
                                 </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de persoon met burgerservicenummer '000000024' is ingeschreven op adres 'A1' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>gemeente van inschrijving (09.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>0800</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de persoon heeft een 'reisdocument' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
                             
 
                             
@@ -1154,18 +1000,18 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>soort reisdocument (35.10)</td>
+                                                        <td>type</td>
                                                     
-                                                        <td>PD</td>
+                                                        <td>ZoekMetBurgerservicenummer</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>nummer reisdocument (35.20)</td>
+                                                        <td>fields</td>
                                                     
-                                                        <td>NE3663258</td>
+                                                        <td>reisdocumentnummer</td>
                                                     
                                                 </tr>
                                             
@@ -1184,17 +1030,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Als </span>
+                                    <span class="keyword highlight">Dan </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        heeft de response de volgende gegevens
                                         
                                     
 
@@ -1254,25 +1100,52 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetReisdocumentnummer</td>
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>title</td>
                                                     
-                                                        <td>NE3663258</td>
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>fields</td>
+                                                        <td>status</td>
                                                     
-                                                        <td>soort</td>
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: burgerservicenummer.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
                                                     
                                                 </tr>
                                             
@@ -1291,17 +1164,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Dan </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de response een reisdocument met de volgende gegevens
+                                        heeft de response invalidParams met de volgende gegevens
                                         
                                     
 
@@ -1349,9 +1222,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>code</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
                                                 
                                             </tr>
 
@@ -1359,18 +1234,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>soort.code</td>
+                                                        <td>required</td>
                                                     
-                                                        <td>PD</td>
+                                                        <td>burgerservicenummer</td>
                                                     
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>soort.omschrijving</td>
-                                                    
-                                                        <td>Diplomatiek paspoort</td>
+                                                        <td>Parameter is verplicht.</td>
                                                     
                                                 </tr>
                                             
@@ -1404,13 +1272,13 @@ input#darkCheck:checked ~ label>svg#moon {
                             
                                 <span class="tag">@api</span>
                             
-                                <span class="tag">@geen-protocollering</span>
+                                <span class="tag">@fout-case</span>
                             
                         
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>soort reisdocument heeft de waarde R1</small></h2>
+                <h2>Abstract Scenario: <small>De opgegeven burgerservicenummer is een string met minder dan negen cijfers</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1422,13 +1290,17 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-
+                        <li>
+                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">2</span>
+                        </li>
                     
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">2</span>
                         </li>
+                    
+
                     
 
                     
@@ -1445,23 +1317,21 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                 
                         
-                
-                        
                             <div class="scenario-step-container">
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
+                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
+                                    <span class="keyword highlight">Als </span>
 
                                     
-                                        adres 'A1' heeft de volgende gegevens
+                                        reisdocumenten wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -1472,6 +1342,8 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
                                     
 
+                                    
+                                        <a href="#error1-1-error" data-toggle="collapse">+ Show Error</a>
                                     
 
                                     
@@ -1488,175 +1360,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                         
                             
+                                <div id="error1-1-error" class="scenario-step-collapse collapse">
+                                    <pre class=info>AssertionError: http://localhost:8080/haalcentraal/api/reisdocumenten/reisdocumenten returns ECONNREFUSED: expected 'ECONNREFUSED' to not equal 'ECONNREFUSED'
+    + expected - actual
 
-                            
 
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>gemeentecode (92.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>0800</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
+    at sendRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:166:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async sendBevragenRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:183:12)
+    at async handleRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:198:24)
+    at async World.(anonymous) (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/als-stepdefs.js:36:5)</pre>
                                 </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de persoon met burgerservicenummer '000000024' is ingeschreven op adres 'A1' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>gemeente van inschrijving (09.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>0800</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de persoon heeft een 'reisdocument' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
                             
 
                             
@@ -1689,18 +1403,27 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>soort reisdocument (35.10)</td>
+                                                        <td>type</td>
                                                     
-                                                        <td>R1</td>
+                                                        <td>ZoekMetBurgerservicenummer</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>nummer reisdocument (35.20)</td>
+                                                        <td>burgerservicenummer</td>
                                                     
-                                                        <td>NE3663258</td>
+                                                        <td>12345678</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>reisdocumentnummer</td>
                                                     
                                                 </tr>
                                             
@@ -1719,17 +1442,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Als </span>
+                                    <span class="keyword highlight">Dan </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        heeft de response de volgende gegevens
                                         
                                     
 
@@ -1789,25 +1512,52 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetReisdocumentnummer</td>
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>title</td>
                                                     
-                                                        <td>NE3663258</td>
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>fields</td>
+                                                        <td>status</td>
                                                     
-                                                        <td>soort</td>
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: burgerservicenummer.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
                                                     
                                                 </tr>
                                             
@@ -1826,17 +1576,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Dan </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de response een reisdocument met de volgende gegevens
+                                        heeft de response invalidParams met de volgende gegevens
                                         
                                     
 
@@ -1884,9 +1634,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>code</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
                                                 
                                             </tr>
 
@@ -1894,18 +1646,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>soort.code</td>
+                                                        <td>pattern</td>
                                                     
-                                                        <td>R1</td>
+                                                        <td>burgerservicenummer</td>
                                                     
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>soort.omschrijving</td>
-                                                    
-                                                        <td>Reisdocument ouder1</td>
+                                                        <td>Waarde voldoet niet aan patroon ^[0-9]{9}$.</td>
                                                     
                                                 </tr>
                                             
@@ -1939,13 +1684,13 @@ input#darkCheck:checked ~ label>svg#moon {
                             
                                 <span class="tag">@api</span>
                             
-                                <span class="tag">@geen-protocollering</span>
+                                <span class="tag">@fout-case</span>
                             
                         
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>soort reisdocument heeft de waarde TE</small></h2>
+                <h2>Abstract Scenario: <small>De opgegeven burgerservicenummer is een string met meer dan negen cijfers</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1957,13 +1702,17 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-
+                        <li>
+                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">2</span>
+                        </li>
                     
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">2</span>
                         </li>
+                    
+
                     
 
                     
@@ -1980,23 +1729,21 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                 
                         
-                
-                        
                             <div class="scenario-step-container">
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
+                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
+                                    <span class="keyword highlight">Als </span>
 
                                     
-                                        adres 'A1' heeft de volgende gegevens
+                                        reisdocumenten wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -2007,6 +1754,8 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
                                     
 
+                                    
+                                        <a href="#error2-1-error" data-toggle="collapse">+ Show Error</a>
                                     
 
                                     
@@ -2023,175 +1772,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                         
                             
+                                <div id="error2-1-error" class="scenario-step-collapse collapse">
+                                    <pre class=info>AssertionError: http://localhost:8080/haalcentraal/api/reisdocumenten/reisdocumenten returns ECONNREFUSED: expected 'ECONNREFUSED' to not equal 'ECONNREFUSED'
+    + expected - actual
 
-                            
 
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>gemeentecode (92.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>0800</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
+    at sendRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:166:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async sendBevragenRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:183:12)
+    at async handleRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:198:24)
+    at async World.(anonymous) (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/als-stepdefs.js:36:5)</pre>
                                 </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de persoon met burgerservicenummer '000000024' is ingeschreven op adres 'A1' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>gemeente van inschrijving (09.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>0800</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de persoon heeft een 'reisdocument' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
                             
 
                             
@@ -2224,18 +1815,27 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>soort reisdocument (35.10)</td>
+                                                        <td>type</td>
                                                     
-                                                        <td>TE</td>
+                                                        <td>ZoekMetBurgerservicenummer</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>nummer reisdocument (35.20)</td>
+                                                        <td>burgerservicenummer</td>
                                                     
-                                                        <td>NE3663258</td>
+                                                        <td>1234567890</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>reisdocumentnummer</td>
                                                     
                                                 </tr>
                                             
@@ -2254,17 +1854,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Als </span>
+                                    <span class="keyword highlight">Dan </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        heeft de response de volgende gegevens
                                         
                                     
 
@@ -2324,25 +1924,52 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetReisdocumentnummer</td>
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>title</td>
                                                     
-                                                        <td>NE3663258</td>
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>fields</td>
+                                                        <td>status</td>
                                                     
-                                                        <td>soort</td>
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: burgerservicenummer.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
                                                     
                                                 </tr>
                                             
@@ -2361,17 +1988,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Dan </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de response een reisdocument met de volgende gegevens
+                                        heeft de response invalidParams met de volgende gegevens
                                         
                                     
 
@@ -2419,9 +2046,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>code</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
                                                 
                                             </tr>
 
@@ -2429,18 +2058,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>soort.code</td>
+                                                        <td>pattern</td>
                                                     
-                                                        <td>TE</td>
+                                                        <td>burgerservicenummer</td>
                                                     
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>soort.omschrijving</td>
-                                                    
-                                                        <td>Tweede paspoort (zakenpaspoort)</td>
+                                                        <td>Waarde voldoet niet aan patroon ^[0-9]{9}$.</td>
                                                     
                                                 </tr>
                                             
@@ -2474,13 +2096,13 @@ input#darkCheck:checked ~ label>svg#moon {
                             
                                 <span class="tag">@api</span>
                             
-                                <span class="tag">@geen-protocollering</span>
+                                <span class="tag">@fout-case</span>
                             
                         
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>soort reisdocument heeft de waarde ..</small></h2>
+                <h2>Abstract Scenario: <small>De opgegeven burgerservicenummer is een string met een letter</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -2492,13 +2114,17 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-
+                        <li>
+                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">2</span>
+                        </li>
                     
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">2</span>
                         </li>
+                    
+
                     
 
                     
@@ -2515,23 +2141,21 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                 
                         
-                
-                        
                             <div class="scenario-step-container">
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
+                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
+                                    <span class="keyword highlight">Als </span>
 
                                     
-                                        adres 'A1' heeft de volgende gegevens
+                                        reisdocumenten wordt gezocht met de volgende parameters
                                         
                                     
 
@@ -2542,6 +2166,8 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
                                     
 
+                                    
+                                        <a href="#error3-1-error" data-toggle="collapse">+ Show Error</a>
                                     
 
                                     
@@ -2558,175 +2184,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                         
                             
+                                <div id="error3-1-error" class="scenario-step-collapse collapse">
+                                    <pre class=info>AssertionError: http://localhost:8080/haalcentraal/api/reisdocumenten/reisdocumenten returns ECONNREFUSED: expected 'ECONNREFUSED' to not equal 'ECONNREFUSED'
+    + expected - actual
 
-                            
 
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>gemeentecode (92.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>0800</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
+    at sendRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:166:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async sendBevragenRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:183:12)
+    at async handleRequest (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/requestHelpers.js:198:24)
+    at async World.(anonymous) (/home/runner/work/reisdocumenten-data-service/reisdocumenten-data-service/features/step_definitions/als-stepdefs.js:36:5)</pre>
                                 </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de persoon met burgerservicenummer '000000024' is ingeschreven op adres 'A1' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>gemeente van inschrijving (09.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>0800</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de persoon heeft een 'reisdocument' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
                             
 
                             
@@ -2759,18 +2227,27 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>soort reisdocument (35.10)</td>
+                                                        <td>type</td>
                                                     
-                                                        <td>..</td>
+                                                        <td>ZoekMetBurgerservicenummer</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>nummer reisdocument (35.20)</td>
+                                                        <td>burgerservicenummer</td>
                                                     
-                                                        <td>NE3663258</td>
+                                                        <td>12345678X</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>fields</td>
+                                                    
+                                                        <td>reisdocumentnummer</td>
                                                     
                                                 </tr>
                                             
@@ -2789,17 +2266,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Als </span>
+                                    <span class="keyword highlight">Dan </span>
 
                                     
-                                        reisdocumenten wordt gezocht met de volgende parameters
+                                        heeft de response de volgende gegevens
                                         
                                     
 
@@ -2859,25 +2336,52 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetReisdocumentnummer</td>
+                                                        <td>https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>reisdocumentnummer</td>
+                                                        <td>title</td>
                                                     
-                                                        <td>NE3663258</td>
+                                                        <td>Een of meerdere parameters zijn niet correct.</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>fields</td>
+                                                        <td>status</td>
                                                     
-                                                        <td>soort</td>
+                                                        <td>400</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>detail</td>
+                                                    
+                                                        <td>De foutieve parameter(s) zijn: burgerservicenummer.</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>code</td>
+                                                    
+                                                        <td>paramsValidation</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>instance</td>
+                                                    
+                                                        <td>/haalcentraal/api/reisdocumenten/reisdocumenten</td>
                                                     
                                                 </tr>
                                             
@@ -2896,17 +2400,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
+                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Dan </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de response een reisdocument met de volgende gegevens
+                                        heeft de response invalidParams met de volgende gegevens
                                         
                                     
 
@@ -2954,9 +2458,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>code</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>name</th>
+                                                
+                                                    <th>reason</th>
                                                 
                                             </tr>
 
@@ -2964,18 +2470,11 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>soort.code</td>
+                                                        <td>pattern</td>
                                                     
-                                                        <td>..</td>
+                                                        <td>burgerservicenummer</td>
                                                     
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>soort.omschrijving</td>
-                                                    
-                                                        <td>Onbekend</td>
+                                                        <td>Waarde voldoet niet aan patroon ^[0-9]{9}$.</td>
                                                     
                                                 </tr>
                                             
@@ -3049,8 +2548,8 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            4,
                             0,
+                            4,
                             0,
                             0,
                             0,
