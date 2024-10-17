@@ -410,6 +410,13 @@ ul.quick-list li i {
     max-width: 100%;
 }
 
+.videoCapture{
+    width: 50%;
+    height: 50%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
 /* Features / Scenarios */
 ul.panel_toolbox li .step {
     border-radius: 50%;
@@ -736,21 +743,23 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                         <i class="fa fa-tag fa-lg"></i>
                         
-                            <span class="tag">@stap-documentatie</span>
+                            <span class="tag">@valideer-volgorde</span>
                         
                     
                 
             </div>
             <h1>Feature:
-                <small>Autorisatie gegeven stap definities</small>
+                <small>volgorde validatie</small>
             </h1>
             
                 <p>
+                    <strong>Description: </strong>   Als team lid<br>  wil ik kunnen aangeven dat een response body volgens de gespecificeerde volgorde moet worden gevalideerd </p>
+                
                <p><strong>File name:</strong>
-                    gegeven-stap-definities-autorisatie.feature
+                    dan-stap-definities-volgorde-validatie.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    docs/gegeven-stap-definities-autorisatie.feature</p>
+                    docs/dan-stap-definities-volgorde-validatie.feature</p>
             
         </div>
 
@@ -788,7 +797,7 @@ input#darkCheck:checked ~ label>svg#moon {
         <tr>
             <td class="chart">
                 <canvas id="scenario-chart"></canvas>
-                <div class="total">4</div>
+                <div class="total">3</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -865,13 +874,13 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                             <i class="fa fa-tag fa-lg"></i>
                             
-                                <span class="tag">@stap-documentatie</span>
+                                <span class="tag">@valideer-volgorde</span>
                             
                         
                     
                 </div>
 
-                <h2>Scenario: <small>Gegeven de afnemer met indicatie '[indicatie]' heeft de volgende 'autorisatie' gegevens</small></h2>
+                <h2>Scenario: <small>de '@valideer-volgorde' tag is opgegeven</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -920,7 +929,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de afnemer met indicatie '000008' heeft de volgende 'autorisatie' gegevens
+                                        de response body is gelijk aan
                                         
                                     
 
@@ -934,7 +943,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -957,33 +968,27 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
                             
                                 <div class="scenario-scroll-bar">
                                     
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>Rubrieknummer ad hoc (35.95.60)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>10120 10210</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
                                 </div>
 
+                                
+                                    <pre class="info">{
+  "verblijfplaatsen": [
+    {
+      "adresseerbaarObjectIdentificatie": "0800010000000001"
+    },
+    {
+      "adresseerbaarObjectIdentificatie": "0800010000000002"
+    }
+  ]
+}</pre>
                                 
                             
                         
@@ -1005,7 +1010,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        zijn de gegenereerde SQL statements
+                                        heeft de response verblijfplaatsen met de volgende gegevens
                                         
                                     
 
@@ -1019,7 +1024,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1042,6 +1049,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
@@ -1053,13 +1062,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>stap</th>
-                                                
-                                                    <th>categorie</th>
-                                                
-                                                    <th>text</th>
-                                                
-                                                    <th>values</th>
+                                                    <th>adresseerbaarObjectIdentificatie</th>
                                                 
                                             </tr>
 
@@ -1067,13 +1070,14 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>1</td>
+                                                        <td>0800010000000001</td>
                                                     
-                                                        <td>autorisatie</td>
+                                                </tr>
+                                            
+                                                <tr>
                                                     
-                                                        <td>INSERT INTO public.lo3_autorisatie(autorisatie_id,afnemer_code,geheimhouding_ind,verstrekkings_beperking,ad_hoc_rubrieken) VALUES((SELECT COALESCE(MAX(autorisatie_id), 0)+1 FROM public.lo3_autorisatie),$1,$2,$3,$4) RETURNING *</td>
                                                     
-                                                        <td>000008,0,0,10120 10210</td>
+                                                        <td>0800010000000002</td>
                                                     
                                                 </tr>
                                             
@@ -1103,15 +1107,10 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                         
                         
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
                     
                 </div>
 
-                <h2>Scenario: <small>Gegeven de afnemer met indicatie '[indicatie]' is geautoriseerd voor 'adressering binnenland' gegevens</small></h2>
+                <h2>Abstract Scenario: <small>de '@valideer-volgorde' tag is niet opgegeven</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1160,7 +1159,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de afnemer met indicatie '000008' is geautoriseerd voor 'adressering binnenland' gegevens
+                                        de response body is gelijk aan
                                         
                                     
 
@@ -1174,7 +1173,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1197,9 +1198,28 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                </div>
+
+                                
+                                    <pre class="info">{
+  "verblijfplaatsen": [
+    {
+      "adresseerbaarObjectIdentificatie": "0800010000000001"
+    },
+    {
+      "adresseerbaarObjectIdentificatie": "0800010000000002"
+    }
+  ]
+}</pre>
+                                
                             
                         
 
@@ -1220,7 +1240,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        zijn de gegenereerde SQL statements
+                                        heeft de response verblijfplaatsen met de volgende gegevens
                                         
                                     
 
@@ -1234,7 +1254,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1246,6 +1268,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -1268,13 +1292,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>stap</th>
-                                                
-                                                    <th>categorie</th>
-                                                
-                                                    <th>text</th>
-                                                
-                                                    <th>values</th>
+                                                    <th>adresseerbaarObjectIdentificatie</th>
                                                 
                                             </tr>
 
@@ -1282,13 +1300,14 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>1</td>
+                                                        <td>0800010000000001</td>
                                                     
-                                                        <td>autorisatie</td>
+                                                </tr>
+                                            
+                                                <tr>
                                                     
-                                                        <td>INSERT INTO public.lo3_autorisatie(autorisatie_id,afnemer_code,geheimhouding_ind,verstrekkings_beperking,afnemer_naam,adres_vraag_bevoegdheid,ad_hoc_medium,tabel_regel_start_datum,ad_hoc_rubrieken) VALUES((SELECT COALESCE(MAX(autorisatie_id), 0)+1 FROM public.lo3_autorisatie),$1,$2,$3,$4,$5,$6,$7,$8) RETURNING *</td>
                                                     
-                                                        <td>000008,0,0,Haal Centraal,1,N,20201128,10120 10240 10310 80910 81110 81120 81130 81140 81180 81190 PANM03 PANM04 PANM05 PANM06 PAVP03 PAVP04</td>
+                                                        <td>0800010000000002</td>
                                                     
                                                 </tr>
                                             
@@ -1318,15 +1337,10 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                         
                         
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
                     
                 </div>
 
-                <h2>Scenario: <small>Gegeven de afnemer met indicatie '[indicatie]' is geautoriseerd voor 'verblijfplaats binnenland' gegevens</small></h2>
+                <h2>Abstract Scenario: <small>de '@valideer-volgorde' tag is niet opgegeven</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1375,7 +1389,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de afnemer met indicatie '000008' is geautoriseerd voor 'verblijfplaats binnenland' gegevens
+                                        de response body is gelijk aan
                                         
                                     
 
@@ -1389,7 +1403,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1412,9 +1428,28 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                </div>
+
+                                
+                                    <pre class="info">{
+  "verblijfplaatsen": [
+    {
+      "adresseerbaarObjectIdentificatie": "0800010000000001"
+    },
+    {
+      "adresseerbaarObjectIdentificatie": "0800010000000002"
+    }
+  ]
+}</pre>
+                                
                             
                         
 
@@ -1435,7 +1470,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        zijn de gegenereerde SQL statements
+                                        heeft de response verblijfplaatsen met de volgende gegevens
                                         
                                     
 
@@ -1449,7 +1484,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1461,6 +1498,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -1483,13 +1522,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>stap</th>
-                                                
-                                                    <th>categorie</th>
-                                                
-                                                    <th>text</th>
-                                                
-                                                    <th>values</th>
+                                                    <th>adresseerbaarObjectIdentificatie</th>
                                                 
                                             </tr>
 
@@ -1497,13 +1530,14 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>1</td>
+                                                        <td>0800010000000002</td>
                                                     
-                                                        <td>autorisatie</td>
+                                                </tr>
+                                            
+                                                <tr>
                                                     
-                                                        <td>INSERT INTO public.lo3_autorisatie(autorisatie_id,afnemer_code,geheimhouding_ind,verstrekkings_beperking,afnemer_naam,adres_vraag_bevoegdheid,ad_hoc_medium,tabel_regel_start_datum,ad_hoc_rubrieken) VALUES((SELECT COALESCE(MAX(autorisatie_id), 0)+1 FROM public.lo3_autorisatie),$1,$2,$3,$4,$5,$6,$7,$8) RETURNING *</td>
                                                     
-                                                        <td>000008,0,0,Haal Centraal,1,N,20201128,10120 81010 80910 81110 81115 81120 81130 81140 81150 81160 81170 81180 81190 81210 88510 PAVP01</td>
+                                                        <td>0800010000000001</td>
                                                     
                                                 </tr>
                                             
@@ -1512,273 +1546,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                 </div>
 
                                 
-                            
-                        
-
-                    
-                
-                        
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Scenario: <small>Gegeven de geauthenticeerde consumer heeft de volgende 'claim' gegevens</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de geauthenticeerde consumer heeft de volgende 'claim' gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>afnemerID</th>
-                                                
-                                                    <th>gemeenteCode</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>000008</td>
-                                                    
-                                                        <td>0800</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Dan </span>
-
-                                    
-                                        heeft de scenario context een property 'afnemerID' met waarde '000008'
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        heeft de scenario context een property 'gemeenteCode' met waarde '0800'
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
                             
                         
 
@@ -1844,7 +1611,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            4,
+                            3,
                             0,
                             0,
                             0,

@@ -410,6 +410,13 @@ ul.quick-list li i {
     max-width: 100%;
 }
 
+.videoCapture{
+    width: 50%;
+    height: 50%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
 /* Features / Scenarios */
 ul.panel_toolbox li .step {
     border-radius: 50%;
@@ -742,15 +749,15 @@ input#darkCheck:checked ~ label>svg#moon {
                 
             </div>
             <h1>Feature:
-                <small>Partner dan stap definities</small>
+                <small>Persoon, Inschrijving gegeven stap definities</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    dan-stap-definities-partner.feature
+                    gegeven-stap-definities-persoon.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    docs/dan-stap-definities-partner.feature</p>
+                    docs/gegeven-stap-definities-persoon.feature</p>
             
         </div>
 
@@ -788,7 +795,7 @@ input#darkCheck:checked ~ label>svg#moon {
         <tr>
             <td class="chart">
                 <canvas id="scenario-chart"></canvas>
-                <div class="total">14</div>
+                <div class="total">10</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -871,7 +878,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>Dan heeft de response een persoon met een 'partner' met (alleen) de volgende gegevens</small></h2>
+                <h2>Scenario: <small>de persoon met burgerservicenummer '[bsn]' heeft de volgende gegevens</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -888,7 +895,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -920,7 +927,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de response body is gelijk aan
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
                                         
                                     
 
@@ -934,7 +941,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -957,27 +966,11 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
-                        
 
-                        
                             
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
+                        
 
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "partners": [
-        {
-          "burgerservicenummer": "000000013"
-        }
-      ]
-    }
-  ]
-}</pre>
-                                
+                        
                             
                         
 
@@ -995,10 +988,10 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Dan </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de response een persoon met een 'partner' met de volgende gegevens
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
                                         
                                     
 
@@ -1012,7 +1005,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1024,6 +1019,72 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
                             
 
                             
@@ -1056,9 +1117,123 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>geslachtsnaam (02.40)</td>
                                                     
-                                                        <td>000000013</td>
+                                                        <td>Jansen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        zijn de gegenereerde SQL statements
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>stap</th>
+                                                
+                                                    <th>categorie</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>1</td>
+                                                    
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                    
+                                                        <td>9999,0,0,P,000000012,Jansen</td>
                                                     
                                                 </tr>
                                             
@@ -1096,7 +1271,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>Dan heeft de response een persoon met een 'partner' met (alleen) de volgende gegevens</small></h2>
+                <h2>Scenario: <small>de persoon met burgerservicenummer '[bsn]' heeft de volgende gegevens (meerdere personen)</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1113,7 +1288,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
                         </li>
                     
 
@@ -1145,7 +1320,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de response body is gelijk aan
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
                                         
                                     
 
@@ -1159,7 +1334,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1182,27 +1359,11 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
-                        
 
-                        
                             
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
+                        
 
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "partners": [
-        {
-          "burgerservicenummer": "000000013"
-        }
-      ]
-    }
-  ]
-}</pre>
-                                
+                        
                             
                         
 
@@ -1220,10 +1381,10 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Dan </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de response een persoon met een 'partner' met alleen de volgende gegevens
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
                                         
                                     
 
@@ -1237,7 +1398,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1249,6 +1412,72 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
                             
 
                             
@@ -1281,9 +1510,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>geslachtsnaam (02.40)</td>
                                                     
-                                                        <td>000000013</td>
+                                                        <td>Jansen</td>
                                                     
                                                 </tr>
                                             
@@ -1298,64 +1527,6 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 
                         
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Abstract Scenario: <small>Dan heeft de response een persoon met een 'partner' met (alleen) de volgende '[gegevensgroep]' gegevens</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
-                
-                        
                             <div class="scenario-step-container">
 
                                 
@@ -1367,10 +1538,10 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        de response body is gelijk aan
+                                        de persoon met burgerservicenummer '000000013' heeft de volgende gegevens
                                         
                                     
 
@@ -1384,87 +1555,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
-                                    
-                                    
 
                                     
 
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
-
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "partners": [
-        {
-          "naam": {
-            "geslachtsnaam": "Pietersen"
-          }
-        }
-      ]
-    }
-  ]
-}</pre>
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Dan </span>
-
-                                    
-                                        heeft de response een persoon met een 'partner' met de volgende 'naam' gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
                                     
 
                                     
@@ -1476,6 +1569,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -1508,7 +1603,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geslachtsnaam</td>
+                                                        <td>geslachtsnaam (02.40)</td>
                                                     
                                                         <td>Pietersen</td>
                                                     
@@ -1525,6 +1620,146 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 
                         
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        zijn de gegenereerde SQL statements
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>stap</th>
+                                                
+                                                    <th>categorie</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>1</td>
+                                                    
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                    
+                                                        <td>9999,0,0,P,000000012,Jansen</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>2</td>
+                                                    
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                    
+                                                        <td>10000,0,0,P,000000013,Pietersen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
                 
                         
                 
@@ -1548,7 +1783,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>Dan heeft de response een persoon met een 'partner' met (alleen) de volgende '[gegevensgroep]' gegevens</small></h2>
+                <h2>Scenario: <small>de persoon met burgerservicenummer '[bsn]' heeft de volgende 'inschrijving' gegevens</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1565,7 +1800,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -1597,7 +1832,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de response body is gelijk aan
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
                                         
                                     
 
@@ -1611,7 +1846,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1634,28 +1871,163 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende 'inschrijving' gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
                         
 
                         
                             
                                 <div class="scenario-scroll-bar">
                                     
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>indicatie geheim (70.10)</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>7</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
                                 </div>
 
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "partners": [
-        {
-          "naam": {
-            "geslachtsnaam": "Pietersen"
-          }
-        }
-      ]
-    }
-  ]
-}</pre>
                                 
                             
                         
@@ -1677,7 +2049,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon met een 'partner' met alleen de volgende 'naam' gegevens
+                                        zijn de gegenereerde SQL statements
                                         
                                     
 
@@ -1691,7 +2063,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1703,6 +2077,691 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>stap</th>
+                                                
+                                                    <th>categorie</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>1</td>
+                                                    
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>7</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr) VALUES($1,$2,$3,$4,$5)</td>
+                                                    
+                                                        <td>9999,0,0,P,000000012</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tag fa-lg"></i>
+                            
+                                <span class="tag">@stap-documentatie</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>de persoon met burgerservicenummer '[bsn]'  heeft de volgende 'kiesrecht' gegevens</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende 'kiesrecht' gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>aanduiding uitgesloten kiesrecht (38.10)</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>A</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        zijn de gegenereerde SQL statements
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>key</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind,kiesrecht_uitgesl_aand) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1,$2) RETURNING *</td>
+                                                    
+                                                        <td>0,A</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr) VALUES($1,$2,$3,$4,$5)</td>
+                                                    
+                                                        <td>9999,0,0,P,000000012</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tag fa-lg"></i>
+                            
+                                <span class="tag">@stap-documentatie</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>de persoon heeft de volgende 'inschrijving' gegevens</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
                             
 
                             
@@ -1735,7 +2794,1064 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geslachtsnaam</td>
+                                                        <td>geslachtsnaam (02.40)</td>
+                                                    
+                                                        <td>Jansen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon heeft de volgende 'inschrijving' gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>indicatie geheim (70.10)</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>7</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        zijn de gegenereerde SQL statements
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>stap</th>
+                                                
+                                                    <th>categorie</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>1</td>
+                                                    
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>7</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                    
+                                                        <td>9999,0,0,P,000000012,Jansen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tag fa-lg"></i>
+                            
+                                <span class="tag">@stap-documentatie</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>de persoon heeft de volgende gegevens</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>geslachtsnaam (02.40)</td>
+                                                    
+                                                        <td>Jansen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon heeft de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>aanduiding in onderzoek (83.10)</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>010000</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        zijn de gegenereerde SQL statements
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>stap</th>
+                                                
+                                                    <th>categorie</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>1</td>
+                                                    
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onderzoek_gegevens_aand) VALUES($1,$2,$3,$4,$5,$6,$7)</td>
+                                                    
+                                                        <td>9999,0,0,P,000000012,Jansen,010000</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tag fa-lg"></i>
+                            
+                                <span class="tag">@stap-documentatie</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>de persoon is gewijzigd naar de volgende gegevens</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>geslachtsnaam (02.40)</td>
+                                                    
+                                                        <td>Jansen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon is gewijzigd naar de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>geslachtsnaam (02.40)</td>
                                                     
                                                         <td>Pietersen</td>
                                                     
@@ -1752,6 +3868,133 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 
                         
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        zijn de gegenereerde SQL statements
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>stap</th>
+                                                
+                                                    <th>categorie</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>1</td>
+                                                    
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                    
+                                                        <td>9999,0,1,P,000000012,Jansen</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,geslachts_naam) VALUES($1,$2,$3,$4,$5)</td>
+                                                    
+                                                        <td>9999,0,0,P,Pietersen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
                 
                         
                 
@@ -1775,7 +4018,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>Dan heeft de response een persoon met een 'partner' zonder gegevens</small></h2>
+                <h2>Scenario: <small>de persoon is gecorrigeerd naar de volgende gegevens</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1792,7 +4035,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
                         </li>
                     
 
@@ -1824,7 +4067,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de response body is gelijk aan
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
                                         
                                     
 
@@ -1838,7 +4081,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1861,25 +4106,11 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
-                        
 
-                        
                             
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
+                        
 
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "partners": [
-        {}
-      ]
-    }
-  ]
-}</pre>
-                                
+                        
                             
                         
 
@@ -1897,10 +4128,10 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Dan </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de response een persoon met een 'partner' zonder gegevens
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
                                         
                                     
 
@@ -1914,7 +4145,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1937,534 +4170,11 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Scenario: <small>Dan heeft de response een persoon met een 'partner' zonder '[gegevensgroep]' gegevens</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de response body is gelijk aan
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
 
                             
                         
 
                         
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
-
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "partners": [
-        {
-          "naam": {}
-        }
-      ]
-    }
-  ]
-}</pre>
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Dan </span>
-
-                                    
-                                        heeft de response een persoon met een 'partner' zonder 'naam' gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Scenario: <small>Dan heeft de response een persoon zonder partners</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de response body is gelijk aan
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
-
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "partners": []
-    }
-  ]
-}</pre>
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Dan </span>
-
-                                    
-                                        heeft de response een persoon zonder partners
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Abstract Scenario: <small>Dan heeft de persoon een 'partner' met (alleen) de volgende gegevens</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de response body is gelijk aan
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
-
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "burgerservicenummer": "000000012",
-      "partners": [
-        {
-          "burgerservicenummer": "000000013"
-        }
-      ]
-    }
-  ]
-}</pre>
-                                
                             
                         
 
@@ -2482,10 +4192,10 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Dan </span>
+                                    <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        heeft de response een persoon met de volgende gegevens
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende gegevens
                                         
                                     
 
@@ -2499,7 +4209,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -2511,6 +4223,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -2543,9 +4257,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>geslachtsnaam (02.40)</td>
                                                     
-                                                        <td>000000012</td>
+                                                        <td>Jansen</td>
                                                     
                                                 </tr>
                                             
@@ -2574,7 +4288,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de persoon een 'partner' met de volgende gegevens
+                                        de persoon is gecorrigeerd naar de volgende gegevens
                                         
                                     
 
@@ -2588,7 +4302,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -2600,6 +4316,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -2632,9 +4350,136 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>geslachtsnaam (02.40)</td>
                                                     
-                                                        <td>000000013</td>
+                                                        <td>Janssen</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        zijn de gegenereerde SQL statements
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>stap</th>
+                                                
+                                                    <th>categorie</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>1</td>
+                                                    
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)</td>
+                                                    
+                                                        <td>9999,0,1,P,000000012,Jansen,O</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,geslachts_naam) VALUES($1,$2,$3,$4,$5)</td>
+                                                    
+                                                        <td>9999,0,0,P,Janssen</td>
                                                     
                                                 </tr>
                                             
@@ -2672,7 +4517,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>Dan heeft de persoon een 'partner' met (alleen) de volgende gegevens</small></h2>
+                <h2>Scenario: <small>de persoon heeft een niet-gegenereerd pl_id (kolom variant)</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -2689,7 +4534,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -2721,7 +4566,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de response body is gelijk aan
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
                                         
                                     
 
@@ -2735,7 +4580,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -2758,28 +4605,11 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
-                        
 
-                        
                             
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
+                        
 
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "burgerservicenummer": "000000012",
-      "partners": [
-        {
-          "burgerservicenummer": "000000013"
-        }
-      ]
-    }
-  ]
-}</pre>
-                                
+                        
                             
                         
 
@@ -2797,10 +4627,10 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">Dan </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de response een persoon met de volgende gegevens
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
                                         
                                     
 
@@ -2814,7 +4644,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -2826,6 +4658,72 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
                             
 
                             
@@ -2848,9 +4746,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
-                                                
-                                                    <th>waarde</th>
+                                                    <th>pl_id</th>
                                                 
                                             </tr>
 
@@ -2858,9 +4754,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
-                                                    
-                                                        <td>000000012</td>
+                                                        <td>9999</td>
                                                     
                                                 </tr>
                                             
@@ -2886,10 +4780,10 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">En </span>
+                                    <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de persoon een 'partner' met alleen de volgende gegevens
+                                        zijn de gegenereerde SQL statements
                                         
                                     
 
@@ -2903,7 +4797,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -2926,6 +4822,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
@@ -2937,9 +4835,13 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>stap</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>categorie</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
                                                 
                                             </tr>
 
@@ -2947,9 +4849,26 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>1</td>
                                                     
-                                                        <td>000000013</td>
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES(9999,current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr) VALUES($1,$2,$3,$4,$5)</td>
+                                                    
+                                                        <td>9999,0,0,P,000000012</td>
                                                     
                                                 </tr>
                                             
@@ -2987,7 +4906,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>Dan heeft de persoon een 'partner' met (alleen) de volgende '[gegevensgroep]' gegevens</small></h2>
+                <h2>Scenario: <small>de persoon heeft een niet-gegenereerd pl_id (rij variant)</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -3004,7 +4923,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -3036,7 +4955,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de response body is gelijk aan
+                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
                                         
                                     
 
@@ -3050,7 +4969,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -3073,119 +4994,11 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
-
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "burgerservicenummer": "000000012",
-      "partners": [
-        {
-          "naam": {
-            "geslachtsnaam": "Aedel"
-          }
-        }
-      ]
-    }
-  ]
-}</pre>
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Dan </span>
-
-                                    
-                                        heeft de response een persoon met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
 
                             
                         
 
                         
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>naam</th>
-                                                
-                                                    <th>waarde</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>burgerservicenummer</td>
-                                                    
-                                                        <td>000000012</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
                             
                         
 
@@ -3206,7 +5019,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de persoon een 'partner' met de volgende 'naam' gegevens
+                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
                                         
                                     
 
@@ -3220,7 +5033,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -3243,100 +5058,15 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
                             
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>naam</th>
-                                                
-                                                    <th>waarde</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>geslachtsnaam</td>
-                                                    
-                                                        <td>Aedel</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
                         
 
                     
-                
-                        
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Abstract Scenario: <small>Dan heeft de persoon een 'partner' met (alleen) de volgende '[gegevensgroep]' gegevens</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
                 
                         
                             <div class="scenario-step-container">
@@ -3353,7 +5083,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de response body is gelijk aan
+                                        de persoon met burgerservicenummer '000000012' heeft de volgende gegevens
                                         
                                     
 
@@ -3367,7 +5097,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -3390,29 +5122,39 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
                             
                                 <div class="scenario-scroll-bar">
                                     
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>pl_id</td>
+                                                    
+                                                        <td>9999</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
                                 </div>
 
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "burgerservicenummer": "000000012",
-      "partners": [
-        {
-          "naam": {
-            "geslachtsnaam": "Aedel"
-          }
-        }
-      ]
-    }
-  ]
-}</pre>
                                 
                             
                         
@@ -3434,7 +5176,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon met de volgende gegevens
+                                        zijn de gegenereerde SQL statements
                                         
                                     
 
@@ -3448,7 +5190,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -3460,6 +5204,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -3482,9 +5228,13 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>stap</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>categorie</th>
+                                                
+                                                    <th>text</th>
+                                                
+                                                    <th>values</th>
                                                 
                                             </tr>
 
@@ -3492,9 +5242,26 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>1</td>
                                                     
-                                                        <td>000000012</td>
+                                                        <td>inschrijving</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES(9999,current_timestamp,$1) RETURNING *</td>
+                                                    
+                                                        <td>0</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr) VALUES($1,$2,$3,$4,$5)</td>
+                                                    
+                                                        <td>9999,0,0,P,000000012</td>
                                                     
                                                 </tr>
                                             
@@ -3503,976 +5270,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                 </div>
 
                                 
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        heeft de persoon een 'partner' met alleen de volgende 'naam' gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>naam</th>
-                                                
-                                                    <th>waarde</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>geslachtsnaam</td>
-                                                    
-                                                        <td>Aedel</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Scenario: <small>Dan heeft de persoon geen partners</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de response body is gelijk aan
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
-
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "burgerservicenummer": "000000012",
-      "partners": []
-    }
-  ]
-}</pre>
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Dan </span>
-
-                                    
-                                        heeft de response een persoon met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>naam</th>
-                                                
-                                                    <th>waarde</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>burgerservicenummer</td>
-                                                    
-                                                        <td>000000012</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        heeft de persoon geen partners
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Scenario: <small>Dan heeft de 'partner' de volgende '[gegevensgroep]' gegevens</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de response body is gelijk aan
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
-
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "partners": [
-        {
-          "burgerservicenummer": "000000013",
-          "naam": {
-            "voornamen": "Karel"
-          }
-        }
-      ]
-    }
-  ]
-}</pre>
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Dan </span>
-
-                                    
-                                        heeft de response een persoon met een 'partner' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>naam</th>
-                                                
-                                                    <th>waarde</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>burgerservicenummer</td>
-                                                    
-                                                        <td>000000013</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        heeft de 'partner' de volgende 'naam' gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>voornamen</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>Karel</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Scenario: <small>Dan heeft de 'partner' geen '[gegevensgroep]' gegevens</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de response body is gelijk aan
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
-
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "partners": [
-        {
-          "burgerservicenummer": "000000012",
-          "naam": {}
-        }
-      ]
-    }
-  ]
-}</pre>
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Dan </span>
-
-                                    
-                                        heeft de response een persoon met een 'partner' met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>naam</th>
-                                                
-                                                    <th>waarde</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>burgerservicenummer</td>
-                                                    
-                                                        <td>000000012</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        heeft de 'partner' geen 'naam' gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
                             
                         
 
@@ -4538,7 +5335,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            14,
+                            10,
                             0,
                             0,
                             0,

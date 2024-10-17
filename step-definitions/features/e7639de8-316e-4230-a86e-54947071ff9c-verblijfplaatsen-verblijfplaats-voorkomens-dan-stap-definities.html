@@ -410,6 +410,13 @@ ul.quick-list li i {
     max-width: 100%;
 }
 
+.videoCapture{
+    width: 50%;
+    height: 50%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
 /* Features / Scenarios */
 ul.panel_toolbox li .step {
     border-radius: 50%;
@@ -742,15 +749,15 @@ input#darkCheck:checked ~ label>svg#moon {
                 
             </div>
             <h1>Feature:
-                <small>Verblijfstitel gegeven stap definities</small>
+                <small>Verblijfplaatsen/verblijfplaats voorkomens dan stap definities</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    gegeven-stap-definities-verblijfstitel.feature
+                    dan-stap-definities-verblijfplaats-voorkomen.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    docs/gegeven-stap-definities-verblijfstitel.feature</p>
+                    docs/dan-stap-definities-verblijfplaats-voorkomen.feature</p>
             
         </div>
 
@@ -871,7 +878,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>de persoon met burgerservicenummer '[bsn]' heeft een 'verblijfstitel' verkregen met de volgende gegevens</small></h2>
+                <h2>Scenario: <small>Dan heeft de response verblijfplaatsen met de volgende gegevens (enkele verblijfplaats)</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -888,7 +895,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
                         </li>
                     
 
@@ -920,7 +927,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
+                                        de response body is gelijk aan
                                         
                                     
 
@@ -934,67 +941,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
-                                    
-                                    
 
                                     
 
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
                                     
 
                                     
@@ -1008,64 +957,6 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                             
 
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de persoon met burgerservicenummer '000000012' heeft een 'verblijfstitel' verkregen met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
                             
 
                             
@@ -1083,27 +974,22 @@ input#darkCheck:checked ~ label>svg#moon {
                             
                                 <div class="scenario-scroll-bar">
                                     
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>aanduiding verblijfstitel (39.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>37</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
                                 </div>
 
+                                
+                                    <pre class="info">{
+  "verblijfplaatsen": [
+    {
+      "adresseerbaarObjectIdentificatie": "0800010000000001",
+      "straat": "Laan",
+      "datumAanvangAdreshouding": "20100818",
+      "gemeenteVanInschrijving": {
+        "code": "0800",
+        "omschrijving": "Hoogeloon, Hapert en Casteren"
+      }
+    }
+  ]
+}</pre>
                                 
                             
                         
@@ -1125,7 +1011,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        zijn de gegenereerde SQL statements
+                                        heeft de response verblijfplaatsen met de volgende gegevens
                                         
                                     
 
@@ -1139,7 +1025,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1162,6 +1050,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
@@ -1173,13 +1063,15 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>stap</th>
+                                                    <th>adresseerbaarObjectIdentificatie</th>
                                                 
-                                                    <th>categorie</th>
+                                                    <th>straat</th>
                                                 
-                                                    <th>text</th>
+                                                    <th>datumAanvangAdreshouding</th>
                                                 
-                                                    <th>values</th>
+                                                    <th>gemeenteVanInschrijving.code</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.omschrijving</th>
                                                 
                                             </tr>
 
@@ -1187,39 +1079,15 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>1</td>
+                                                        <td>0800010000000001</td>
                                                     
-                                                        <td>inschrijving</td>
+                                                        <td>Laan</td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                        <td>20100818</td>
                                                     
-                                                        <td>0</td>
+                                                        <td>0800</td>
                                                     
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td>persoon</td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr) VALUES($1,$2,$3,$4,$5)</td>
-                                                    
-                                                        <td>9999,0,0,P,000000012</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td>verblijfstitel</td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_verblijfstitel(pl_id,volg_nr,verblijfstitel_aand) VALUES($1,$2,$3)</td>
-                                                    
-                                                        <td>9999,0,37</td>
+                                                        <td>Hoogeloon, Hapert en Casteren</td>
                                                     
                                                 </tr>
                                             
@@ -1257,7 +1125,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>de persoon heeft een 'verblijfstitel' verkregen met de volgende gegevens</small></h2>
+                <h2>Scenario: <small>Dan heeft de response verblijfplaatsen met de volgende gegevens (meerdere verblijfplaatsen)</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1274,7 +1142,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
                         </li>
                     
 
@@ -1306,7 +1174,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
+                                        de response body is gelijk aan
                                         
                                     
 
@@ -1320,67 +1188,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
-                                    
-                                    
 
                                     
 
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
                                     
 
                                     
@@ -1394,64 +1204,6 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                             
 
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de persoon met burgerservicenummer '000000012' heeft de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
                             
 
                             
@@ -1469,112 +1221,39 @@ input#darkCheck:checked ~ label>svg#moon {
                             
                                 <div class="scenario-scroll-bar">
                                     
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>geslachtsnaam (02.40)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>Jansen</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
                                 </div>
 
                                 
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de persoon heeft een 'verblijfstitel' verkregen met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>aanduiding verblijfstitel (39.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>37</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
+                                    <pre class="info">{
+  "verblijfplaatsen": [
+    {
+      "adresseerbaarObjectIdentificatie": "0800010000000002",
+      "straat": "Luttestraat",
+      "datumAanvangAdreshouding": "20200415",
+      "gemeenteVanInschrijving": {
+        "code": "0800",
+        "omschrijving": "Hoogeloon, Hapert en Casteren"
+      }
+    },
+    {
+      "land": {
+        "code": "6014",
+        "omschrijving": "Verenigde Staten van Amerika"
+      },
+      "datumAanvangAdresBuitenland": "20181201",
+      "datumAanvangVolgendeAdreshouding": "20200415"
+    },
+    {
+      "locatiebeschrijving": "Woonboot bij de Grote Sloot",
+      "datumAanvangAdreshouding": "20160526",
+      "datumAanvangVolgendeAdresBuitenland": "20181201",
+      "gemeenteVanInschrijving": {
+        "code": "0800",
+        "omschrijving": "Hoogeloon, Hapert en Casteren"
+      }
+    }
+  ]
+}</pre>
                                 
                             
                         
@@ -1596,7 +1275,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        zijn de gegenereerde SQL statements
+                                        heeft de response verblijfplaatsen met de volgende gegevens
                                         
                                     
 
@@ -1610,7 +1289,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1633,6 +1314,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
@@ -1644,13 +1327,27 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>stap</th>
+                                                    <th>land.code</th>
                                                 
-                                                    <th>categorie</th>
+                                                    <th>land.omschrijving</th>
                                                 
-                                                    <th>text</th>
+                                                    <th>straat</th>
                                                 
-                                                    <th>values</th>
+                                                    <th>adresseerbaarObjectIdentificatie</th>
+                                                
+                                                    <th>locatiebeschrijving</th>
+                                                
+                                                    <th>datumAanvangAdreshouding</th>
+                                                
+                                                    <th>datumAanvangVolgendeAdreshouding</th>
+                                                
+                                                    <th>datumAanvangAdresBuitenland</th>
+                                                
+                                                    <th>datumAanvangVolgendeAdresBuitenland</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.code</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.omschrijving</th>
                                                 
                                             </tr>
 
@@ -1658,13 +1355,54 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>1</td>
+                                                        <td></td>
                                                     
-                                                        <td>inschrijving</td>
+                                                        <td></td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                        <td>Luttestraat</td>
                                                     
-                                                        <td>0</td>
+                                                        <td>0800010000000002</td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>20200415</td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>0800</td>
+                                                    
+                                                        <td>Hoogeloon, Hapert en Casteren</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>6014</td>
+                                                    
+                                                        <td>Verenigde Staten van Amerika</td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>20200415</td>
+                                                    
+                                                        <td>20181201</td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
                                                     
                                                 </tr>
                                             
@@ -1673,24 +1411,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td></td>
                                                     
-                                                        <td>persoon</td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
-                                                    
-                                                        <td>9999,0,0,P,000000012,Jansen</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
+                                                        <td></td>
                                                     
                                                         <td></td>
                                                     
-                                                        <td>verblijfstitel</td>
+                                                        <td></td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl_verblijfstitel(pl_id,volg_nr,verblijfstitel_aand) VALUES($1,$2,$3)</td>
+                                                        <td>Woonboot bij de Grote Sloot</td>
                                                     
-                                                        <td>9999,0,37</td>
+                                                        <td>20160526</td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>20181201</td>
+                                                    
+                                                        <td>0800</td>
+                                                    
+                                                        <td>Hoogeloon, Hapert en Casteren</td>
                                                     
                                                 </tr>
                                             
@@ -1728,7 +1467,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>de 'verblijfstitel' is gewijzigd naar de volgende gegevens</small></h2>
+                <h2>Scenario: <small>Dan heeft de response een verblijfplaats voorkomen met de volgende gegevens</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1745,7 +1484,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
                         </li>
                     
 
@@ -1777,7 +1516,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
+                                        de response body is gelijk aan
                                         
                                     
 
@@ -1791,67 +1530,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
-                                    
-                                    
 
                                     
 
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
                                     
 
                                     
@@ -1865,64 +1546,6 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                             
 
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de persoon met burgerservicenummer '000000012' heeft een 'verblijfstitel' verkregen met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
                             
 
                             
@@ -1940,112 +1563,22 @@ input#darkCheck:checked ~ label>svg#moon {
                             
                                 <div class="scenario-scroll-bar">
                                     
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>aanduiding verblijfstitel (39.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>37</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
                                 </div>
 
                                 
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de 'verblijfstitel' is gewijzigd naar de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>aanduiding verblijfstitel (39.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>38</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
+                                    <pre class="info">{
+  "verblijfplaatsen": [
+    {
+      "adresseerbaarObjectIdentificatie": "0800010000000001",
+      "straat": "Laan",
+      "datumAanvangAdreshouding": "20100818",
+      "gemeenteVanInschrijving": {
+        "code": "0800",
+        "omschrijving": "Hoogeloon, Hapert en Casteren"
+      }
+    }
+  ]
+}</pre>
                                 
                             
                         
@@ -2067,7 +1600,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        zijn de gegenereerde SQL statements
+                                        heeft de response een verblijfplaats voorkomen met de volgende gegevens
                                         
                                     
 
@@ -2081,7 +1614,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -2104,6 +1639,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
@@ -2115,13 +1652,15 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>stap</th>
+                                                    <th>adresseerbaarObjectIdentificatie</th>
                                                 
-                                                    <th>categorie</th>
+                                                    <th>straat</th>
                                                 
-                                                    <th>text</th>
+                                                    <th>datumAanvangAdreshouding</th>
                                                 
-                                                    <th>values</th>
+                                                    <th>gemeenteVanInschrijving.code</th>
+                                                
+                                                    <th>gemeenteVanInschrijving.omschrijving</th>
                                                 
                                             </tr>
 
@@ -2129,52 +1668,15 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>1</td>
+                                                        <td>0800010000000001</td>
                                                     
-                                                        <td>inschrijving</td>
+                                                        <td>Laan</td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
+                                                        <td>20100818</td>
                                                     
-                                                        <td>0</td>
+                                                        <td>0800</td>
                                                     
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td>persoon</td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr) VALUES($1,$2,$3,$4,$5)</td>
-                                                    
-                                                        <td>9999,0,0,P,000000012</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td>verblijfstitel</td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_verblijfstitel(pl_id,volg_nr,verblijfstitel_aand) VALUES($1,$2,$3)</td>
-                                                    
-                                                        <td>9999,1,37</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_verblijfstitel(pl_id,volg_nr,verblijfstitel_aand) VALUES($1,$2,$3)</td>
-                                                    
-                                                        <td>9999,0,38</td>
+                                                        <td>Hoogeloon, Hapert en Casteren</td>
                                                     
                                                 </tr>
                                             
@@ -2212,7 +1714,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>Gegeven het 'verblijfstitel' is gecorrigeerd naar de volgende gegevens</small></h2>
+                <h2>Scenario: <small>Dan heeft het verblijfplaats voorkomen de volgende 'verblijfadres' gegevens</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -2229,7 +1731,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
                         </li>
                     
 
@@ -2261,7 +1763,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de 1e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '9999'
+                                        de response body is gelijk aan
                                         
                                     
 
@@ -2275,67 +1777,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
-                                    
-                                    
 
                                     
 
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        de 2e 'SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl' statement heeft als resultaat '10000'
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
                                     
 
                                     
@@ -2349,64 +1793,6 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                             
 
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de persoon met burgerservicenummer '000000012' heeft een 'verblijfstitel' verkregen met de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
                             
 
                             
@@ -2424,112 +1810,20 @@ input#darkCheck:checked ~ label>svg#moon {
                             
                                 <div class="scenario-scroll-bar">
                                     
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>aanduiding verblijfstitel (39.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>37</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
                                 </div>
 
                                 
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        het 'verblijfstitel' is gecorrigeerd naar de volgende gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>ingangsdatum geldigheid (85.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>20031107</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
+                                    <pre class="info">{
+  "verblijfplaatsen": [
+    {
+      "type": "Adres",
+      "adresseerbaarObjectIdentificatie": "0800010000000001",
+      "verblijfadres": {
+        "korteStraatnaam": "Laan"
+      }
+    }
+  ]
+}</pre>
                                 
                             
                         
@@ -2551,7 +1845,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        zijn de gegenereerde SQL statements
+                                        heeft de response een verblijfplaats voorkomen met de volgende gegevens
                                         
                                     
 
@@ -2565,7 +1859,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -2588,6 +1884,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             
 
                             
+
+                            
                         
 
                         
@@ -2599,13 +1897,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>stap</th>
+                                                    <th>type</th>
                                                 
-                                                    <th>categorie</th>
-                                                
-                                                    <th>text</th>
-                                                
-                                                    <th>values</th>
+                                                    <th>adresseerbaarObjectIdentificatie</th>
                                                 
                                             </tr>
 
@@ -2613,52 +1907,98 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>1</td>
+                                                        <td>Adres</td>
                                                     
-                                                        <td>inschrijving</td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *</td>
-                                                    
-                                                        <td>0</td>
+                                                        <td>0800010000000001</td>
                                                     
                                                 </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft het verblijfplaats voorkomen de volgende 'verblijfadres' gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>korteStraatnaam</th>
+                                                
+                                            </tr>
+
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td></td>
-                                                    
-                                                        <td>persoon</td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr) VALUES($1,$2,$3,$4,$5)</td>
-                                                    
-                                                        <td>9999,0,0,P,000000012</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td>verblijfstitel</td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_verblijfstitel(pl_id,volg_nr,verblijfstitel_aand,onjuist_ind) VALUES($1,$2,$3,$4)</td>
-                                                    
-                                                        <td>9999,1,37,O</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_verblijfstitel(pl_id,volg_nr,geldigheid_start_datum) VALUES($1,$2,$3)</td>
-                                                    
-                                                        <td>9999,0,20031107</td>
+                                                        <td>Laan</td>
                                                     
                                                 </tr>
                                             

@@ -410,6 +410,13 @@ ul.quick-list li i {
     max-width: 100%;
 }
 
+.videoCapture{
+    width: 50%;
+    height: 50%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
 /* Features / Scenarios */
 ul.panel_toolbox li .step {
     border-radius: 50%;
@@ -742,15 +749,15 @@ input#darkCheck:checked ~ label>svg#moon {
                 
             </div>
             <h1>Feature:
-                <small>Verblijfplaats dan stap definities</small>
+                <small>Gezagsrelatie dan stap definities</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    dan-stap-definities-verblijfplaats.feature
+                    dan-stap-definities-gezagsrelatie.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    docs/dan-stap-definities-verblijfplaats.feature</p>
+                    docs/dan-stap-definities-gezagsrelatie.feature</p>
             
         </div>
 
@@ -788,7 +795,7 @@ input#darkCheck:checked ~ label>svg#moon {
         <tr>
             <td class="chart">
                 <canvas id="scenario-chart"></canvas>
-                <div class="total">3</div>
+                <div class="total">7</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -871,7 +878,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>Dan heeft de response een persoon met de volgende 'verblijfplaats' gegevens</small></h2>
+                <h2>Scenario: <small>Dan heeft de response een persoon met een 'gezag' met (alleen) de volgende gegevens</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -934,7 +941,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -946,6 +955,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -969,234 +980,14 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <pre class="info">{
   "personen": [
     {
-      "verblijfplaats": {
-        "type": "VerblijfplaatsBuitenland"
-      }
-    }
-  ]
-}</pre>
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Dan </span>
-
-                                    
-                                        heeft de response een persoon met de volgende 'verblijfplaats' gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>type</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>VerblijfplaatsBuitenland</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                
-                        
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tag fa-lg"></i>
-                            
-                                <span class="tag">@stap-documentatie</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Scenario: <small>Dan heeft de 'verblijfplaats' de volgende 'verblijfadres' gegevens</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
-                        
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Gegeven </span>
-
-                                    
-                                        de response body is gelijk aan
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                </div>
-
-                                
-                                    <pre class="info">{
-  "personen": [
-    {
-      "verblijfplaats": {
-        "type": "VerblijfplaatsBuitenland",
-        "verblijfadres": {
-          "land": {
-            "code": "5010",
-            "omschrijving": "België"
+      "gezag": [
+        {
+          "type": "TweehoofdigOuderlijkGezag",
+          "minderjarige": {
+            "burgerservicenummer": "000000012"
           }
         }
-      }
+      ]
     }
   ]
 }</pre>
@@ -1221,7 +1012,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon met de volgende 'verblijfplaats' gegevens
+                                        heeft de response een persoon met een 'gezag' met de volgende gegevens
                                         
                                     
 
@@ -1235,7 +1026,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1247,6 +1040,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -1271,92 +1066,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 
                                                     <th>type</th>
                                                 
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>VerblijfplaatsBuitenland</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        heeft de 'verblijfplaats' de volgende 'verblijfadres' gegevens
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>naam</th>
-                                                
-                                                    <th>waarde</th>
+                                                    <th>minderjarige.burgerservicenummer</th>
                                                 
                                             </tr>
 
@@ -1364,18 +1074,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>land.code</td>
+                                                        <td>TweehoofdigOuderlijkGezag</td>
                                                     
-                                                        <td>5010</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>land.omschrijving</td>
-                                                    
-                                                        <td>België</td>
+                                                        <td>000000012</td>
                                                     
                                                 </tr>
                                             
@@ -1413,7 +1114,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>Dan heeft de 'verblijfplaats' geen 'verblijfadres' gegevens</small></h2>
+                <h2>Scenario: <small>Dan heeft de persoon een 'gezag' met de volgende gegevens</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1476,7 +1177,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1488,6 +1191,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -1511,10 +1216,20 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <pre class="info">{
   "personen": [
     {
-      "verblijfplaats": {
-        "type": "VerblijfplaatsBuitenland",
-        "verblijfadres": {}
-      }
+      "gezag": [
+        {
+          "type": "TweehoofdigOuderlijkGezag",
+          "minderjarige": {
+            "burgerservicenummer": "000000012"
+          }
+        },
+        {
+          "type": "GezamenlijkGezag",
+          "minderjarige": {
+            "burgerservicenummer": "000000013"
+          }
+        }
+      ]
     }
   ]
 }</pre>
@@ -1539,7 +1254,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon met de volgende 'verblijfplaats' gegevens
+                                        heeft de response een persoon met een 'gezag' met de volgende gegevens
                                         
                                     
 
@@ -1553,7 +1268,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1565,6 +1282,8 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
                             
 
                             
@@ -1589,13 +1308,17 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 
                                                     <th>type</th>
                                                 
+                                                    <th>minderjarige.burgerservicenummer</th>
+                                                
                                             </tr>
 
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>VerblijfplaatsBuitenland</td>
+                                                        <td>TweehoofdigOuderlijkGezag</td>
+                                                    
+                                                        <td>000000012</td>
                                                     
                                                 </tr>
                                             
@@ -1624,7 +1347,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de 'verblijfplaats' geen 'verblijfadres' gegevens
+                                        heeft de persoon een 'gezag' met de volgende gegevens
                                         
                                     
 
@@ -1638,7 +1361,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+
                                     
+
                                     
 
                                     
@@ -1650,6 +1375,1672 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>type</th>
+                                                
+                                                    <th>minderjarige.burgerservicenummer</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>GezamenlijkGezag</td>
+                                                    
+                                                        <td>000000013</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tag fa-lg"></i>
+                            
+                                <span class="tag">@stap-documentatie</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>Dan heeft (het) 'gezag' (nog) een 'ouder' met de volgende gegevens</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de response body is gelijk aan
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                </div>
+
+                                
+                                    <pre class="info">{
+  "personen": [
+    {
+      "gezag": [
+        {
+          "type": "TweehoofdigOuderlijkGezag",
+          "minderjarige": {
+            "burgerservicenummer": "000000012"
+          },
+          "ouders": [
+            {
+              "burgerservicenummer": "000000024"
+            },
+            {
+              "burgerservicenummer": "000000048"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</pre>
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response een persoon met een 'gezag' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>type</th>
+                                                
+                                                    <th>minderjarige.burgerservicenummer</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>TweehoofdigOuderlijkGezag</td>
+                                                    
+                                                        <td>000000012</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft 'gezag' een 'ouder' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>burgerservicenummer</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000024</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft het 'gezag' nog een 'ouder' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>burgerservicenummer</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000048</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tag fa-lg"></i>
+                            
+                                <span class="tag">@stap-documentatie</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>Dan heeft (het) 'gezag' een 'derde' met de volgende gegevens</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de response body is gelijk aan
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                </div>
+
+                                
+                                    <pre class="info">{
+  "personen": [
+    {
+      "gezag": [
+        {
+          "type": "Voogdij",
+          "minderjarige": {
+            "burgerservicenummer": "000000012"
+          },
+          "derden": [
+            {
+              "burgerservicenummer": "000000024"
+            },
+            {
+              "burgerservicenummer": "000000048"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</pre>
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response een persoon met een 'gezag' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>type</th>
+                                                
+                                                    <th>minderjarige.burgerservicenummer</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>Voogdij</td>
+                                                    
+                                                        <td>000000012</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft 'gezag' een 'derde' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>burgerservicenummer</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000024</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft 'gezag' een 'derde' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>burgerservicenummer</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000048</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tag fa-lg"></i>
+                            
+                                <span class="tag">@stap-documentatie</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>Dan heeft de response een persoon zonder 'gezag' gegevens</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de response body is gelijk aan
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                </div>
+
+                                
+                                    <pre class="info">{
+  "personen": [
+    {
+      "gezag": []
+    }
+  ]
+}</pre>
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response een persoon zonder gezag
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tag fa-lg"></i>
+                            
+                                <span class="tag">@stap-documentatie</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>Dan heeft de persoon geen gezag</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de response body is gelijk aan
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                </div>
+
+                                
+                                    <pre class="info">{
+  "personen": [
+    {
+      "burgerservicenummer": "000000061",
+      "gezag": []
+    }
+  ]
+}</pre>
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response een persoon met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>burgerservicenummer</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000061</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft de persoon geen gezag
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                
+                        
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height: auto;">
+            <div class="x_title">
+
+                <div class="tags">
+                    
+                        
+                        
+                            <i class="fa fa-tag fa-lg"></i>
+                            
+                                <span class="tag">@stap-documentatie</span>
+                            
+                        
+                    
+                </div>
+
+                <h2>Scenario: <small>Dan heeft (het) 'gezag' geen derden</small></h2>
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                        </li>
+                    
+
+                    
+
+                    
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content" style="display: none;">
+                <div class="scenario-step-container"></div>
+                    
+                        
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Gegeven </span>
+
+                                    
+                                        de response body is gelijk aan
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                </div>
+
+                                
+                                    <pre class="info">{
+  "personen": [
+    {
+      "gezag": [
+        {
+          "type": "Voogdij",
+          "minderjarige": {
+            "burgerservicenummer": "000000012"
+          },
+          "derden": []
+        }
+      ]
+    }
+  ]
+}</pre>
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Dan </span>
+
+                                    
+                                        heeft de response een persoon met een 'gezag' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>type</th>
+                                                
+                                                    <th>minderjarige.burgerservicenummer</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>Voogdij</td>
+                                                    
+                                                        <td>000000012</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft het 'gezag' geen derden
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
                             
 
                             
@@ -1729,7 +3120,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            3,
+                            7,
                             0,
                             0,
                             0,
