@@ -749,15 +749,17 @@ input#darkCheck:checked ~ label>svg#moon {
                 
             </div>
             <h1>Feature:
-                <small>Persoon: leeftijd veld in onderzoek</small>
+                <small>samenstellen van adresregels in gezag persoon beperkt</small>
             </h1>
             
                 <p>
+                    <strong>Description: </strong>   Als consumer van de BRP bevragen API<br>  Wil ik dat de verblijfplaats gegevens van een persoon kan worden gevraagd conform NEN 5825:2002<br>  Zodat ik de adresgegevens van de persoon op de correcte manier kan gebruiken </p>
+                
                <p><strong>File name:</strong>
-                    in-onderzoek.feature
+                    overzicht.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    leeftijd/in-onderzoek.feature</p>
+                    adres-regels/overzicht.feature</p>
             
         </div>
 
@@ -806,7 +808,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">100.00 %</td>
+                        <td class="percentage">0.00 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -815,7 +817,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Failed
                             </p>
                         </td>
-                        <td class="percentage">0.00 %</td>
+                        <td class="percentage">100.00 %</td>
                     
                     
                     </tr>
@@ -878,7 +880,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>'hele categorie persoon' is in onderzoek en leeftijd wordt gevraagd</small></h2>
+                <h2>Scenario: <small>persoon heeft een adres met alleen een straatnaam en huisnummer als verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -892,10 +894,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -927,7 +933,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de persoon met burgerservicenummer '000000152' heeft de volgende gegevens
+                                        adres 'A1' heeft de volgende gegevens
                                         
                                     
 
@@ -979,9 +985,13 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>gemeentecode (92.10)</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>identificatiecode verblijfplaats (11.80)</th>
                                                 
                                             </tr>
 
@@ -989,27 +999,102 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geboortedatum (03.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>vandaag - 10 jaar</td>
+                                                        <td>Jonkheer van Riemsdijkln</td>
+                                                    
+                                                        <td>88</td>
+                                                    
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000188' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>aanduiding in onderzoek (83.10)</td>
-                                                    
-                                                        <td>010000</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>datum ingang onderzoek (83.20)</td>
-                                                    
-                                                        <td>20020701</td>
+                                                        <td>20200401</td>
                                                     
                                                 </tr>
                                             
@@ -1102,16 +1187,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>000000152</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -1120,7 +1205,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adressering.adresregel1</td>
                                                     
                                                 </tr>
                                             
@@ -1149,7 +1234,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon met de volgende gegevens
+                                        heeft de response een persoon met alleen de volgende 'adressering' gegevens
                                         
                                     
 
@@ -1211,45 +1296,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adresregel1</td>
                                                     
-                                                        <td>10</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.leeftijd</td>
-                                                    
-                                                        <td>true</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.datumIngangOnderzoekPersoon.type</td>
-                                                    
-                                                        <td>Datum</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.datumIngangOnderzoekPersoon.datum</td>
-                                                    
-                                                        <td>2002-07-01</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.datumIngangOnderzoekPersoon.langFormaat</td>
-                                                    
-                                                        <td>1 juli 2002</td>
+                                                        <td>Jonkheer van Riemsdijkln 88</td>
                                                     
                                                 </tr>
                                             
@@ -1287,7 +1336,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>'hele groep geboorte' is in onderzoek en leeftijd wordt gevraagd</small></h2>
+                <h2>Scenario: <small>persoon heeft een adres met straatnaam, huisnummer en huisletter als verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1301,10 +1350,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -1336,7 +1389,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de persoon met burgerservicenummer '000000152' heeft de volgende gegevens
+                                        adres 'A1' heeft de volgende gegevens
                                         
                                     
 
@@ -1388,9 +1441,15 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>gemeentecode (92.10)</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>huisletter (11.30)</th>
+                                                
+                                                    <th>identificatiecode verblijfplaats (11.80)</th>
                                                 
                                             </tr>
 
@@ -1398,27 +1457,104 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geboortedatum (03.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>vandaag - 10 jaar</td>
+                                                        <td>Borgesiusstraat</td>
+                                                    
+                                                        <td>103</td>
+                                                    
+                                                        <td>c</td>
+                                                    
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000188' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>aanduiding in onderzoek (83.10)</td>
-                                                    
-                                                        <td>010300</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>datum ingang onderzoek (83.20)</td>
-                                                    
-                                                        <td>20020701</td>
+                                                        <td>20200401</td>
                                                     
                                                 </tr>
                                             
@@ -1511,16 +1647,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>000000152</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -1529,7 +1665,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adressering.adresregel1</td>
                                                     
                                                 </tr>
                                             
@@ -1558,7 +1694,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon met de volgende gegevens
+                                        heeft de response een persoon met alleen de volgende 'adressering' gegevens
                                         
                                     
 
@@ -1620,45 +1756,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adresregel1</td>
                                                     
-                                                        <td>10</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.leeftijd</td>
-                                                    
-                                                        <td>true</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.datumIngangOnderzoekPersoon.type</td>
-                                                    
-                                                        <td>Datum</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.datumIngangOnderzoekPersoon.datum</td>
-                                                    
-                                                        <td>2002-07-01</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.datumIngangOnderzoekPersoon.langFormaat</td>
-                                                    
-                                                        <td>1 juli 2002</td>
+                                                        <td>Borgesiusstraat 103 c</td>
                                                     
                                                 </tr>
                                             
@@ -1696,7 +1796,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>'geboortedatum' is in onderzoek en leeftijd wordt gevraagd</small></h2>
+                <h2>Scenario: <small>persoon heeft een adres met straatnaam, huisnummer en huisnummertoevoeging die begint met een letter als verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1710,10 +1810,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -1745,7 +1849,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de persoon met burgerservicenummer '000000152' heeft de volgende gegevens
+                                        adres 'A1' heeft de volgende gegevens
                                         
                                     
 
@@ -1797,9 +1901,15 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>gemeentecode (92.10)</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>huisnummertoevoeging (11.40)</th>
+                                                
+                                                    <th>identificatiecode verblijfplaats (11.80)</th>
                                                 
                                             </tr>
 
@@ -1807,27 +1917,104 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geboortedatum (03.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>vandaag - 10 jaar</td>
+                                                        <td>Daniël Stalpertstraat</td>
+                                                    
+                                                        <td>35</td>
+                                                    
+                                                        <td>III</td>
+                                                    
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000188' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>aanduiding in onderzoek (83.10)</td>
-                                                    
-                                                        <td>010310</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>datum ingang onderzoek (83.20)</td>
-                                                    
-                                                        <td>20020701</td>
+                                                        <td>20200401</td>
                                                     
                                                 </tr>
                                             
@@ -1920,16 +2107,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>000000152</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -1938,7 +2125,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adressering.adresregel1</td>
                                                     
                                                 </tr>
                                             
@@ -1967,7 +2154,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon met de volgende gegevens
+                                        heeft de response een persoon met alleen de volgende 'adressering' gegevens
                                         
                                     
 
@@ -2029,45 +2216,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adresregel1</td>
                                                     
-                                                        <td>10</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.leeftijd</td>
-                                                    
-                                                        <td>true</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.datumIngangOnderzoekPersoon.type</td>
-                                                    
-                                                        <td>Datum</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.datumIngangOnderzoekPersoon.datum</td>
-                                                    
-                                                        <td>2002-07-01</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>inOnderzoek.datumIngangOnderzoekPersoon.langFormaat</td>
-                                                    
-                                                        <td>1 juli 2002</td>
+                                                        <td>Daniël Stalpertstraat 35 III</td>
                                                     
                                                 </tr>
                                             
@@ -2105,7 +2256,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>'geboorteplaats' is in onderzoek en leeftijd wordt gevraagd</small></h2>
+                <h2>Scenario: <small>persoon heeft een adres met straatnaam, huisnummer en huisnummertoevoeging die begint met een cijfer als verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -2119,10 +2270,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -2154,7 +2309,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de persoon met burgerservicenummer '000000152' heeft de volgende gegevens
+                                        adres 'A1' heeft de volgende gegevens
                                         
                                     
 
@@ -2206,9 +2361,15 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>gemeentecode (92.10)</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>huisnummertoevoeging (11.40)</th>
+                                                
+                                                    <th>identificatiecode verblijfplaats (11.80)</th>
                                                 
                                             </tr>
 
@@ -2216,27 +2377,104 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geboortedatum (03.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>vandaag - 10 jaar</td>
+                                                        <td>Atatürkstraat</td>
+                                                    
+                                                        <td>9</td>
+                                                    
+                                                        <td>2</td>
+                                                    
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000188' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>aanduiding in onderzoek (83.10)</td>
-                                                    
-                                                        <td>010320</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>datum ingang onderzoek (83.20)</td>
-                                                    
-                                                        <td>20020701</td>
+                                                        <td>20200401</td>
                                                     
                                                 </tr>
                                             
@@ -2329,16 +2567,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>000000152</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -2347,7 +2585,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adressering.adresregel1</td>
                                                     
                                                 </tr>
                                             
@@ -2376,7 +2614,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon met de volgende gegevens
+                                        heeft de response een persoon met alleen de volgende 'adressering' gegevens
                                         
                                     
 
@@ -2438,9 +2676,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adresregel1</td>
                                                     
-                                                        <td>10</td>
+                                                        <td>Atatürkstraat 9-2</td>
                                                     
                                                 </tr>
                                             
@@ -2478,7 +2716,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>'geboorteland' is in onderzoek en leeftijd wordt gevraagd</small></h2>
+                <h2>Scenario: <small>persoon heeft een adres met straatnaam, huisnummer, huisletter en huisnummertoevoeging die begint met een letter als verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -2492,10 +2730,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -2527,7 +2769,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de persoon met burgerservicenummer '000000152' heeft de volgende gegevens
+                                        adres 'A1' heeft de volgende gegevens
                                         
                                     
 
@@ -2579,9 +2821,17 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>gemeentecode (92.10)</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>huisletter (11.30)</th>
+                                                
+                                                    <th>huisnummertoevoeging (11.40)</th>
+                                                
+                                                    <th>identificatiecode verblijfplaats (11.80)</th>
                                                 
                                             </tr>
 
@@ -2589,27 +2839,106 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geboortedatum (03.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>vandaag - 10 jaar</td>
+                                                        <td>St. Jacobsstraat</td>
+                                                    
+                                                        <td>400</td>
+                                                    
+                                                        <td>L</td>
+                                                    
+                                                        <td>Toe</td>
+                                                    
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000188' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>aanduiding in onderzoek (83.10)</td>
-                                                    
-                                                        <td>010330</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>datum ingang onderzoek (83.20)</td>
-                                                    
-                                                        <td>20020701</td>
+                                                        <td>20200401</td>
                                                     
                                                 </tr>
                                             
@@ -2702,16 +3031,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>000000152</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -2720,7 +3049,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adressering.adresregel1</td>
                                                     
                                                 </tr>
                                             
@@ -2749,7 +3078,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon met de volgende gegevens
+                                        heeft de response een persoon met alleen de volgende 'adressering' gegevens
                                         
                                     
 
@@ -2811,9 +3140,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>leeftijd</td>
+                                                        <td>adresregel1</td>
                                                     
-                                                        <td>10</td>
+                                                        <td>St. Jacobsstraat 400 LToe</td>
                                                     
                                                 </tr>
                                             
@@ -2851,7 +3180,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>'hele categorie persoon' is in onderzoek en leeftijd wordt niet gevraagd</small></h2>
+                <h2>Scenario: <small>persoon heeft een adres met straatnaam, huisnummer, huisletter en huisnummertoevoeging die begint met een cijfer als verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -2865,10 +3194,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -2900,7 +3233,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de persoon met burgerservicenummer '000000152' heeft de volgende gegevens
+                                        adres 'A1' heeft de volgende gegevens
                                         
                                     
 
@@ -2952,9 +3285,17 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>gemeentecode (92.10)</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>huisletter (11.30)</th>
+                                                
+                                                    <th>huisnummertoevoeging (11.40)</th>
+                                                
+                                                    <th>identificatiecode verblijfplaats (11.80)</th>
                                                 
                                             </tr>
 
@@ -2962,27 +3303,106 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geboortedatum (03.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>vandaag - 10 jaar</td>
+                                                        <td>Cronus</td>
+                                                    
+                                                        <td>555</td>
+                                                    
+                                                        <td>B</td>
+                                                    
+                                                        <td>73c</td>
+                                                    
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000188' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>aanduiding in onderzoek (83.10)</td>
-                                                    
-                                                        <td>010000</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>datum ingang onderzoek (83.20)</td>
-                                                    
-                                                        <td>20020701</td>
+                                                        <td>20200401</td>
                                                     
                                                 </tr>
                                             
@@ -3075,16 +3495,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>000000152</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -3093,7 +3513,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>verblijfplaats</td>
+                                                        <td>adressering.adresregel1</td>
                                                     
                                                 </tr>
                                             
@@ -3122,7 +3542,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon zonder gegevens
+                                        heeft de response een persoon met alleen de volgende 'adressering' gegevens
                                         
                                     
 
@@ -3166,6 +3586,35 @@ input#darkCheck:checked ~ label>svg#moon {
                         
 
                         
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresregel1</td>
+                                                    
+                                                        <td>Cronus 555 B73c</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
                             
                         
 
@@ -3195,7 +3644,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>'hele groep geboorte' is in onderzoek en leeftijd wordt niet gevraagd</small></h2>
+                <h2>Scenario: <small>persoon heeft een adres met postcode en woonplaats als verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -3209,10 +3658,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -3244,7 +3697,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de persoon met burgerservicenummer '000000152' heeft de volgende gegevens
+                                        adres 'A1' heeft de volgende gegevens
                                         
                                     
 
@@ -3296,9 +3749,17 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>gemeentecode (92.10)</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>postcode (11.60)</th>
+                                                
+                                                    <th>woonplaats (11.70)</th>
+                                                
+                                                    <th>identificatiecode verblijfplaats (11.80)</th>
                                                 
                                             </tr>
 
@@ -3306,27 +3767,110 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geboortedatum (03.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>vandaag - 10 jaar</td>
+                                                        <td>een straat</td>
+                                                    
+                                                        <td>1</td>
+                                                    
+                                                        <td>2583XL</td>
+                                                    
+                                                        <td>Scheveningen</td>
+                                                    
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000188' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>gemeente van inschrijving (09.10)</th>
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>aanduiding in onderzoek (83.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>010300</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>datum ingang onderzoek (83.20)</td>
-                                                    
-                                                        <td>20020701</td>
+                                                        <td>20200401</td>
                                                     
                                                 </tr>
                                             
@@ -3419,16 +3963,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>000000152</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -3437,7 +3981,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>verblijfplaats</td>
+                                                        <td>adressering.adresregel2</td>
                                                     
                                                 </tr>
                                             
@@ -3466,7 +4010,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon zonder gegevens
+                                        heeft de response een persoon met alleen de volgende 'adressering' gegevens
                                         
                                     
 
@@ -3510,6 +4054,35 @@ input#darkCheck:checked ~ label>svg#moon {
                         
 
                         
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresregel2</td>
+                                                    
+                                                        <td>2583 XL  SCHEVENINGEN</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
                             
                         
 
@@ -3539,7 +4112,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>'geboortedatum' is in onderzoek en leeftijd wordt niet gevraagd</small></h2>
+                <h2>Scenario: <small>persoon heeft een adres met postcode en zonder woonplaats als verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -3553,10 +4126,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
                         </li>
                     
 
@@ -3588,7 +4165,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        de persoon met burgerservicenummer '000000152' heeft de volgende gegevens
+                                        adres 'A1' heeft de volgende gegevens
                                         
                                     
 
@@ -3640,9 +4217,15 @@ input#darkCheck:checked ~ label>svg#moon {
                                             <tr>
                                                 
                                                 
-                                                    <th>naam</th>
+                                                    <th>gemeentecode (92.10)</th>
                                                 
-                                                    <th>waarde</th>
+                                                    <th>straatnaam (11.10)</th>
+                                                
+                                                    <th>huisnummer (11.20)</th>
+                                                
+                                                    <th>postcode (11.60)</th>
+                                                
+                                                    <th>identificatiecode verblijfplaats (11.80)</th>
                                                 
                                             </tr>
 
@@ -3650,27 +4233,108 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>geboortedatum (03.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>vandaag - 10 jaar</td>
+                                                        <td>een straat</td>
+                                                    
+                                                        <td>1</td>
+                                                    
+                                                        <td>2584BZ</td>
+                                                    
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        de persoon met burgerservicenummer '000000188' is ingeschreven op adres 'A1' met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>gemeente van inschrijving (09.10)</th>
+                                                
+                                                    <th>datum aanvang adreshouding (10.30)</th>
+                                                
+                                            </tr>
+
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>aanduiding in onderzoek (83.10)</td>
+                                                        <td>0518</td>
                                                     
-                                                        <td>010310</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>datum ingang onderzoek (83.20)</td>
-                                                    
-                                                        <td>20020701</td>
+                                                        <td>20200401</td>
                                                     
                                                 </tr>
                                             
@@ -3763,16 +4427,16 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>RaadpleegMetBurgerservicenummer</td>
+                                                        <td>ZoekMetAdresseerbaarObjectIdentificatie</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>burgerservicenummer</td>
+                                                        <td>adresseerbaarObjectIdentificatie</td>
                                                     
-                                                        <td>000000152</td>
+                                                        <td>0599010051001502</td>
                                                     
                                                 </tr>
                                             
@@ -3781,7 +4445,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>fields</td>
                                                     
-                                                        <td>verblijfplaats</td>
+                                                        <td>adressering.adresregel2</td>
                                                     
                                                 </tr>
                                             
@@ -3810,7 +4474,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Dan </span>
 
                                     
-                                        heeft de response een persoon zonder gegevens
+                                        heeft de response een persoon met alleen de volgende 'adressering' gegevens
                                         
                                     
 
@@ -3854,6 +4518,35 @@ input#darkCheck:checked ~ label>svg#moon {
                         
 
                         
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresregel2</td>
+                                                    
+                                                        <td>2584 BZ  'S-GRAVENHAGE</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
                             
                         
 
@@ -3919,8 +4612,8 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            8,
                             0,
+                            8,
                             0,
                             0,
                             0,
