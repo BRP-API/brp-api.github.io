@@ -806,7 +806,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">100.00 %</td>
+                        <td class="percentage">0.00 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -815,7 +815,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Failed
                             </p>
                         </td>
-                        <td class="percentage">0.00 %</td>
+                        <td class="percentage">100.00 %</td>
                     
                     
                     </tr>
@@ -892,10 +892,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">7</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
@@ -1301,8 +1305,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
+                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
                                         </div>
                                     
                                 
@@ -1323,6 +1327,8 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+                                        <a href="#error0-7-error" data-toggle="collapse">+ Show Error</a>
+                                    
 
                                     
 
@@ -1339,6 +1345,228 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+                                <div id="error0-7-error" class="scenario-step-collapse collapse">
+                                    <pre class=info>AssertionError: {
+	"personen": [
+		{
+			"stap": "persoon-P2",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"P",
+						"000000012",
+						"P2"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"K",
+						"000000036",
+						"P1"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P1",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"1",
+						"P",
+						"000000036",
+						"P1",
+						"O"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"P",
+						"000000036",
+						"P1",
+						"1AQ0100"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "ouder-1",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"1",
+						"000000012",
+						"P2",
+						"20201219"
+					]
+				}
+			]
+		}
+	]
+} != {
+	"personen": [
+		{
+			"stap": "persoon-P2",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"P",
+						"000000012",
+						"P2"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"K",
+						"000000036",
+						"P1"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P1",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"1",
+						"P",
+						"000000036",
+						"P1"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"P",
+						"000000036",
+						"P1",
+						"1AQ0100"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "ouder-1",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"1",
+						"000000012",
+						"P2",
+						"20201219"
+					]
+				}
+			]
+		}
+	]
+}: expected { personen: [ { …(2) }, { …(2) } ] } to deeply equal { personen: [ { …(2) }, { …(2) } ] }
+    + expected - actual
+
+               ]
+             }
+             {
+               "categorie": "persoon"
+    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
+    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)"
+               "values": [
+                 "0"
+    -            "0"
+                 "000000036"
+    +            "1"
+                 "10000"
+    -            "1AQ0100"
+                 "P"
+                 "P1"
+               ]
+             }
+             {
+               "categorie": "persoon"
+    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)"
+    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
+               "values": [
+                 "0"
+    +            "0"
+                 "000000036"
+    -            "1"
+                 "10000"
+    -            "O"
+    +            "1AQ0100"
+                 "P"
+                 "P1"
+               ]
+             }
+
+    at Proxy.equalInAnyOrder (/home/runner/work/personen-data-service/personen-data-service/node_modules/deep-equal-in-any-order/build/index.js:33:10)
+    at Proxy.methodWrapper (/home/runner/work/personen-data-service/personen-data-service/node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+    at World.(anonymous) (/home/runner/work/personen-data-service/personen-data-service/features/step_definitions/docs-stepdefs.js:179:28)</pre>
+                                </div>
                             
 
                             
@@ -1513,10 +1741,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">7</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
@@ -1922,8 +2154,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
+                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
                                         </div>
                                     
                                 
@@ -1944,6 +2176,8 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+                                        <a href="#error1-7-error" data-toggle="collapse">+ Show Error</a>
+                                    
 
                                     
 
@@ -1960,6 +2194,228 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+                                <div id="error1-7-error" class="scenario-step-collapse collapse">
+                                    <pre class=info>AssertionError: {
+	"personen": [
+		{
+			"stap": "persoon-P2",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"P",
+						"000000012",
+						"P2"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"K",
+						"000000036",
+						"P1"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P1",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"1",
+						"P",
+						"000000036",
+						"P1",
+						"O"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"P",
+						"000000036",
+						"P1",
+						"1AQ0100"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "ouder-2",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"2",
+						"000000012",
+						"P2",
+						"20201219"
+					]
+				}
+			]
+		}
+	]
+} != {
+	"personen": [
+		{
+			"stap": "persoon-P2",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"P",
+						"000000012",
+						"P2"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"K",
+						"000000036",
+						"P1"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P1",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"1",
+						"P",
+						"000000036",
+						"P1"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"P",
+						"000000036",
+						"P1",
+						"1AQ0100"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "ouder-2",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"2",
+						"000000012",
+						"P2",
+						"20201219"
+					]
+				}
+			]
+		}
+	]
+}: expected { personen: [ { …(2) }, { …(2) } ] } to deeply equal { personen: [ { …(2) }, { …(2) } ] }
+    + expected - actual
+
+               ]
+             }
+             {
+               "categorie": "persoon"
+    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
+    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)"
+               "values": [
+                 "0"
+    -            "0"
+                 "000000036"
+    +            "1"
+                 "10000"
+    -            "1AQ0100"
+                 "P"
+                 "P1"
+               ]
+             }
+             {
+               "categorie": "persoon"
+    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)"
+    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
+               "values": [
+                 "0"
+    +            "0"
+                 "000000036"
+    -            "1"
+                 "10000"
+    -            "O"
+    +            "1AQ0100"
+                 "P"
+                 "P1"
+               ]
+             }
+
+    at Proxy.equalInAnyOrder (/home/runner/work/personen-data-service/personen-data-service/node_modules/deep-equal-in-any-order/build/index.js:33:10)
+    at Proxy.methodWrapper (/home/runner/work/personen-data-service/personen-data-service/node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+    at World.(anonymous) (/home/runner/work/personen-data-service/personen-data-service/features/step_definitions/docs-stepdefs.js:179:28)</pre>
+                                </div>
                             
 
                             
@@ -2134,10 +2590,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">7</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
@@ -2489,7 +2949,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">* </span>
 
                                     
-                                        is geadopteerd door 'P1' als ouder 1 met de volgende gegevens
+                                        'P2' is geadopteerd door 'P1' als ouder 1 met de volgende gegevens
                                         
                                     
 
@@ -2572,8 +3032,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
+                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
                                         </div>
                                     
                                 
@@ -2594,6 +3054,8 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+                                        <a href="#error2-7-error" data-toggle="collapse">+ Show Error</a>
+                                    
 
                                     
 
@@ -2610,6 +3072,230 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+                                <div id="error2-7-error" class="scenario-step-collapse collapse">
+                                    <pre class=info>AssertionError: {
+	"personen": [
+		{
+			"stap": "persoon-P1",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"P",
+						"000000012",
+						"P1"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"K",
+						"000000024",
+						"P2"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P2",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"1",
+						"P",
+						"000000024",
+						"P2",
+						"O"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"P",
+						"000000024",
+						"P2",
+						"1AQ0100"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)",
+					"categorie": "ouder-1",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"1",
+						"000000012",
+						"P1",
+						"20191217",
+						"2BR1211"
+					]
+				}
+			]
+		}
+	]
+} != {
+	"personen": [
+		{
+			"stap": "persoon-P1",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"P",
+						"000000012",
+						"P1"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"K",
+						"000000024",
+						"P2"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P2",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"1",
+						"P",
+						"000000024",
+						"P2"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"P",
+						"000000024",
+						"P2",
+						"1AQ0100"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)",
+					"categorie": "ouder-1",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"1",
+						"000000012",
+						"P1",
+						"20191217",
+						"2BR1211"
+					]
+				}
+			]
+		}
+	]
+}: expected { personen: [ { …(2) }, { …(2) } ] } to deeply equal { personen: [ { …(2) }, { …(2) } ] }
+    + expected - actual
+
+               ]
+             }
+             {
+               "categorie": "persoon"
+    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
+    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)"
+               "values": [
+                 "0"
+    -            "0"
+                 "000000024"
+    +            "1"
+                 "10000"
+    -            "1AQ0100"
+                 "P"
+                 "P2"
+               ]
+             }
+             {
+               "categorie": "persoon"
+    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)"
+    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
+               "values": [
+                 "0"
+    +            "0"
+                 "000000024"
+    -            "1"
+                 "10000"
+    -            "O"
+    +            "1AQ0100"
+                 "P"
+                 "P2"
+               ]
+             }
+
+    at Proxy.equalInAnyOrder (/home/runner/work/personen-data-service/personen-data-service/node_modules/deep-equal-in-any-order/build/index.js:33:10)
+    at Proxy.methodWrapper (/home/runner/work/personen-data-service/personen-data-service/node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+    at World.(anonymous) (/home/runner/work/personen-data-service/personen-data-service/features/step_definitions/docs-stepdefs.js:179:28)</pre>
+                                </div>
                             
 
                             
@@ -2784,10 +3470,14 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">10</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">9</span>
                         </li>
                     
 
@@ -3385,8 +4075,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
+                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
                                         </div>
                                     
                                 
@@ -3407,6 +4097,8 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
+                                        <a href="#error3-10-error" data-toggle="collapse">+ Show Error</a>
+                                    
 
                                     
 
@@ -3423,6 +4115,378 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
+                            
+                                <div id="error3-10-error" class="scenario-step-collapse collapse">
+                                    <pre class=info>AssertionError: {
+	"personen": [
+		{
+			"stap": "persoon-P2",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"P",
+						"000000012",
+						"P2"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"K",
+						"000000036",
+						"P1"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P3",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"P",
+						"000000024",
+						"P3"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"K",
+						"000000036",
+						"P1"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P1",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7,$8)",
+					"categorie": "persoon",
+					"values": [
+						"10001",
+						"0",
+						"2",
+						"P",
+						"000000036",
+						"P1",
+						"20071217",
+						"O"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)",
+					"categorie": "persoon",
+					"values": [
+						"10001",
+						"0",
+						"1",
+						"P",
+						"000000036",
+						"P1",
+						"20071217",
+						"1AQ0100",
+						"O"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)",
+					"categorie": "persoon",
+					"values": [
+						"10001",
+						"0",
+						"0",
+						"P",
+						"000000036",
+						"P1",
+						"20071217",
+						"1AQ0100"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "ouder-1",
+					"values": [
+						"10001",
+						"0",
+						"0",
+						"1",
+						"000000012",
+						"P2",
+						"20201219"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "ouder-2",
+					"values": [
+						"10001",
+						"0",
+						"0",
+						"2",
+						"000000024",
+						"P3",
+						"20201219"
+					]
+				}
+			]
+		}
+	]
+} != {
+	"personen": [
+		{
+			"stap": "persoon-P2",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"P",
+						"000000012",
+						"P2"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"9999",
+						"0",
+						"0",
+						"K",
+						"000000036",
+						"P1"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P3",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "persoon",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"P",
+						"000000024",
+						"P3"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
+					"categorie": "kind-1",
+					"values": [
+						"10000",
+						"0",
+						"0",
+						"K",
+						"000000036",
+						"P1"
+					]
+				}
+			]
+		},
+		{
+			"stap": "persoon-P1",
+			"statements": [
+				{
+					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
+					"categorie": "inschrijving",
+					"values": [
+						"0"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "persoon",
+					"values": [
+						"10001",
+						"0",
+						"2",
+						"P",
+						"000000036",
+						"P1",
+						"20071217"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)",
+					"categorie": "persoon",
+					"values": [
+						"10001",
+						"0",
+						"1",
+						"P",
+						"000000036",
+						"P1",
+						"20071217",
+						"1AQ0100"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)",
+					"categorie": "persoon",
+					"values": [
+						"10001",
+						"0",
+						"0",
+						"P",
+						"000000036",
+						"P1",
+						"20071217",
+						"1AQ0100"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "ouder-1",
+					"values": [
+						"10001",
+						"0",
+						"0",
+						"1",
+						"000000012",
+						"P2",
+						"20201219"
+					]
+				},
+				{
+					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
+					"categorie": "ouder-2",
+					"values": [
+						"10001",
+						"0",
+						"0",
+						"2",
+						"000000024",
+						"P3",
+						"20201219"
+					]
+				}
+			]
+		}
+	]
+}: expected { personen: [ { …(2) }, …(2) ] } to deeply equal { personen: [ { …(2) }, …(2) ] }
+    + expected - actual
+
+               ]
+             }
+             {
+               "categorie": "persoon"
+    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)"
+    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum) VALUES($1,$2,$3,$4,$5,$6,$7)"
+               "values": [
+                 "0"
+    -            "0"
+                 "000000036"
+                 "10001"
+    -            "1AQ0100"
+    +            "2"
+                 "20071217"
+                 "P"
+                 "P1"
+               ]
+             }
+             {
+               "categorie": "persoon"
+    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)"
+    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)"
+               "values": [
+                 "0"
+    +            "0"
+                 "000000036"
+    -            "1"
+                 "10001"
+                 "1AQ0100"
+                 "20071217"
+    -            "O"
+                 "P"
+                 "P1"
+               ]
+             }
+             {
+               "categorie": "persoon"
+    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7,$8)"
+    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)"
+               "values": [
+                 "0"
+                 "000000036"
+    +            "1"
+                 "10001"
+    -            "2"
+    +            "1AQ0100"
+                 "20071217"
+    -            "O"
+                 "P"
+                 "P1"
+               ]
+             }
+
+    at Proxy.equalInAnyOrder (/home/runner/work/personen-data-service/personen-data-service/node_modules/deep-equal-in-any-order/build/index.js:33:10)
+    at Proxy.methodWrapper (/home/runner/work/personen-data-service/personen-data-service/node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+    at World.(anonymous) (/home/runner/work/personen-data-service/personen-data-service/features/step_definitions/docs-stepdefs.js:179:28)</pre>
+                                </div>
                             
 
                             
@@ -3684,8 +4748,8 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            4,
                             0,
+                            4,
                             0,
                             0,
                             0,
