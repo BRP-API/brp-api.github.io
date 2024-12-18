@@ -806,7 +806,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">76.92 %</td>
+                        <td class="percentage">100.00 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -815,18 +815,8 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Failed
                             </p>
                         </td>
-                        <td class="percentage">7.69 %</td>
+                        <td class="percentage">0.00 %</td>
                     
-                    
-                    <tr>
-                        <td>
-                            <p data-toggle="tooltip" data-placement="left" title="Scenario has no step implmentation.">
-                                <i class="fa fa-question-circle not-defined-color"></i>
-                                Not defined
-                            </p>
-                        </td>
-                        <td class="percentage">15.38 %</td>
-                    </tr>
                     
                     </tr>
                     
@@ -12651,14 +12641,10 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-                        <li>
-                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
-                        </li>
-                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">7</span>
                         </li>
                     
 
@@ -13064,8 +13050,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
-                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -13086,8 +13072,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
-                                        <a href="#error19-7-error" data-toggle="collapse">+ Show Error</a>
-                                    
 
                                     
 
@@ -13104,228 +13088,6 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
-                            
-                                <div id="error19-7-error" class="scenario-step-collapse collapse">
-                                    <pre class=info>AssertionError: {
-	"personen": [
-		{
-			"stap": "persoon-P1",
-			"statements": [
-				{
-					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
-					"categorie": "inschrijving",
-					"values": [
-						"0"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "persoon",
-					"values": [
-						"9999",
-						"0",
-						"0",
-						"P",
-						"000000012",
-						"P1"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "kind-1",
-					"values": [
-						"9999",
-						"0",
-						"0",
-						"K",
-						"000000024",
-						"P2"
-					]
-				}
-			]
-		},
-		{
-			"stap": "persoon-P2",
-			"statements": [
-				{
-					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
-					"categorie": "inschrijving",
-					"values": [
-						"0"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "persoon",
-					"values": [
-						"10000",
-						"0",
-						"1",
-						"P",
-						"000000024",
-						"P2",
-						"O"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "persoon",
-					"values": [
-						"10000",
-						"0",
-						"0",
-						"P",
-						"000000024",
-						"P2",
-						"1AQ0100"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "ouder-1",
-					"values": [
-						"10000",
-						"0",
-						"0",
-						"1",
-						"000000012",
-						"P1",
-						"20201219"
-					]
-				}
-			]
-		}
-	]
-} != {
-	"personen": [
-		{
-			"stap": "persoon-P1",
-			"statements": [
-				{
-					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
-					"categorie": "inschrijving",
-					"values": [
-						"0"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "persoon",
-					"values": [
-						"9999",
-						"0",
-						"0",
-						"P",
-						"000000012",
-						"P1"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "kind-1",
-					"values": [
-						"9999",
-						"0",
-						"0",
-						"K",
-						"000000024",
-						"P2"
-					]
-				}
-			]
-		},
-		{
-			"stap": "persoon-P2",
-			"statements": [
-				{
-					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
-					"categorie": "inschrijving",
-					"values": [
-						"0"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "persoon",
-					"values": [
-						"10000",
-						"0",
-						"1",
-						"P",
-						"000000024",
-						"P2"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "persoon",
-					"values": [
-						"10000",
-						"0",
-						"0",
-						"P",
-						"000000024",
-						"P2",
-						"1AQ0100"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "ouder-1",
-					"values": [
-						"10000",
-						"0",
-						"0",
-						"1",
-						"000000012",
-						"P1",
-						"20201219"
-					]
-				}
-			]
-		}
-	]
-}: expected { personen: [ { …(2) }, { …(2) } ] } to deeply equal { personen: [ { …(2) }, { …(2) } ] }
-    + expected - actual
-
-               ]
-             }
-             {
-               "categorie": "persoon"
-    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
-    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)"
-               "values": [
-                 "0"
-    -            "0"
-                 "000000024"
-    +            "1"
-                 "10000"
-    -            "1AQ0100"
-                 "P"
-                 "P2"
-               ]
-             }
-             {
-               "categorie": "persoon"
-    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)"
-    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
-               "values": [
-                 "0"
-    +            "0"
-                 "000000024"
-    -            "1"
-                 "10000"
-    -            "O"
-    +            "1AQ0100"
-                 "P"
-                 "P2"
-               ]
-             }
-
-    at Proxy.equalInAnyOrder (/home/runner/work/personen-data-service/personen-data-service/node_modules/deep-equal-in-any-order/build/index.js:33:10)
-    at Proxy.methodWrapper (/home/runner/work/personen-data-service/personen-data-service/node_modules/chai/lib/chai/utils/addMethod.js:57:25)
-    at World.(anonymous) (/home/runner/work/personen-data-service/personen-data-service/features/step_definitions/docs-stepdefs.js:179:28)</pre>
-                                </div>
                             
 
                             
@@ -13420,9 +13182,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>persoon</td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)</td>
                                                     
-                                                        <td>10000,0,1,P,000000024,P2</td>
+                                                        <td>10000,0,1,P,000000024,P2,O</td>
                                                     
                                                 </tr>
                                             
@@ -13500,14 +13262,10 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-                        <li>
-                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
-                        </li>
-                    
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">7</span>
                         </li>
                     
 
@@ -13913,8 +13671,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
-                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -13935,8 +13693,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                     
 
                                     
-                                        <a href="#error20-7-error" data-toggle="collapse">+ Show Error</a>
-                                    
 
                                     
 
@@ -13953,228 +13709,6 @@ input#darkCheck:checked ~ label>svg#moon {
                             </div>
 
                         
-                            
-                                <div id="error20-7-error" class="scenario-step-collapse collapse">
-                                    <pre class=info>AssertionError: {
-	"personen": [
-		{
-			"stap": "persoon-P1",
-			"statements": [
-				{
-					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
-					"categorie": "inschrijving",
-					"values": [
-						"0"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "persoon",
-					"values": [
-						"9999",
-						"0",
-						"0",
-						"P",
-						"000000012",
-						"P1"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "kind-1",
-					"values": [
-						"9999",
-						"0",
-						"0",
-						"K",
-						"000000024",
-						"P2"
-					]
-				}
-			]
-		},
-		{
-			"stap": "persoon-P2",
-			"statements": [
-				{
-					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
-					"categorie": "inschrijving",
-					"values": [
-						"0"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "persoon",
-					"values": [
-						"10000",
-						"0",
-						"1",
-						"P",
-						"000000024",
-						"P2",
-						"O"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "persoon",
-					"values": [
-						"10000",
-						"0",
-						"0",
-						"P",
-						"000000024",
-						"P2",
-						"1AQ0100"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "ouder-2",
-					"values": [
-						"10000",
-						"0",
-						"0",
-						"2",
-						"000000012",
-						"P1",
-						"20201219"
-					]
-				}
-			]
-		}
-	]
-} != {
-	"personen": [
-		{
-			"stap": "persoon-P1",
-			"statements": [
-				{
-					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
-					"categorie": "inschrijving",
-					"values": [
-						"0"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "persoon",
-					"values": [
-						"9999",
-						"0",
-						"0",
-						"P",
-						"000000012",
-						"P1"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "kind-1",
-					"values": [
-						"9999",
-						"0",
-						"0",
-						"K",
-						"000000024",
-						"P2"
-					]
-				}
-			]
-		},
-		{
-			"stap": "persoon-P2",
-			"statements": [
-				{
-					"text": "INSERT INTO public.lo3_pl(pl_id,mutatie_dt,geheim_ind) VALUES((SELECT COALESCE(MAX(pl_id), 0)+1 FROM public.lo3_pl),current_timestamp,$1) RETURNING *",
-					"categorie": "inschrijving",
-					"values": [
-						"0"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)",
-					"categorie": "persoon",
-					"values": [
-						"10000",
-						"0",
-						"1",
-						"P",
-						"000000024",
-						"P2"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "persoon",
-					"values": [
-						"10000",
-						"0",
-						"0",
-						"P",
-						"000000024",
-						"P2",
-						"1AQ0100"
-					]
-				},
-				{
-					"text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,familie_betrek_start_datum) VALUES($1,$2,$3,$4,$5,$6,$7)",
-					"categorie": "ouder-2",
-					"values": [
-						"10000",
-						"0",
-						"0",
-						"2",
-						"000000012",
-						"P1",
-						"20201219"
-					]
-				}
-			]
-		}
-	]
-}: expected { personen: [ { …(2) }, { …(2) } ] } to deeply equal { personen: [ { …(2) }, { …(2) } ] }
-    + expected - actual
-
-               ]
-             }
-             {
-               "categorie": "persoon"
-    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
-    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)"
-               "values": [
-                 "0"
-    -            "0"
-                 "000000024"
-    +            "1"
-                 "10000"
-    -            "1AQ0100"
-                 "P"
-                 "P2"
-               ]
-             }
-             {
-               "categorie": "persoon"
-    -          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)"
-    +          "text": "INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7)"
-               "values": [
-                 "0"
-    +            "0"
-                 "000000024"
-    -            "1"
-                 "10000"
-    -            "O"
-    +            "1AQ0100"
-                 "P"
-                 "P2"
-               ]
-             }
-
-    at Proxy.equalInAnyOrder (/home/runner/work/personen-data-service/personen-data-service/node_modules/deep-equal-in-any-order/build/index.js:33:10)
-    at Proxy.methodWrapper (/home/runner/work/personen-data-service/personen-data-service/node_modules/chai/lib/chai/utils/addMethod.js:57:25)
-    at World.(anonymous) (/home/runner/work/personen-data-service/personen-data-service/features/step_definitions/docs-stepdefs.js:179:28)</pre>
-                                </div>
                             
 
                             
@@ -14269,9 +13803,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>persoon</td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)</td>
                                                     
-                                                        <td>10000,0,1,P,000000024,P2</td>
+                                                        <td>10000,0,1,P,000000024,P2,O</td>
                                                     
                                                 </tr>
                                             
@@ -14347,23 +13881,15 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-                        <li>
-                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">1</span>
-                        </li>
-                    
 
                     
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">5</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">7</span>
                         </li>
                     
 
-                    
-                        <li>
-                            <span class="step not-defined-background" data-toggle="tooltip" title="Scenario has nop step implementation.">1</span>
-                        </li>
                     
 
                     
@@ -14702,8 +14228,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step has no implementation.">
-                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -14712,7 +14238,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">* </span>
 
                                     
-                                        is geadopteerd door 'P1' als ouder 1 met de volgende gegevens
+                                        'P2' is geadopteerd door 'P1' als ouder 1 met de volgende gegevens
                                         
                                     
 
@@ -14721,20 +14247,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                 </div>
 
                                 
-                                    
-                                        <pre class="info">
-// With Callbacks
-* (/^is geadopteerd door 'P1' als ouder 1 met de volgende gegevens$/, (callback) => {
-    // Write code here that turns the phrase above into concrete actions
-    callback(null, 'pending');
-});
-
-// With Promises
-* (/^is geadopteerd door 'P1' als ouder 1 met de volgende gegevens$/, () => {
-    // Write code here that turns the phrase above into concrete actions
-    return Promise.resolve('pending');
-});
-                                        </pre>
                                     
 
                                     
@@ -14809,8 +14321,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -14941,9 +14453,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>persoon</td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)</td>
                                                     
-                                                        <td>10000,0,1,P,000000024,P2</td>
+                                                        <td>10000,0,1,P,000000024,P2,O</td>
                                                     
                                                 </tr>
                                             
@@ -15019,23 +14531,15 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-                        <li>
-                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">1</span>
-                        </li>
-                    
 
                     
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
-                    
-                        <li>
-                            <span class="step not-defined-background" data-toggle="tooltip" title="Scenario has nop step implementation.">1</span>
-                        </li>
                     
 
                     
@@ -15310,17 +14814,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step has no implementation.">
-                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">* </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft gezag uitspraak
+                                        voor 'P1' is een gerechtelijke uitspraak over het gezag gedaan met de volgende gegevens
                                         
                                     
 
@@ -15329,20 +14833,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                 </div>
 
                                 
-                                    
-                                        <pre class="info">
-// With Callbacks
-* (/^heeft gezag uitspraak$/, (callback) => {
-    // Write code here that turns the phrase above into concrete actions
-    callback(null, 'pending');
-});
-
-// With Promises
-* (/^heeft gezag uitspraak$/, () => {
-    // Write code here that turns the phrase above into concrete actions
-    return Promise.resolve('pending');
-});
-                                        </pre>
                                     
 
                                     
@@ -15417,8 +14907,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -15575,23 +15065,15 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-                        <li>
-                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">1</span>
-                        </li>
-                    
 
                     
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
-                    
-                        <li>
-                            <span class="step not-defined-background" data-toggle="tooltip" title="Scenario has nop step implementation.">1</span>
-                        </li>
                     
 
                     
@@ -15866,8 +15348,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step has no implementation.">
-                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -15876,7 +15358,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">* </span>
 
                                     
-                                        staat onder curatele
+                                        is onder curatele gesteld
                                         
                                     
 
@@ -15885,20 +15367,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                 </div>
 
                                 
-                                    
-                                        <pre class="info">
-// With Callbacks
-* (/^staat onder curatele$/, (callback) => {
-    // Write code here that turns the phrase above into concrete actions
-    callback(null, 'pending');
-});
-
-// With Promises
-* (/^staat onder curatele$/, () => {
-    // Write code here that turns the phrase above into concrete actions
-    return Promise.resolve('pending');
-});
-                                        </pre>
                                     
 
                                     
@@ -15944,8 +15412,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -16102,23 +15570,15 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-                        <li>
-                            <span class="step skipped-background" data-toggle="tooltip" title="Scenario is skipped">1</span>
-                        </li>
-                    
 
                     
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">7</span>
                         </li>
                     
 
-                    
-                        <li>
-                            <span class="step not-defined-background" data-toggle="tooltip" title="Scenario has nop step implementation.">2</span>
-                        </li>
                     
 
                     
@@ -16393,17 +15853,17 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step has no implementation.">
-                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">* </span>
+                                    <span class="keyword highlight">En </span>
 
                                     
-                                        heeft gezag uitspraak
+                                        voor 'P1' is een gerechtelijke uitspraak over het gezag gedaan met de volgende gegevens
                                         
                                     
 
@@ -16412,20 +15872,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                 </div>
 
                                 
-                                    
-                                        <pre class="info">
-// With Callbacks
-* (/^heeft gezag uitspraak$/, (callback) => {
-    // Write code here that turns the phrase above into concrete actions
-    callback(null, 'pending');
-});
-
-// With Promises
-* (/^heeft gezag uitspraak$/, () => {
-    // Write code here that turns the phrase above into concrete actions
-    return Promise.resolve('pending');
-});
-                                        </pre>
                                     
 
                                     
@@ -16500,8 +15946,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step has no implementation.">
-                                            <i class="fa fa-question-circle fa-2x not-defined-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -16510,7 +15956,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">* </span>
 
                                     
-                                        staat onder curatele
+                                        is onder curatele gesteld
                                         
                                     
 
@@ -16519,20 +15965,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                 </div>
 
                                 
-                                    
-                                        <pre class="info">
-// With Callbacks
-* (/^staat onder curatele$/, (callback) => {
-    // Write code here that turns the phrase above into concrete actions
-    callback(null, 'pending');
-});
-
-// With Promises
-* (/^staat onder curatele$/, () => {
-    // Write code here that turns the phrase above into concrete actions
-    return Promise.resolve('pending');
-});
-                                        </pre>
                                     
 
                                     
@@ -16578,8 +16010,8 @@ input#darkCheck:checked ~ label>svg#moon {
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step is skipped">
-                                            <i class="fa fa-arrow-circle-right fa-2x skipped-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -17265,12 +16697,12 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            20,
-                            2,
+                            26,
                             0,
                             0,
                             0,
-                            4
+                            0,
+                            0
                         ],
                         backgroundColor: [
                             getColor(".passed-color", "#26B99A"),
