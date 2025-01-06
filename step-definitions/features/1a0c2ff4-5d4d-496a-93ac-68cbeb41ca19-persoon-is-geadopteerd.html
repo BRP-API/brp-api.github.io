@@ -1247,7 +1247,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">* </span>
 
                                     
-                                        is geadopteerd door 'P2' als ouder 1
+                                        'P1' is geadopteerd door 'P2' als ouder 1
                                         
                                     
 
@@ -1433,9 +1433,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>persoon</td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)</td>
                                                     
-                                                        <td>10000,0,1,P,000000036,P1</td>
+                                                        <td>10000,0,1,P,000000036,P1,O</td>
                                                     
                                                 </tr>
                                             
@@ -1868,7 +1868,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">* </span>
 
                                     
-                                        is geadopteerd door 'P2' als ouder 2
+                                        'P1' is geadopteerd door 'P2' als ouder 2
                                         
                                     
 
@@ -2054,9 +2054,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>persoon</td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)</td>
                                                     
-                                                        <td>10000,0,1,P,000000036,P1</td>
+                                                        <td>10000,0,1,P,000000036,P1,O</td>
                                                     
                                                 </tr>
                                             
@@ -2489,7 +2489,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">* </span>
 
                                     
-                                        is geadopteerd door 'P1' als ouder 1 met de volgende gegevens
+                                        'P2' is geadopteerd door 'P1' als ouder 1 met de volgende gegevens
                                         
                                     
 
@@ -2704,9 +2704,9 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>persoon</td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam) VALUES($1,$2,$3,$4,$5,$6)</td>
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7)</td>
                                                     
-                                                        <td>10000,0,1,P,000000024,P2</td>
+                                                        <td>10000,0,1,P,000000024,P2,O</td>
                                                     
                                                 </tr>
                                             
@@ -3556,35 +3556,35 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>persoon</td>
                                                     
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum) VALUES($1,$2,$3,$4,$5,$6,$7)</td>
-                                                    
-                                                        <td>10001,0,2,P,000000036,P1,gisteren - 17 jaar</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td>persoon</td>
-                                                    
-                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)</td>
-                                                    
-                                                        <td>10001,0,1,P,000000036,P1,gisteren - 17 jaar,1AQ0100</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td></td>
-                                                    
-                                                        <td>persoon</td>
-                                                    
                                                         <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr) VALUES($1,$2,$3,$4,$5,$6,$7,$8)</td>
                                                     
                                                         <td>10001,0,0,P,000000036,P1,gisteren - 17 jaar,1AQ0100</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,akte_nr,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)</td>
+                                                    
+                                                        <td>10001,0,1,P,000000036,P1,gisteren - 17 jaar,1AQ0100,O</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td></td>
+                                                    
+                                                        <td>persoon</td>
+                                                    
+                                                        <td>INSERT INTO public.lo3_pl_persoon(pl_id,stapel_nr,volg_nr,persoon_type,burger_service_nr,geslachts_naam,geboorte_datum,onjuist_ind) VALUES($1,$2,$3,$4,$5,$6,$7,$8)</td>
+                                                    
+                                                        <td>10001,0,2,P,000000036,P1,gisteren - 17 jaar,O</td>
                                                     
                                                 </tr>
                                             
