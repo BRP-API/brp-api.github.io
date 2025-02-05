@@ -755,7 +755,7 @@ input#darkCheck:checked ~ label>svg#moon {
             </h1>
             
                 <p>
-                    <strong>Description: </strong>     De sortering gebeurt op basis van de volgende criteria, in deze volgorde:<br>    1. Datum van aanvang adreshouding: bewoners worden gesorteerd op de datum waarop zij op het adres zijn ingeschreven.<br>    2. Geslachtsnaam: als meerdere bewoners dezelfde aanvangsdatum hebben, worden zij alfabetisch gesorteerd op hun achternaam.<br>    3. Voornamen: bij gelijke achternamen wordt verder gesorteerd op voornamen in alfabetische volgorde.<br>    4. Geboortedatum: als de voornamen ook gelijk zijn, wordt tenslotte gesorteerd op geboortedatum, waarbij de oudste persoon eerst komt.<br><br><br>    Testen door combinaties van bewoners:<br>    - met verschillende datum aanvang adreshouding<br>    - met zelfde datum aanvang adreshouding maar verschillende geslachtsnaam<br>    - met zelfde datum aanvang adreshouding en geslachtsnaam maar verschillende voornamen<br>    - met zelfde datum aanvang adreshouding en geslachtsnaam en voornamen maar verschillende geboortedatum<br><br>    Voor de zekerheid hebben niet-relevante gegevens steeds omgekeerde volgorde. Zou dus het geteste criterium niet goed werken, dan merken we dat aan de sortering op de volgende aspecten.<br><br>    Sortering wordt getest voor bewoners en voor mogelijke bewoners.<br>    Sortering wordt getest met volledige datums en met onvolledige datums.<br>    Sortering wordt getest met ook verschillende vertrekdatum. Dit mag geen effect hebben op de volgorde. </p>
+                    <strong>Description: </strong>     Testen sortering met combinaties van bewoners:<br>    - met verschillende datum aanvang adreshouding<br>      * volledig bekende datums<br>      * gedeeltelijk onbekende datums<br>      * gedeeltelijk onbekende datums met datum aanvang vorige in de onzekerheidsperiode: volgorde wordt berekend met datum vorige + 1<br>    - met zelfde datum aanvang adreshouding maar verschillende geslachtsnaam<br>    - met zelfde datum aanvang adreshouding en geslachtsnaam maar verschillende voornamen<br>    - met zelfde datum aanvang adreshouding en geslachtsnaam en voornamen maar verschillende geboortedatum<br>    - met ook verschillende vertrekdatum. Dit mag geen effect hebben op de volgorde<br><br>    Sortering wordt getest voor: <br>    - bewoners<br>    - mogelijke bewoners omdat datum aanvang (gedeeltelijk) onbekend is<br>    - mogelijke bewoners omdat datum aanvang volgende (gedeeltelijk) onbekend is </p>
                 
                <p><strong>File name:</strong>
                     bewoners-volgorde.feature
@@ -1626,16 +1626,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2016-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2017-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -1737,7 +1746,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2016-01-01 tot 2016-01-02</td>
+                                                        <td>2016-01-01 tot 2017-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -2642,16 +2651,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2019-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2020-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -2753,7 +2771,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2019-01-01 tot 2019-01-02</td>
+                                                        <td>2019-01-01 tot 2020-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -3671,16 +3689,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2022-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2023-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -3782,7 +3809,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2022-01-01 tot 2022-01-02</td>
+                                                        <td>2022-01-01 tot 2023-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -4726,16 +4753,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2023-07-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2024-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -4837,7 +4873,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2023-07-01 tot 2023-07-02</td>
+                                                        <td>2023-07-01 tot 2024-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -5947,16 +5983,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
-                                                        <td>2023-07-01</td>
+                                                        <td>2023-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2024-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -6058,7 +6103,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2023-07-01 tot 2023-07-02</td>
+                                                        <td>2023-01-01 tot 2024-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -7243,16 +7288,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
-                                                        <td>2023-04-10</td>
+                                                        <td>2023-04-02</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2023-04-15</td>
                                                     
                                                 </tr>
                                             
@@ -7354,7 +7408,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2023-04-10 tot 2023-04-11</td>
+                                                        <td>2023-04-02 tot 2023-04-15</td>
                                                     
                                                 </tr>
                                             
@@ -8565,16 +8619,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2024-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2025-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -8676,7 +8739,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2024-01-01 tot 2024-01-02</td>
+                                                        <td>2024-01-01 tot 2025-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -9838,16 +9901,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2023-07-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2024-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -9949,7 +10021,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2023-07-01 tot 2023-07-02</td>
+                                                        <td>2023-07-01 tot 2024-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -11186,16 +11258,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2023-07-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2023-08-01</td>
                                                     
                                                 </tr>
                                             
@@ -11297,7 +11378,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2023-07-01 tot 2023-07-02</td>
+                                                        <td>2023-07-01 tot 2023-08-01</td>
                                                     
                                                 </tr>
                                             
@@ -11665,7 +11746,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>Sorteren bewoner met gedeeltelijk onbekende datum aanvang en bekende aanvang vorige verblijfplaats</small></h2>
+                <h2>Abstract Scenario: <small>Sorteren bewoners met gedeeltelijk onbekende datum aanvang en bekende aanvang vorige verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -12710,16 +12791,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2024-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2025-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -12821,7 +12911,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2024-01-01 tot 2024-01-02</td>
+                                                        <td>2024-01-01 tot 2025-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -12984,7 +13074,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>Sorteren bewoner met gedeeltelijk onbekende datum aanvang en bekende aanvang vorige verblijfplaats</small></h2>
+                <h2>Abstract Scenario: <small>Sorteren bewoners met gedeeltelijk onbekende datum aanvang en bekende aanvang vorige verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -14029,16 +14119,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2024-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2025-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -14140,7 +14239,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2024-01-01 tot 2024-01-02</td>
+                                                        <td>2024-01-01 tot 2025-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -14303,7 +14402,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Abstract Scenario: <small>Sorteren bewoner met gedeeltelijk onbekende datum aanvang en bekende aanvang vorige verblijfplaats</small></h2>
+                <h2>Abstract Scenario: <small>Sorteren bewoners met gedeeltelijk onbekende datum aanvang en bekende aanvang vorige verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -15348,16 +15447,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2024-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2025-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -15459,7 +15567,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2024-01-01 tot 2024-01-02</td>
+                                                        <td>2024-01-01 tot 2025-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -16768,16 +16876,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2023-07-15</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2023-08-01</td>
                                                     
                                                 </tr>
                                             
@@ -16879,7 +16996,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2023-07-15 tot 2023-07-16</td>
+                                                        <td>2023-07-15 tot 2023-08-01</td>
                                                     
                                                 </tr>
                                             
@@ -18188,16 +18305,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2023-07-15</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2023-08-01</td>
                                                     
                                                 </tr>
                                             
@@ -18299,7 +18425,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2023-07-15 tot 2023-07-16</td>
+                                                        <td>2023-07-15 tot 2023-08-01</td>
                                                     
                                                 </tr>
                                             
@@ -19608,16 +19734,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2023-07-15</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2023-08-01</td>
                                                     
                                                 </tr>
                                             
@@ -19719,7 +19854,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2023-07-15 tot 2023-07-16</td>
+                                                        <td>2023-07-15 tot 2023-08-01</td>
                                                     
                                                 </tr>
                                             
@@ -19882,7 +20017,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>Sorteren mogelijke bewoners met gedeeltelijk onbekende datum aanvang en bekende aanvang vorige verblijfplaats</small></h2>
+                <h2>Scenario: <small>Sorteren bewoners en mogelijke bewoners met gedeeltelijk onbekende datum aanvang en bekende aanvang vorige verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -19899,7 +20034,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">14</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">16</span>
                         </li>
                     
 
@@ -21093,16 +21228,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
                                                         <td>2023-05-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2024-05-01</td>
                                                     
                                                 </tr>
                                             
@@ -21204,7 +21348,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2023-05-01 tot 2023-05-02</td>
+                                                        <td>2023-05-01 tot 2024-01-01</td>
                                                     
                                                 </tr>
                                             
@@ -21560,6 +21704,352 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 
                         
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft de response een bewoning met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>naam</th>
+                                                
+                                                    <th>waarde</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>periode</td>
+                                                    
+                                                        <td>2024-01-01 tot 2024-05-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>adresseerbaarObjectIdentificatie</td>
+                                                    
+                                                        <td>0800010000000001</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        heeft de bewoning bewoners met de volgende gegevens
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>burgerservicenummer</th>
+                                                
+                                                    <th>naam.voornamen</th>
+                                                
+                                                    <th>naam.geslachtsnaam</th>
+                                                
+                                                    <th>geboorte.datum</th>
+                                                
+                                            </tr>
+
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000024</td>
+                                                    
+                                                        <td>Karel</td>
+                                                    
+                                                        <td>Jansen</td>
+                                                    
+                                                        <td>20011014</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000012</td>
+                                                    
+                                                        <td>Femke</td>
+                                                    
+                                                        <td>Pietersen</td>
+                                                    
+                                                        <td>19980526</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000036</td>
+                                                    
+                                                        <td>Elise</td>
+                                                    
+                                                        <td>Boer</td>
+                                                    
+                                                        <td>19971130</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000061</td>
+                                                    
+                                                        <td>Irene</td>
+                                                    
+                                                        <td>Jansen</td>
+                                                    
+                                                        <td>20000328</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000048</td>
+                                                    
+                                                        <td>Karel Jan</td>
+                                                    
+                                                        <td>Jansen</td>
+                                                    
+                                                        <td>19990624</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000103</td>
+                                                    
+                                                        <td>Leonie</td>
+                                                    
+                                                        <td>Teunissen</td>
+                                                    
+                                                        <td>20181103</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000139</td>
+                                                    
+                                                        <td>Peter</td>
+                                                    
+                                                        <td>Teunissen</td>
+                                                    
+                                                        <td>20210411</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000085</td>
+                                                    
+                                                        <td>Bas</td>
+                                                    
+                                                        <td>Pietersen</td>
+                                                    
+                                                        <td>20000119</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000073</td>
+                                                    
+                                                        <td>Bas</td>
+                                                    
+                                                        <td>Pietersen</td>
+                                                    
+                                                        <td>20190917</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000115</td>
+                                                    
+                                                        <td>Ruud</td>
+                                                    
+                                                        <td>Alberts</td>
+                                                    
+                                                        <td>20160703</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000097</td>
+                                                    
+                                                        <td>Corine</td>
+                                                    
+                                                        <td>Alberts</td>
+                                                    
+                                                        <td>20171109</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000140</td>
+                                                    
+                                                        <td>Anton</td>
+                                                    
+                                                        <td>Boer</td>
+                                                    
+                                                        <td>20140621</td>
+                                                    
+                                                </tr>
+                                            
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
                 
                         
                 
@@ -21585,7 +22075,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                 </div>
 
-                <h2>Scenario: <small>Sorteren bewoners met gedeeltelijk onbekende datum aanvang en bekende aanvang vorige verblijfplaats</small></h2>
+                <h2>Scenario: <small>Sorteren mogelijke bewoners met gedeeltelijk onbekende datum aanvang volgende verblijfplaats</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -21602,7 +22092,7 @@ input#darkCheck:checked ~ label>svg#moon {
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">13</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">11</span>
                         </li>
                     
 
@@ -22263,7 +22753,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Gegeven </span>
 
                                     
-                                        met datum aanvang adreshouding 20230415 zijn de volgende personen ingeschreven op adres 'A2'
+                                        met datum aanvang adreshouding 20250000 zijn de volgende personen ingeschreven op adres 'A1'
                                         
                                     
 
@@ -22339,371 +22829,182 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                 </tr>
                                             
+                                        </table>
+                                    
+                                </div>
+
+                                
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">En </span>
+
+                                    
+                                        vervolgens zijn de volgende personen met datum aanvang adreshouding 20250000 ingeschreven op adres 'A2'
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                                <div class="scenario-scroll-bar">
+                                    
+                                        <table class="table arguments">
+                                            
+                                            <tr>
+                                                
+                                                
+                                                    <th>burgerservicenummer (01.20)</th>
+                                                
+                                                    <th>geslachtsnaam (02.40)</th>
+                                                
+                                                    <th>voornamen (02.10)</th>
+                                                
+                                                    <th>geboortedatum (03.10)</th>
+                                                
+                                            </tr>
+
+                                            
                                                 <tr>
                                                     
                                                     
-                                                        <td>000000140</td>
+                                                        <td>000000012</td>
+                                                    
+                                                        <td>Pietersen</td>
+                                                    
+                                                        <td>Femke</td>
+                                                    
+                                                        <td>19980526</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000024</td>
+                                                    
+                                                        <td>Jansen</td>
+                                                    
+                                                        <td>Karel</td>
+                                                    
+                                                        <td>20011014</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>000000036</td>
                                                     
                                                         <td>Boer</td>
                                                     
-                                                        <td>Anton</td>
+                                                        <td>Elise</td>
                                                     
-                                                        <td>20140621</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        met datum aanvang adreshouding 20230312 zijn de volgende personen ingeschreven op adres 'A2'
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>burgerservicenummer (01.20)</th>
-                                                
-                                                    <th>geslachtsnaam (02.40)</th>
-                                                
-                                                    <th>voornamen (02.10)</th>
-                                                
-                                                    <th>geboortedatum (03.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>000000139</td>
-                                                    
-                                                        <td>Teunissen</td>
-                                                    
-                                                        <td>Peter</td>
-                                                    
-                                                        <td>20210411</td>
+                                                        <td>19971130</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>000000103</td>
+                                                        <td>000000048</td>
                                                     
-                                                        <td>Teunissen</td>
+                                                        <td>Jansen</td>
                                                     
-                                                        <td>Leonie</td>
+                                                        <td>Karel Jan</td>
                                                     
-                                                        <td>20181103</td>
-                                                    
-                                                </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        vervolgens zijn de volgende personen met datum aanvang adreshouding 20230000 ingeschreven op adres 'A1'
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>burgerservicenummer (01.20)</th>
-                                                
-                                                    <th>geslachtsnaam (02.40)</th>
-                                                
-                                                    <th>voornamen (02.10)</th>
-                                                
-                                                    <th>geboortedatum (03.10)</th>
-                                                
-                                            </tr>
-
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>000000097</td>
-                                                    
-                                                        <td>Alberts</td>
-                                                    
-                                                        <td>Corine</td>
-                                                    
-                                                        <td>20171109</td>
+                                                        <td>19990624</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>000000103</td>
+                                                        <td>000000061</td>
                                                     
-                                                        <td>Teunissen</td>
+                                                        <td>Jansen</td>
                                                     
-                                                        <td>Leonie</td>
+                                                        <td>Irene</td>
                                                     
-                                                        <td>20181103</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>000000139</td>
-                                                    
-                                                        <td>Teunissen</td>
-                                                    
-                                                        <td>Peter</td>
-                                                    
-                                                        <td>20210411</td>
+                                                        <td>20000328</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>000000140</td>
+                                                        <td>000000073</td>
                                                     
-                                                        <td>Boer</td>
+                                                        <td>Pietersen</td>
                                                     
-                                                        <td>Anton</td>
+                                                        <td>Bas</td>
                                                     
-                                                        <td>20140621</td>
+                                                        <td>20190917</td>
                                                     
                                                 </tr>
-                                            
-                                        </table>
-                                    
-                                </div>
-
-                                
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">En </span>
-
-                                    
-                                        met datum aanvang adreshouding 20230415 zijn de volgende personen ingeschreven op adres 'A1'
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                                <div class="scenario-scroll-bar">
-                                    
-                                        <table class="table arguments">
-                                            
-                                            <tr>
-                                                
-                                                
-                                                    <th>burgerservicenummer (01.20)</th>
-                                                
-                                                    <th>geslachtsnaam (02.40)</th>
-                                                
-                                                    <th>voornamen (02.10)</th>
-                                                
-                                                    <th>geboortedatum (03.10)</th>
-                                                
-                                            </tr>
-
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>000000115</td>
+                                                        <td>000000085</td>
                                                     
-                                                        <td>Alberts</td>
+                                                        <td>Pietersen</td>
                                                     
-                                                        <td>Ruud</td>
+                                                        <td>Bas</td>
                                                     
-                                                        <td>20160703</td>
+                                                        <td>20000119</td>
                                                     
                                                 </tr>
                                             
@@ -22796,16 +23097,25 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>type</td>
                                                     
-                                                        <td>BewoningMetPeildatum</td>
+                                                        <td>BewoningMetPeriode</td>
                                                     
                                                 </tr>
                                             
                                                 <tr>
                                                     
                                                     
-                                                        <td>peildatum</td>
+                                                        <td>datumVan</td>
                                                     
-                                                        <td>2024-01-01</td>
+                                                        <td>2025-01-01</td>
+                                                    
+                                                </tr>
+                                            
+                                                <tr>
+                                                    
+                                                    
+                                                        <td>datumTot</td>
+                                                    
+                                                        <td>2025-02-01</td>
                                                     
                                                 </tr>
                                             
@@ -22907,7 +23217,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                                     
                                                         <td>periode</td>
                                                     
-                                                        <td>2024-01-01 tot 2024-01-02</td>
+                                                        <td>2025-01-01 tot 2025-02-01</td>
                                                     
                                                 </tr>
                                             
@@ -22945,7 +23255,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">En </span>
 
                                     
-                                        heeft de bewoning bewoners met de volgende gegevens
+                                        heeft de bewoning mogelijke bewoners met de volgende gegevens
                                         
                                     
 
@@ -23076,32 +23386,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>000000103</td>
-                                                    
-                                                        <td>Leonie</td>
-                                                    
-                                                        <td>Teunissen</td>
-                                                    
-                                                        <td>20181103</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>000000139</td>
-                                                    
-                                                        <td>Peter</td>
-                                                    
-                                                        <td>Teunissen</td>
-                                                    
-                                                        <td>20210411</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
                                                         <td>000000085</td>
                                                     
                                                         <td>Bas</td>
@@ -23128,19 +23412,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                                 <tr>
                                                     
                                                     
-                                                        <td>000000115</td>
-                                                    
-                                                        <td>Ruud</td>
-                                                    
-                                                        <td>Alberts</td>
-                                                    
-                                                        <td>20160703</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
                                                         <td>000000097</td>
                                                     
                                                         <td>Corine</td>
@@ -23148,19 +23419,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                                         <td>Alberts</td>
                                                     
                                                         <td>20171109</td>
-                                                    
-                                                </tr>
-                                            
-                                                <tr>
-                                                    
-                                                    
-                                                        <td>000000140</td>
-                                                    
-                                                        <td>Anton</td>
-                                                    
-                                                        <td>Boer</td>
-                                                    
-                                                        <td>20140621</td>
                                                     
                                                 </tr>
                                             
