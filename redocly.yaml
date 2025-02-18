@@ -5,6 +5,7 @@ catalog:
     slug: /brp-api/
     items:
       - directory: ./personen
+      - directory: ./bewoningen
   navbar: 
     items: 
       - page: /brp-api/
