@@ -6,6 +6,8 @@ catalog:
     items:
       - directory: ./personen
       - directory: ./bewoningen
-  navbar: 
-    items: 
-      - page: /brp-api/
+navbar: 
+  items:
+    - page: index.md
+      label: Home
+    - page: /brp-api/
