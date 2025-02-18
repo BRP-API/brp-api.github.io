@@ -1,13 +1,19 @@
 catalog:
-  brp-api-catalog:
+  public-catalog:
     title: BRP API catalog
     description: BRP API
     slug: /brp-api/
     items:
-      - directory: ./personen
-      - directory: ./bewoningen
+      - directory: ./api-specificaties/personen
+      - directory: ./api-specificaties/bewoningen
+  internal-catalog:
+    title: internal api catalog
+    slug: /brp-api-internal/
+    items:
+      - directory: ./api-specificaties/gezag
 navbar: 
   items:
     - page: index.md
       label: Home
     - page: /brp-api/
+    - page: /brp-api-internal/
