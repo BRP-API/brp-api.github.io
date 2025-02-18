@@ -1,0 +1,10 @@
+catalog:
+  brp-api-catalog:
+    title: BRP API catalog
+    description: BRP API
+    slug: /brp-api/
+    items:
+      - directory: ./personen
+  navbar: 
+    items: 
+      - page: /brp-api/
