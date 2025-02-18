@@ -11,6 +11,7 @@ catalog:
     slug: /brp-api-internal/
     items:
       - directory: ./api-specificaties/gezag
+      - directory: ./api-specificaties/bewoning-data
 navbar: 
   items:
     - page: index.md
