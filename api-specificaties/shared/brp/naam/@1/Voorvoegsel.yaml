@@ -1,0 +1,4 @@
+type: string
+pattern: ^[a-zA-Z \']{1,10}$
+maxLength: 10
+example: de

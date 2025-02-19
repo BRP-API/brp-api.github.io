@@ -33,7 +33,7 @@ paths:
         content:
           'application/json; charset=utf-8':
             schema:
-              $ref: '#/components/schemas/BewoningenQuery'
+              $ref: '../bewoningen/@1/BewoningenQuery.yaml#/components/schemas/BewoningenQuery'
       responses:
         '200':
           description: |
@@ -41,64 +41,8 @@ paths:
           content:
             'application/json; charset=utf-8':
               schema:
-                $ref: '#/components/schemas/GbaBewoningenQueryResponse'
+                $ref: ./@1/BewoningenQueryResponse.yaml
+        '400':
+          $ref: ../shared/problem-details/@1/400.yaml
       tags:
         - Bewoning
-components:
-  schemas:
-    BewoningenQuery:
-      type: object
-      required:
-        - type
-      discriminator:
-        propertyName: type
-        mapping:
-          BewoningMetPeildatum: '#/components/schemas/BewoningMetPeildatum'
-          BewoningMetPeriode: '#/components/schemas/BewoningMetPeriode'
-      properties:
-        type:
-          type: string
-
-    BewoningMetPeildatum:
-      required:
-        - peildatum
-        - adresseerbaarObjectIdentificatie
-      allOf:
-        - $ref: '#/components/schemas/BewoningenQuery'
-        - type: object
-          properties:
-            peildatum:
-              $ref: '../brp-api/query-parameters/datum-filter-v1.yaml#/components/schemas/DatumFilter'
-              description: |
-                de datum waarover de bewoning wordt opgevraagd.
-            adresseerbaarObjectIdentificatie:
-              $ref: '../brp-api/query-parameters/adresseerbaar-object-identificatie-filter-v1.yaml#/components/schemas/AdresseerbaarObjectIdentificatieFilter'
-
-    BewoningMetPeriode:
-      required:
-        - datumVan
-        - datumTot
-        - adresseerbaarObjectIdentificatie
-      allOf:
-        - $ref: '#/components/schemas/BewoningenQuery'
-        - type: object
-          properties:
-            datumVan:
-              $ref: '../brp-api/query-parameters/datum-filter-v1.yaml#/components/schemas/DatumFilter'
-              description: |
-                de begindatum van de periode waarover de bewoning wordt opgevraagd.
-            datumTot:
-              $ref: '../brp-api/query-parameters/datum-filter-v1.yaml#/components/schemas/DatumFilter'
-              description: |
-                de einddatum van de periode waarover de bewoning wordt opgevraagd.
-            adresseerbaarObjectIdentificatie:
-              $ref: '../brp-api/query-parameters/adresseerbaar-object-identificatie-filter-v1.yaml#/components/schemas/AdresseerbaarObjectIdentificatieFilter'
-
-    GbaBewoningenQueryResponse:
-      type: object
-      properties:
-        bewoningen:
-          type: array
-          items:
-            type: string
-            # $ref: 'bewoning.yaml#/components/schemas/GbaBewoning'

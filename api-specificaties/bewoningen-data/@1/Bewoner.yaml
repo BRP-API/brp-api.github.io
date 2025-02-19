@@ -1,0 +1,14 @@
+type: object
+properties:
+  burgerservicenummer:
+    $ref: ..\..\shared\brp\identificatienummers\@1\Burgerservicenummer.yaml
+  geheimhoudingPersoonsgegevens:
+    $ref: ..\..\shared\brp\@1\IndicatieGeheim.yaml
+  verblijfplaatsInOnderzoek:
+    $ref: ..\..\shared\brp\@1\InOnderzoek.yaml
+  # geslacht:
+  #   $ref: ..\..\shared\brp\@1\Geslachtsaanduiding.yaml
+  # naam:
+  #   $ref: ..\..\shared\brp\naam\@1\NaamBasis.yaml
+  # geboorte:
+  #   $ref: ..\..\shared\brp\geboorte\@1\GeboorteBasis.yaml

@@ -1,0 +1,12 @@
+description: >
+  Wordt gevuld met waarden uit de landelijke tabel 'Adellijke titel/predicaat'.
+  De property soort geeft aan of het een 'predicaat' of een 'titel' is.
+allOf:
+  - $ref: ..\..\@1\Waardetabel.yaml
+  - properties:
+      soort:
+        $ref: .\AdellijkeTitelPredicaatSoort.yaml
+    example:
+      code: JV
+      omschrijving: jonkvrouw
+      soort: predicaat

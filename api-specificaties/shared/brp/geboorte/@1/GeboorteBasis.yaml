@@ -1,0 +1,6 @@
+type: object
+properties:
+  datum:
+    $ref: ..\..\@1\Datum.yaml
+    description: |
+      Datum waarop de persoon is geboren.

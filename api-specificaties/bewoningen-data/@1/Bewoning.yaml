@@ -1,0 +1,45 @@
+description: >
+  Een bewoning geeft aan welke personen in een periode (mogelijk) op een
+  adresseerbaar object staan ingeschreven.
+
+
+  Een persoon is een mogelijke bewoner als niet met zekerheid kan worden bepaald
+  of de persoon in de bewoningperiode op het adresseerbaar object staat/stond
+  ingeschreven.
+
+  Dit is het geval als de datum aanvang of de datum einde van de inschrijving
+  geheel of deels onbekend is, en de onzekerheidsperiode overlapt de
+  bewoningperiode.
+
+
+  Wanneer een bewoning in totaal meer dan 100 bewoners en/of mogelijke bewoners
+  heeft, wordt het **indicatieVeelBewoners** veld geleverd.
+type: object
+properties:
+  adresseerbaarObjectIdentificatie:
+    $ref: ..\..\shared\brp\adres\@1\AdresseerbaarObjectIdentificatie.yaml
+  periode:
+    $ref: ..\..\shared\brp-api\datum\@1\Periode.yaml
+  bewoners:
+    type: array
+    description: >
+      De personen die in de bewoning periode staan ingeschreven op het
+      adresseerbaar object.
+    minItems: 0
+    maxItems: 100
+    items:
+      $ref: .\Bewoner.yaml
+  mogelijkeBewoners:
+    type: array
+    description: >
+      De personen die in de bewoning periode mogelijk staan ingeschreven op het
+      adresseerbaar object.
+    minItems: 0
+    maxItems: 100
+    items:
+      $ref: .\Bewoner.yaml
+  indicatieVeelBewoners:
+    type: boolean
+    description: >
+      Geeft aan dat de bewoning in totaal meer dan 100 bewoners en/of mogelijke
+      bewoners heeft.

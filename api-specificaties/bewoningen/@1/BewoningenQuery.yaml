@@ -1,0 +1,53 @@
+openapi: 3.1.0
+info:
+  title: bewoningen query type definitie
+  version: 1.0.0
+components:
+  schemas:
+    BewoningenQuery:
+      type: object
+      required:
+        - type
+      discriminator:
+        propertyName: type
+        mapping:
+          BewoningMetPeildatum: '#/components/schemas/BewoningMetPeildatum'
+          BewoningMetPeriode: '#/components/schemas/BewoningMetPeriode'
+      properties:
+        type:
+          type: string
+
+    BewoningMetPeildatum:
+      required:
+        - peildatum
+        - adresseerbaarObjectIdentificatie
+      allOf:
+        - $ref: '#/components/schemas/BewoningenQuery'
+        - type: object
+          properties:
+            peildatum:
+              $ref: ..\..\shared\brp-api\query-parameters\@1\DatumFilter.yaml
+              description: |
+                de datum waarover de bewoning wordt opgevraagd.
+            adresseerbaarObjectIdentificatie:
+              $ref: ..\..\shared\brp-api\query-parameters\@1\AdresseerbaarObjectIdentificatieFilter.yaml
+
+    BewoningMetPeriode:
+      required:
+        - datumVan
+        - datumTot
+        - adresseerbaarObjectIdentificatie
+      allOf:
+        - $ref: '#/components/schemas/BewoningenQuery'
+        - type: object
+          properties:
+            datumVan:
+              $ref: ..\..\shared\brp-api\query-parameters\@1\DatumFilter.yaml
+              description: |
+                de begindatum van de periode waarover de bewoning wordt opgevraagd.
+            datumTot:
+              $ref: ..\..\shared\brp-api\query-parameters\@1\DatumFilter.yaml
+              description: |
+                de einddatum van de periode waarover de bewoning wordt opgevraagd.
+            adresseerbaarObjectIdentificatie:
+              $ref: ..\..\shared\brp-api\query-parameters\@1\AdresseerbaarObjectIdentificatieFilter.yaml

@@ -1,0 +1,6 @@
+description: >
+  Gegevens over het mogen verstrekken van persoonsgegevens aan derden /
+  maatschappelijke instellingen.
+type: integer
+minimum: 0
+maximum: 7

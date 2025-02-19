@@ -1,0 +1,11 @@
+type: object
+required:
+  - aanduidingGegevensInOnderzoek
+  - datumIngangOnderzoek
+properties:
+  aanduidingGegevensInOnderzoek:
+    type: string
+    pattern: ^[0-9]{6}$
+    example: '100000'
+  datumIngangOnderzoek:
+    $ref: .\Datum.yaml

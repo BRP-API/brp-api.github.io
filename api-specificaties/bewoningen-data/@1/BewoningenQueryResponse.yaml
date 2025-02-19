@@ -1,0 +1,6 @@
+type: object
+properties:
+  bewoningen:
+    type: array
+    items:
+      $ref: .\Bewoning.yaml

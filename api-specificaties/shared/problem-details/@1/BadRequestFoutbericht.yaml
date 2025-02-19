@@ -1,0 +1,11 @@
+allOf:
+  - $ref: .\Foutbericht.yaml
+  - type: object
+    properties:
+      invalidParams:
+        description: >
+          Foutmelding per fout in een parameter. Alle gevonden fouten worden één
+          keer teruggemeld.
+        type: array
+        items:
+          $ref: .\InvalidParam.yaml

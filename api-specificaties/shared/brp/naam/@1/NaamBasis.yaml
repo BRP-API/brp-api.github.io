@@ -1,0 +1,10 @@
+type: object
+properties:
+  voornamen:
+    $ref: .\Voornamen.yaml
+  adellijkeTitelPredicaat:
+    $ref: .\AdellijkeTitelPredicaatType.yaml
+  voorvoegsel:
+    $ref: .\Voorvoegsel.yaml
+  geslachtsnaam:
+    $ref: .\Geslachtsnaam.yaml
