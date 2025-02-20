@@ -1,0 +1,48 @@
+openapi: 3.1.0
+servers:
+- url: https://proefomgeving.haalcentraal.nl/haalcentraal/api/reisdocumenten
+  description: |
+    Proef omgeving
+- url: http://localhost:5010/haalcentraal/api/reisdocumenten
+  description: |
+    Lokaal
+info:
+  title: Haal Centraal Reisdocumenten bevragen
+  description: |
+    API voor het bevragen van gegevens van reisdocumenten.
+  contact:
+    url: https://brp-api.github.io/Haal-Centraal-Reisdocumenten-bevragen
+  license:
+    name: 'European Union Public License, version 1.2 (EUPL-1.2)'
+    url: https://eupl.eu/1.2/nl/
+  version: 2.0.0
+tags:
+- name: Reisdocumenten
+paths:
+  /reisdocumenten:
+    post:
+      summary: Raadplegen van reisdocumenten
+      description: |
+        Zoek reisdocumenten met één van de onderstaande verplichte combinaties van parameters
+
+        1. Raadpleeg met reisdocumentnummer
+        2. Zoek met burgerservicenummer
+      operationId: Reisdocumenten
+      requestBody:
+        content:
+          'application/json; charset=utf-8':
+            schema:
+              $ref: '../@2/ReisdocumentenQuery.yaml#/components/schemas/ReisdocumentenQuery'
+           
+      responses:
+        '200':
+          description: |
+            Zoekactie geslaagd
+          content:
+            'application/json; charset=utf-8':
+              schema:
+                $ref: '../@2/ReisdocumentenQueryResponse.yaml#/components/schemas/ReisdocumentenQueryResponse'
+        '400':
+          $ref: ../../shared/problem-details/@1/400.yaml
+      tags:
+        - Reisdocumenten

@@ -12,6 +12,7 @@ catalog:
     items:
       - directory: ./api-specificaties/gezag
       - directory: ./api-specificaties/bewoningen-data
+      - directory: ./api-specificaties/reisdocumenten-data
 navbar: 
   items:
     - page: index.md
