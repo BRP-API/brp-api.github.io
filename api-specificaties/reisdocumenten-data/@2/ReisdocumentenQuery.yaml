@@ -1,0 +1,70 @@
+openapi: 3.1.0
+info:
+  title: reisdocumenten query type definitie
+  version: 1.0.0
+components:
+  schemas:
+    ReisdocumentenQuery:
+      type: object
+      required:
+        - fields
+        - type
+      properties:
+        type:
+          type: string
+        fields:
+          maxItems: 25
+          minItems: 1
+          type: array
+          items:
+            $ref: '#/components/schemas/Field'
+      discriminator:
+        propertyName: type
+        mapping:
+          RaadpleegMetReisdocumentnummer: '#/components/schemas/RaadpleegMetReisdocumentnummer'
+          ZoekMetBurgerservicenummer: '#/components/schemas/ZoekMetBurgerservicenummer'
+    
+    Field:
+      pattern: "^[a-zA-Z0-9\\._]{1,200}$"
+      type: string
+      description: |
+        Het pad naar een gewenst veld in punt-gescheiden formaat. Bijvoorbeeld "burgerservicenummer", "geboorte.datum", "partners.naam.voornamen".      
+          
+    RaadpleegMetReisdocumentnummer:
+      allOf:
+        - $ref: '#/components/schemas/ReisdocumentenQuery'
+        - type: object
+        - description: Raadpleeg met reisdocumentnummer
+        - required:
+            reisdocumentnummer
+        - properties:
+            reisdocumentnummer:
+              description: Lijst met maximaal 1 item
+              maxItems: 1
+              minItems: 1
+              type: array
+              items:
+                $ref: '#/components/schemas/Reisdocumentnummer'
+                
+    ZoekMetBurgerservicenummer:
+      allOf:
+        - $ref: '#/components/schemas/ReisdocumentenQuery'
+        - type: object
+        - description: Zoek met burgerservicenummer
+        - required:
+            burgerservicenummer
+        - properties:
+            burgerservicenummer:
+              description: Lijst met maximaal 1 item
+              maxItems: 1
+              minItems: 1
+              type: array
+              items:
+                $ref: ../../shared/brp/identificatienummers/@1/Burgerservicenummer.yaml
+    
+    Reisdocumentnummer:
+      type: string
+      description: Reisdocumentnummer
+      pattern: "^[A-Z0-9]{9}$"
+      example: "abc123def"
+    

@@ -1,0 +1,96 @@
+openapi: 3.1.0
+info:
+  title: reisdocumenten query response type definitie
+  version: 1.0.0
+components:
+  schemas:
+    ReisdocumentenQueryResponse:
+      type: object
+      required:
+        - type
+      properties:
+        type:
+          type: string
+      discriminator:
+        propertyName: type
+        mapping:
+          RaadpleegMetReisdocumentnummer: '#/components/schemas/RaadpleegMetReisdocumentnummerResponse'
+          ZoekMetBurgerservicenummer: '#/components/schemas/ZoekMetBurgerservicenummerResponse'
+        
+    RaadpleegMetReisdocumentnummerResponse:
+      allOf:
+        - $ref: '#/components/schemas/ReisdocumentenQueryResponse'
+        - type: object
+          properties:
+            reisdocumenten:
+              type: array
+              items:
+                $ref: '#/components/schemas/GbaReisdocument'
+    
+    ZoekMetBurgerservicenummerResponse:
+      allOf:
+        - $ref: '#/components/schemas/ReisdocumentenQueryResponse'
+        - type: object
+          properties:
+            reisdocumenten:
+              type: array
+              items:
+                $ref: '#/components/schemas/GbaReisdocument'
+    
+    GbaReisdocument:
+      type: object
+      properties:
+        reisdocumentnummer:
+          $ref: ./ReisdocumentenQuery.yaml#/components/schemas/Reisdocumentnummer
+        soort:
+          $ref: ../../shared/brp/@1/Waardetabel.yaml
+        datumEindeGeldigheid:
+          $ref: ../../shared/brp/@1/Datum.yaml
+        inhoudingOfVermissing:
+          $ref: '#/components/schemas/GbaInhoudingOfVermissing'
+        houder:
+          $ref: '#/components/schemas/GbaReisdocumenthouder'
+        inOnderzoek:
+          $ref: ../../shared/brp/@1/InOnderzoek.yaml
+        
+    GbaInhoudingOfVermissing:
+      type: object
+      properties:
+        datum:
+          $ref: ../../shared/brp/@1/Datum.yaml
+        aanduiding:
+          $ref: ../../shared/brp/@1/Waardetabel.yaml
+    
+    ReisdocumenthouderBasis:
+      type: object
+      properties:
+        burgerservicenummer:
+          $ref: ../../shared/brp/identificatienummers/@1/Burgerservicenummer.yaml
+          
+    GbaReisdocumenthouder:
+      required:
+      - gemeenteVanInschrijving
+      allOf:
+      - $ref: '#/components/schemas/ReisdocumenthouderBasis'
+      - type: object
+        properties:
+          geheimhoudingPersoonsgegevens:
+            $ref: ../../shared/brp/@1/IndicatieGeheim.yaml
+          opschortingBijhouding:
+            $ref: '#/components/schemas/GbaOpschortingBijhouding'
+          inOnderzoek:
+            $ref: ../../shared/brp/@1/InOnderzoek.yaml
+    
+    GbaOpschortingBijhouding:
+      allOf:
+      - $ref: '#/components/schemas/OpschortingBijhoudingBasis'
+      - type: object
+        properties:
+          datum:
+            $ref: ../../shared/brp/@1/Datum.yaml
+       
+    OpschortingBijhoudingBasis:
+      type: object
+      properties:
+        reden:
+          $ref: ../../shared/brp/@1/Waardetabel.yaml
