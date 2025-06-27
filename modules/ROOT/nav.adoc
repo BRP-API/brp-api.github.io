@@ -14,20 +14,21 @@
 ** xref:gemeente-als-verstrekker.adoc[Gemeente als verstrekker]
 ** xref:rest-principes.adoc[REST-principes]
 
-.Reference
-
+* Reference
 // Haal-Centraal-BRP-bevragen repo
-* Personen
-** xref:releasenotes.adoc[Releasenotes]
-** xref:specificatie.adoc[Specificatie]
-
-** Documentatie
-*** xref:standaardwaarden.adoc[Standaardwaarden]
-*** xref:meegeleverde-gegevens.adoc[Meegeleverde gegevens]
-
-** Informatieproducten
-*** xref:adressering/index.adoc[Adressering]
-*** xref:gezag.adoc[Gezag]
-*** xref:leeftijd.adoc[Leeftijd]
-*** xref:volledige-naam.adoc[Volledige naam]
-*** xref:voorletters.adoc[Voorletters]
+** Personen
+*** xref:releasenotes.adoc[Releasenotes]
+*** xref:specificatie.adoc[Specificatie]
+*** Documentatie
+**** xref:standaardwaarden.adoc[Standaardwaarden]
+**** xref:meegeleverde-gegevens.adoc[Meegeleverde gegevens]
+**** Informatieproducten
+***** xref:adressering/index.adoc[Adressering]
+***** xref:gezag.adoc[Gezag]
+***** xref:leeftijd.adoc[Leeftijd]
+***** xref:volledige-naam.adoc[Volledige naam]
+***** xref:voorletters.adoc[Voorletters]
+// Haal-Centraal-BRP-bewoning repo
+** Bewoning
+*** xref:bewoning:releasenotes.adoc[Releasenotes]
+*** xref:bewoning:specificatie.adoc[Specificatie]
