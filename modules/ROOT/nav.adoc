@@ -1,0 +1,33 @@
+// brp-api
+* xref:index.adoc[Overview]
+* xref:getting-started.adoc[Getting Started]
+
+* How-tos
+** xref:personen-zoeken-en-raadplegen.adoc[Personen zoeken en raadplegen]
+** xref:personen-response-filteren.adoc[Personen response filteren]
+** xref:fields-samenstellen.adoc[Fields samenstellen]
+** xref:lokaal-testen.adoc[Lokaal testen]
+** xref:aansluiten.adoc[Aansluiten]
+
+* Concepts
+** xref:informatieproducten.adoc[Informatieproducten]
+** xref:gemeente-als-verstrekker.adoc[Gemeente als verstrekker]
+** xref:rest-principes.adoc[REST-principes]
+
+.Reference
+
+// Haal-Centraal-BRP-bevragen repo
+* Personen
+** xref:releasenotes.adoc[Releasenotes]
+** xref:specificatie.adoc[Specificatie]
+
+** Documentatie
+*** xref:standaardwaarden.adoc[Standaardwaarden]
+*** xref:meegeleverde-gegevens.adoc[Meegeleverde gegevens]
+
+** Informatieproducten
+*** xref:adressering.adoc[Adressering]
+*** xref:gezag.adoc[Gezag]
+*** xref:leeftijd.adoc[Leeftijd]
+*** xref:volledige-naam.adoc[Volledige naam]
+*** xref:voorletters.adoc[Voorletters]
