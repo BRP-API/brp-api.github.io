@@ -26,7 +26,7 @@
 *** xref:meegeleverde-gegevens.adoc[Meegeleverde gegevens]
 
 ** Informatieproducten
-*** xref:adressering.adoc[Adressering]
+*** xref:adressering/index.adoc[Adressering]
 *** xref:gezag.adoc[Gezag]
 *** xref:leeftijd.adoc[Leeftijd]
 *** xref:volledige-naam.adoc[Volledige naam]
