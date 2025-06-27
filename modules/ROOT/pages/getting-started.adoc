@@ -1,1 +1,26 @@
-= Getting started
+= Getting Started
+
+Gemeenten en andere organisaties met een autorisatiebesluit kunnen zich aanmelden voor deelname aan het Experiment dataminimalisatie. Stuur een mail naar mailto:{rvig-email}[{rvig-email}] voor een kennismakingsgesprek en onboarding.
+
+Als developer kun je direct aan de slag:
+
+. Bekijk de OAS3 specificatie in Redoc van van de {apiname} Personen, Bewoning en Verblijfplaatshistorie.
+. Download de OAS specificatie van de {apiname} Personen, Bewoning of Verblijfplaatshistorie om consumer code te genereren.
+. Bouw de aansluiting op de {apiname} in jouw applicatie en test lokaal.
+. Vraag een access token aan voor de proefomgeving en voer een acceptatietest uit. Je bent klaar voor productie!
+
+== Stap 1: Functionaliteit en specificaties
+
+Bekijk de OAS3 specificatie in Redoc van van de {apiname} link:./personen/specificatie[Personen], link:./bewoning/specificatie[Bewoning] en link:./historie/specificatie[Verblijfplaatshistorie]. Onderzoek wat je nodig hebt, en waarvoor autorisatie is verleend.
+
+== Stap 2: Download de OAS
+Download de link:{personen-spec-url}[OAS3 {apiname} Personen], link:{bewoning-spec-url}[OAS3 {apiname} Bewoning] of link:{verblijfplaatshistorie-spec-url}[OAS3 {apiname} Verblijfplaatshistorie] die je nodig hebt en genereer hiermee consumercode.
+
+== Stap 3: Probeer en test de {apiname} lokaal
+Lees link:./how-tos/personen-response-filteren[hoe je de response van de {apiname} Personen filtert], zodat jouw applicatie uitsluitend informatie vraagt die op dat moment nodig is en waarvoor autorisatie is verleend. Maak eventueel gebruik van de link:./how-tos/fields-samenstellen[tool om fields samen te stellen].
+
+Test jouw applicatie door een mock van de {apiname} Personen te gebruiken en deze lokaal als een containerized applicatie te draaien. Je kunt deze link:./how-tos/lokaal-testen[containerized applicatie gemakkelijk hosten op een lokale machine] of in jouw testomgeving.
+
+== Stap 4: Vraag een access token aan voor de RvIG proefomgeving
+
+Lees hoe je kunt link:./how-tos/aansluiten[aansluiten op de RvIG proef- en productieomgeving].

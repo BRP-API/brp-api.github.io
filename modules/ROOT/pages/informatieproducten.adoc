@@ -1,1 +1,29 @@
 = Informatieproducten
+
+Informatieproducten zijn bewerkingen van de door gemeenten en RNI loketten verzamelde gegevens tot een product dat direct voorziet in een klantbehoefte. De {apiname} kent de volgende informatieproducten:
+
+* link:/personen/documentatie/informatieproducten/adressering[Adressering]: aanschrijfwijze, aanhef, een verwijzing naar een persoon in de lopende tekst van een brief, en adresregels die altijd passen in een envelopvenster.
+* link:/bewoning/documentatie[Bewoning]: wie er samen in een woning woonde gedurende een periode, of op een peildatum.
+* link:/personen/documentatie/informatieproducten/gezag[Gezag]: gezagsrelaties van alle minderjarigen en gezagshouders, ook als er geen aantekening is in het gezagsregister.
+* link:/personen/documentatie/informatieproducten/leeftijd[Leeftijd] (in jaren)
+* link:/personen/documentatie/informatieproducten/volledige-naam[Volledige naam]: met adellijke titels en predicaten, zonder gebruik van de naam van de partner
+* link:/personen/documentatie/informatieproducten/voorletters[Voorletters]
+
+
+== Gebaseerd op gezamenlijke domeinkennis
+
+Informatieproducten worden voortdurend verbeterd door de RvIG en andere overheidsorganisaties die betrokken zijn bij het opstellen van de afleidingsregels. Zo is het informatieproduct Adressering afgestemd met de Hoge Raad van Adel, is het ministerie van Justitie en Veiligheid verantwoordelijk voor het afleiden van Gezag, en is de Rechtspraak betrokken bij het opstellen van de afleidingsregels. Zodat jij er vanuit kunt gaan dat alle actuele regelgeving en beschikbare kennis in het informatieproduct is verwerkt. En wij met combineerde kennis als één overheid onze taken kunnen uitvoeren.
+
+De regels die we gebruiken zijn voor iedereen inzichtelijk. Je vindt ze door hierboven op het informatieproduct van jouw keuze te klikken.
+
+== Experimentbesluit Dataminimalisatie
+
+De juridische grondslag voor het bewerken van persoonsgegevens is geregeld in het link:https://zoek.officielebekendmakingen.nl/stb-2024-96.html[Experimentbesluit Dataminimalisatie]. In dit experiment worden de voorbereidingen getroffen voor een stucturele wetswijziging.
+
+== Is er een informatieproduct? Gebruik het dan!
+
+Gebruik altijd de informatieproducten die de BRP API aanbiedt, en ga liever niet zelf met de onderliggende data aan de slag. Bij gebruik van een informatieproduct innoveert jouw applicatie automatisch mee met verbeteringen en nieuwe wet- en regelgeving die door RvIG in het informatieproduct wordt ingebouwd. Bovendien hoeft jouw organisatie minder persoonsgegevens te verwerken, omdat de BRP API direct biedt wat jij nodig hebt. Daarmee zet je een grote stap vooruit op het gebied van dataminimalisatie en voldoet jouw organisatie beter aan de AVG. Met dataminimalisatie bescherm je niet alleen de privacy van onze burgers, maar draag je ook bij aan verduurzaming. Hoe minder gegevens jouw applicatie vraagt, hoe minder de server en het netwerk worden belast.
+
+== Wat als het niet past?
+
+Voorziet een informatieproduct niet in jouw behoefte, of denk je dat de afleiding beter kan? Laat het ons weten en link:https://github.com/BRP-API/Haal-Centraal-BRP-bevragen/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=[stel een verbetering voor]. Met gecombineerde domeinkennis, en een voor velen bruikbaar product komen we samen verder!

@@ -1,1 +1,87 @@
-= Lokaal testen
+= Probeer en test de API lokaal
+
+Voor de {apiname} Personen is een mock beschikbaar als een containerized applicatie. Deze kun je gemakkelijk hosten op een lokale machine of in de testomgeving van jouw organisatie. Het voordeel van deze oplossing is dat je je eigen testgevallen kunt toevoegen aan het JSON bestand. Standaard maakt de {apiname} Personen mock gebruik van de link:https://www.rvig.nl/media/288[testdataset persoonslijsten proefomgevingen GBA-V] om de productie situatie zo goed mogelijk te simuleren.
+
+Je kunt het link:{main-branch-url}/docker-compose-mock.yml[docker compose bestand] gebruiken om de {apiname} Personen mock met behulp van link:https://www.docker.com/products/docker-desktop[Docker Desktop] te draaien op een lokale machine.
+
+Je kunt er ook voor kiezen om de link:{dev-branch-url}/.k8s[Kubernetes configuratie bestanden] te gebruiken om de {apiname} Personen mock te draaien op een lokale machine.
+
+De volgende paragrafen beschrijven wat je moet doen om de {apiname} Personen mock op een lokale machine te installeren en aan te roepen.
+
+== Prerequisites
+
+* link:https://www.docker.com/products/docker-desktop[Docker Desktop] voor het hosten van containers
+* Zet Kubernetes ondersteuning aan in Docker Desktop in het Settings/Kubernetes configuratie scherm om Docker Desktop te gebruiken om de containers te hosten met behulp van de Kubernetes engine.
+
+image:docker-desktop-enable-k8s.png[Enable Kubernetes]
+
+Optioneel kun je de volgende tools ook op de lokale machine installeren:
+
+* link:https://git-scm.com/downloads[git] voor het clonen van git repositories
+* link:https://www.postman.com/downloads/[Postman] voor het aanroepen van {apiname}
+
+=== Gebruik Docker als container engine
+
+* Download het link:{main-branch-url}/docker-compose.yml[Personen docker compose bestand]
+* Start een command prompt window voor de map met het docker-compose.yaml bestand
+* Start de {apiname} Personen mock met behulp van het volgende statement:
+
+[source,shell]
+----
+docker-compose -f docker-compose-mock.yml up -d
+----
+
+De {apiname} Personen mock is nu te benaderen via de url: *http://localhost:5001/haalcentraal/api/brp/personen*
+* Valideer dat de {apiname} mock draait met behulp van het volgende curl statement:
+
+[source,shell]
+----
+curl --location --request POST 'http://localhost:5001/haalcentraal/api/brp/personen' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "type": "RaadpleegMetBurgerservicenummer",
+    "burgerservicenummer": ["999993653"],
+    "fields": ["burgerservicenummer"]
+}'
+----
+
+* Om de {apiname} Personen mock container te stoppen voer je het volgende statement uit:
+
+[source,shell]
+----
+docker-compose -f docker-compose-mock.yml down
+----
+
+=== Gebruik Kubernetes als container engine
+
+* Download de link:{dev-branch-url}/.k8s[Personen kubernetes configuratie bestanden]
+* Start een command prompt window voor de map met de kubernetes manifest bestanden
+* Start de {apiname} en de mock met behulp van het volgende statement:
+
+[source,shell]
+----
+kubectl apply -f .k8s/brppersonenmock-deployment.yaml \
+              -f .k8s/brppersonenmock-service.yaml
+----
+
+De {apiname} Personen mock is nu te benaderen via de url: *http://localhost:5001/haalcentraal/api/brp/personen*
+* Valideer dat de {apiname} Personen mock draait met behulp van het volgende curl statement:
+
+[source,shell]
+----
+curl --location --request POST 'http://localhost:5001/haalcentraal/api/brp/personen' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "type": "RaadpleegMetBurgerservicenummer",
+    "burgerservicenummer": ["999993653"],
+    "fields": ["burgerservicenummer"]
+}'
+----
+
+* Om de {apiname} Personen mock container te stoppen voer je het volgende statement uit:
+
+[source,shell]
+----
+kubectl delete -f .k8s/brppersonenmock-deployment.yaml \
+               -f .k8s/brppersonenmock-service.yaml
+----
