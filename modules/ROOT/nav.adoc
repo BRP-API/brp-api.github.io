@@ -17,17 +17,18 @@
 * Reference
 // Haal-Centraal-BRP-bevragen repo
 ** Personen
-*** xref:releasenotes.adoc[Releasenotes]
-*** xref:specificatie.adoc[Specificatie]
+*** xref:personen:releasenotes.adoc[Releasenotes]
+*** xref:personen:specificatie.adoc[Specificatie]
 *** Documentatie
-**** xref:standaardwaarden.adoc[Standaardwaarden]
-**** xref:meegeleverde-gegevens.adoc[Meegeleverde gegevens]
+**** xref:personen:standaardwaarden.adoc[Standaardwaarden]
+**** xref:personen:meegeleverde-gegevens.adoc[Meegeleverde gegevens]
 **** Informatieproducten
-***** xref:adressering/index.adoc[Adressering]
-***** xref:gezag.adoc[Gezag]
-***** xref:leeftijd.adoc[Leeftijd]
-***** xref:volledige-naam.adoc[Volledige naam]
-***** xref:voorletters.adoc[Voorletters]
+***** xref:personen:adressering/index.adoc[Adressering]
+***** xref:personen:gezag.adoc[Gezag]
+***** xref:personen:leeftijd.adoc[Leeftijd]
+***** xref:personen:volledige-naam.adoc[Volledige naam]
+***** xref:personen:voorletters.adoc[Voorletters]
+****** xref:personen:features/voorletters.adoc[Afleidingsregels]
 // Haal-Centraal-BRP-bewoning repo
 ** Bewoning
 *** xref:bewoning:releasenotes.adoc[Releasenotes]
