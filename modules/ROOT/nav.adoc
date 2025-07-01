@@ -1,5 +1,5 @@
 // brp-api
-* xref:overview.adoc[Overview]
+* xref:index.adoc[Overview]
 * xref:getting-started.adoc[Getting Started]
 
 * How-tos
