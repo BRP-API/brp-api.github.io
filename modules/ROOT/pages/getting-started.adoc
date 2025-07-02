@@ -11,16 +11,16 @@ Als developer kun je direct aan de slag:
 
 == Stap 1: Functionaliteit en specificaties
 
-Bekijk de OAS3 specificatie in Redoc van van de {apiname} link:./personen/specificatie[Personen], link:./bewoning/specificatie[Bewoning] en link:./historie/specificatie[Verblijfplaatshistorie]. Onderzoek wat je nodig hebt, en waarvoor autorisatie is verleend.
+Bekijk de OAS3 specificatie in Redoc van van de {apiname} xref:personen:specificatie.adoc[Personen], xref:bewoning:specificatie.adoc[Bewoning] en xref:historie:specificatie.adoc[Verblijfplaatshistorie]. Onderzoek wat je nodig hebt, en waarvoor autorisatie is verleend.
 
 == Stap 2: Download de OAS
 Download de link:{personen-spec-url}[OAS3 {apiname} Personen], link:{bewoning-spec-url}[OAS3 {apiname} Bewoning] of link:{verblijfplaatshistorie-spec-url}[OAS3 {apiname} Verblijfplaatshistorie] die je nodig hebt en genereer hiermee consumercode.
 
 == Stap 3: Probeer en test de {apiname} lokaal
-Lees link:./how-tos/personen-response-filteren[hoe je de response van de {apiname} Personen filtert], zodat jouw applicatie uitsluitend informatie vraagt die op dat moment nodig is en waarvoor autorisatie is verleend. Maak eventueel gebruik van de link:./how-tos/fields-samenstellen[tool om fields samen te stellen].
+Lees xref:personen-response-filteren.adoc[hoe je de response van de {apiname} Personen filtert], zodat jouw applicatie uitsluitend informatie vraagt die op dat moment nodig is en waarvoor autorisatie is verleend. Maak eventueel gebruik van de xref:fields-samenstellen.adoc[tool om fields samen te stellen].
 
-Test jouw applicatie door een mock van de {apiname} Personen te gebruiken en deze lokaal als een containerized applicatie te draaien. Je kunt deze link:./how-tos/lokaal-testen[containerized applicatie gemakkelijk hosten op een lokale machine] of in jouw testomgeving.
+Test jouw applicatie door een mock van de {apiname} Personen te gebruiken en deze lokaal als een containerized applicatie te draaien. Je kunt deze xref:lokaal-testen.adoc[containerized applicatie gemakkelijk hosten op een lokale machine] of in jouw testomgeving.
 
 == Stap 4: Vraag een access token aan voor de RvIG proefomgeving
 
-Lees hoe je kunt link:./how-tos/aansluiten[aansluiten op de RvIG proef- en productieomgeving].
+Lees hoe je kunt xref:aansluiten.adoc[aansluiten op de RvIG proef- en productieomgeving].

@@ -1,4 +1,4 @@
-= Personen zoek en Raadplegen
+= Personen zoeken en raadplegen
 
 Lees hier hoe je actuele personen uit de BRP voor jouw applicatie kunt zoeken en raadplegen met hun identificerende gegevens. In de BRP worden personen uniek geïdentificeerd met hun burgerservicenummer.
 
@@ -11,63 +11,65 @@ Biedt jouw applicatie het zoeken van personen met hun adresgegevens aan? Gebruik
 
 == Zoek personen
 
-Gebruik onderstaande zoekoperaties om een persoon te zoeken door (niet-uniek) identificerende persoonsgegevens op te geven. In de overzichten en foutcases vind je voorbeelden die laten zien aan welke eisen de parameters moeten voldoen, en hoe je wildcards en diacrieten kunt gebruiken.
+Gebruik onderstaande zoekoperaties om een persoon te zoeken door (niet-uniek) identificerende persoonsgegevens op te geven. In de overzichten en foutcases vind je voorbeelden die laten zien aan welke eisen de parameters moeten voldoen, en hoe je wildcards en diakrieten kunt gebruiken.
 
 * zoek met geslachtsnaam en geboortedatum
-  ** link:/personen/features/zoek-met-geslachtsnaam-en-geboortedatum/overzicht[overzicht]
-  ** link:/personen/features/zoek-met-geslachtsnaam-en-geboortedatum/fout-cases[fout cases]
+  ** xref:personen:features/zoek-met-geslachtsnaam-en-geboortedatum/overzicht.adoc[overzicht]
+  ** xref:personen:features/zoek-met-geslachtsnaam-en-geboortedatum/fout-cases.adoc[fout cases]
 * zoek met geslachtsnaam, voornamen en gemeente van inschrijving
-  ** link:/personen/features/zoek-met-geslachtsnaam-voornamen-en-gemeente-van-inschrijving/overzicht[overzicht]
-  ** link:/personen/features/zoek-met-geslachtsnaam-voornamen-en-gemeente-van-inschrijving/fout-cases[fout cases]
+  ** xref:personen:features/zoek-met-geslachtsnaam-voornamen-en-gemeente-van-inschrijving/overzicht.adoc[overzicht]
+  ** xref:personen:features/zoek-met-geslachtsnaam-voornamen-en-gemeente-van-inschrijving/fout-cases.adoc[fout cases]
 * zoek met postcode en huisnummer
-  ** link:/personen/features/zoek-met-postcode-en-huisnummer/overzicht[overzicht]
-  ** link:/personen/features/zoek-met-postcode-en-huisnummer/fout-cases[fout cases]
+  ** xref:personen:features/zoek-met-postcode-en-huisnummer/overzicht.adoc[overzicht]
+  ** xref:personen:features/zoek-met-postcode-en-huisnummer/fout-cases.adoc[fout cases]
 * zoek met straat, huisnummer en gemeente van inschrijving
-  ** link:/personen/features/zoek-met-straatnaam-huisnummer-en-gemeente-van-inschrijving/overzicht[overzicht]
-  ** link:/personen/features/zoek-met-straatnaam-huisnummer-en-gemeente-van-inschrijving/fout-cases[fout cases]
+  ** xref:personen:features/zoek-met-straatnaam-huisnummer-en-gemeente-van-inschrijving/overzicht.adoc[overzicht]
+  ** xref:personen:features/zoek-met-straatnaam-huisnummer-en-gemeente-van-inschrijving/fout-cases.adoc[fout cases]
 * zoek met nummeraanduiding identificatie
-  ** link:/personen/features/zoek-met-nummeraanduiding-identificatie/overzicht[overzicht]
-  ** link:/personen/features/zoek-met-nummeraanduiding-identificatie/fout-cases[fout cases]
+  ** xref:personen:features/zoek-met-nummeraanduiding-identificatie/overzicht.adoc[overzicht]
+  ** xref:personen:features/zoek-met-nummeraanduiding-identificatie/fout-cases.adoc[fout cases]
 * zoek met adresseerbaar object identificatie
-  ** link:/personen/features/zoek-met-adresseerbaar-object-identificatie/overzicht[overzicht]
-  ** link:/personen/features/zoek-met-adresseerbaar-object-identificatie/fout-cases[fout cases]
+  ** xref:personen:features/zoek-met-adresseerbaar-object-identificatie/overzicht.adoc[overzicht]
+  ** xref:personen:features/zoek-met-adresseerbaar-object-identificatie/fout-cases.adoc[fout cases]
 
 === Twee responsetypen bij zoeken
 Het resultaat van de zoekoperaties is een lijst met alle personen die voldoen aan de opgegeven parameters. Van deze personen krijg je een beperkt aantal identificerende gegevens, zodat jouw applicatie of jouw gebruiker kan kiezen welke persoon te raadplegen. Alle zoekoperaties leveren een **persoonBeperkt response**, behalve de operatie zoek-met-adresseerbaar-object-identificatie.  
 Om alle gezagsrelaties op een adres te kunnen vragen is de response van de zoekoperatie zoek-met-adresseerbaar-object-identificatie uitgebreid met het informatieproduct gezag. Als je zoekt met de zoek-met-adresseerbaar-object-identificatie zoekoperatie, dan krijg je de **gezagPersoonBeperkt response**.   
-Van de personen in beide responsetypen krijg je uitsluitend link:./personen-response-filteren[gegevens waar je om vraagt] en waar je recht op hebt.
+Van de personen in beide responsetypen krijg je uitsluitend xref:personen-response-filteren.adoc[gegevens waar je om vraagt] en waar je recht op hebt.
 
 === Maximaal aantal zoekresultaten
 Voor alle zoekoperaties is een maximum gesteld aan het aantal personen in het antwoord die voldoen aan de opgegeven criteria. Zodra het maximum aantal personen wordt overschreden volgt een foutmelding.
 
 Het aantal gevonden personen in het antwoord is maximaal 10 bij de zoekoperaties:
-* zoek met geslachtsnaam en geboortedatum
-* zoek met geslachtsnaam, voornamen en gemeente van inschrijving.
+
+  * zoek met geslachtsnaam en geboortedatum
+  * zoek met geslachtsnaam, voornamen en gemeente van inschrijving.
 
 Het aantal gevonden personen in het antwoord is maximaal 30 bij de zoekoperaties:
-* zoek met postcode en huisnummer
-* zoek met straat, huisnummer en gemeente van inschrijving
-* zoek met nummeraanduiding identificatie
-* zoek met adresseerbaar object identificatie
+
+  * zoek met postcode en huisnummer
+  * zoek met straat, huisnummer en gemeente van inschrijving
+  * zoek met nummeraanduiding identificatie
+  * zoek met adresseerbaar object identificatie
 
 === Uitsluitend binnengemeentelijk zoeken
 
-Ben je uitsluitend geautoriseerd voor het zoeken van eigen inwoners van een gemeente? Gebruik dan de queryparameter *gemeenteVanInschrijving* met de eigen gemeentecode. Dan worden inwoners van andere gemeenten automatisch uit het antwoord gefilterd. Ieder van de bovenstaande zoekoperaties biedt de mogelijkheid om deze parameter op te geven. Lees meer informatie over het link:/personen/features/zoeken/binnengemeentelijk[zoeken en raadplegen van alleen binnengemeentelijke personen].
+Ben je uitsluitend geautoriseerd voor het zoeken van eigen inwoners van een gemeente? Gebruik dan de queryparameter *gemeenteVanInschrijving* met de eigen gemeentecode. Dan worden inwoners van andere gemeenten automatisch uit het antwoord gefilterd. Ieder van de bovenstaande zoekoperaties biedt de mogelijkheid om deze parameter op te geven. Lees meer informatie over het xref:personen:features/zoeken/binnengemeentelijk.adoc[zoeken en raadplegen van alleen binnengemeentelijke personen].
 
 === Overleden personen zoeken
-Standaard worden alleen personen gevonden die in leven zijn. Om overleden personen te vinden, moet je de inclusiefOverleden parameter met waarde "true" opgeven. Lees voor meer informatie het link:/personen/features/zoeken/overleden-personen[zoeken van overleden personen].
+Standaard worden alleen personen gevonden die in leven zijn. Om overleden personen te vinden, moet je de inclusiefOverleden parameter met waarde "true" opgeven. Lees voor meer informatie het xref:personen:features/zoeken/overleden-personen.adoc[zoeken van overleden personen].
 
-Voor overleden personen wordt altijd het opschortingBijhouding veld geleverd met reden code 'O' en omschrijving 'overlijden'. Lees voor meer informatie het link:/personen/features/beperkt/overlijden/overzicht[overlijden overzicht].
+Voor overleden personen wordt altijd het opschortingBijhouding veld geleverd met reden code 'O' en omschrijving 'overlijden'. Lees voor meer informatie het xref:personen:features/beperkt/overlijden/overzicht.adoc[overlijden overzicht].
 
 == Personen raadplegen
 
 Als het burgerservicenummer bekend is, moet je deze operatie gebruiken om gegevens van de persoon of personen te raadplegen:
 
 * raadpleeg met burgerservicenummer
-  ** link:/personen/features/raadpleeg-met-burgerservicenummer/overzicht[overzicht]
-  ** link:/personen/features/raadpleeg-met-burgerservicenummer/fout-cases[fout cases]
+  ** xref:personen:features/raadpleeg-met-burgerservicenummer/overzicht.adoc[overzicht]
+  ** xref:personen:features/raadpleeg-met-burgerservicenummer/fout-cases.adoc[fout cases]
 
-Het resultaat van deze operatie is een lijst van personen van wie het burgerservicenummer overeenkomt met de opgegeven burgerservicenummers. Van deze personen krijg je uitsluitend link:./personen-response-filteren[gegevens waar je om vraagt] en waar je recht op hebt.
+Het resultaat van deze operatie is een lijst van personen van wie het burgerservicenummer overeenkomt met de opgegeven burgerservicenummers. Van deze personen krijg je uitsluitend xref:personen-response-filteren.adoc[gegevens waar je om vraagt] en waar je recht op hebt.
 
 === Uitsluitend binnengemeentelijk raadplegen
 
@@ -76,4 +78,4 @@ Ben je uitsluitend geautoriseerd voor het raadplegen van eigen inwoners van een 
 === Overleden personen raadplegen
 
 De "raadpleeg met burgerservicenummer" operatie levert de personen van wie het burgerservicenummer overeenkomt met de opgegeven burgerservicenummers. Dit kunnen ook personen zijn die zijn overleden.
-Voor overleden personen wordt altijd het opschortingBijhouding veld geleverd met reden code 'O' en omschrijving 'overlijden'.  Zie de link:/personen/features/overlijden/overzicht[overlijden overzicht] feature voor meer informatie over dit veld.
+Voor overleden personen wordt altijd het opschortingBijhouding veld geleverd met reden code 'O' en omschrijving 'overlijden'.  Zie de xref:personen:features/overlijden/overzicht.adoc[overlijden overzicht] feature voor meer informatie over dit veld.

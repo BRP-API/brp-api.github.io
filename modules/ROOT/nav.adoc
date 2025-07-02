@@ -14,7 +14,7 @@
 ** xref:gemeente-als-verstrekker.adoc[Gemeente als verstrekker]
 ** xref:rest-principes.adoc[REST-principes]
 
-* _Reference_
+* REFERENCE
 
 .Personen
 * xref:personen:releasenotes.adoc[Releasenotes]
@@ -23,11 +23,11 @@
 ** xref:personen:standaardwaarden.adoc[Standaardwaarden]
 ** xref:personen:meegeleverde-gegevens.adoc[Meegeleverde gegevens]
 ** Informatieproducten
-*** xref:personen:adressering/index.adoc[Adressering]
-*** xref:personen:gezag.adoc[Gezag]
-*** xref:personen:leeftijd.adoc[Leeftijd]
-*** xref:personen:volledige-naam.adoc[Volledige naam]
-*** xref:personen:voorletters.adoc[Voorletters]
+*** xref:personen:informatieproducten/adressering/index.adoc[Adressering]
+*** xref:personen:informatieproducten/gezag.adoc[Gezag]
+*** xref:personen:informatieproducten/leeftijd.adoc[Leeftijd]
+*** xref:personen:informatieproducten/volledige-naam.adoc[Volledige naam]
+*** xref:personen:informatieproducten/voorletters.adoc[Voorletters]
 **** xref:personen:features/voorletters.adoc[Afleidingsregels]
 
 .Bewoning
