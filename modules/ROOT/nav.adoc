@@ -28,7 +28,7 @@
 *** xref:personen:informatieproducten/leeftijd.adoc[Leeftijd]
 *** xref:personen:informatieproducten/volledige-naam.adoc[Volledige naam]
 *** xref:personen:informatieproducten/voorletters.adoc[Voorletters]
-**** xref:personen:features/voorletters.adoc[Afleidingsregels]
+**** xref:personen:features/voorletters/index.adoc[Afleidingsregels]
 
 .Bewoning
 * xref:bewoning:releasenotes.adoc[Releasenotes]

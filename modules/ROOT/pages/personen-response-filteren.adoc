@@ -2,7 +2,7 @@
 
 Geef in ieder request met de verplichte fields parameter aan welke velden van de gevonden persoon of personen in het antwoord geleverd moeten worden. Om de privacy van de gevraagde personen te beschermen mag je uitsluitend gegevens vragen waarvoor jouw organisatie geautoriseerd is, *en wat op dat moment in het proces nodig is* voor de uit te voeren taak.
 
-Een autorisatie die is beperkt tot het zoeken binnen inwoners van de eigen gemeente kan niet worden afgedwongen met de fields parameter. Hiervoor kun je de link:./personen-zoeken-en-raadplegen[queryparameter "gemeente van inschrijving"] gebruiken.
+Een autorisatie die is beperkt tot het zoeken binnen inwoners van de eigen gemeente kan niet worden afgedwongen met de fields parameter. Hiervoor kun je de xref:personen-zoeken-en-raadplegen.adoc[queryparameter "gemeente van inschrijving"] gebruiken.
 
 == Filteren van de velden van de gevonden personen
 
@@ -11,11 +11,11 @@ Je vraagt een veld door het volledige pad van het veld op te geven in de fields 
 * geboorte.datum (volledig pad van het geboortedatumveld van een persoon)
 * kinderen.naam.voornamen (volledig pad van het voornamenveld van de kinderen van een persoon)
 
-Wil je snel en foutloos fields samenstellen voor de requests van jouw applicatie? Gebruik dan de link:./fields-samenstellen[fields tool]. Succes is gegarandeerd, zonder dat je diep in de details van de werking van de fieldsparameter hoeft te duiken.
+Wil je snel en foutloos fields samenstellen voor de requests van jouw applicatie? Gebruik dan de xref:fields-samenstellen.adoc[fields tool]. Succes is gegarandeerd, zonder dat je diep in de details van de werking van de fieldsparameter hoeft te duiken.
 
 Heb je een overzicht nodig van alle toegestane fieldswaarden? Bekijk het link:{persoon-beperkt-fields-csv-url}[fields-filtered-PersoonBeperkt.csv] overzicht van de toegestane fieldswaarden voor de Zoek Personen operaties en het link:{persoon-fields-csv-url}[fields-filtered-Persoon.csv] overzicht voor de fieldswaarden van de Raadpleeg Persoon operatie.
 
-Wil je meer achtergrondinformatie over de fields parameter? Bekijk dan de link:/personen/features/fields[fields] en de link:/personen/features/fields/fout-cases[fields fout cases] voor uitleg over de werking van de fields parameter met regels en voorbeelden.
+Wil je meer achtergrondinformatie over de fields parameter? Bekijk dan de xref:personen:features/fields/index.adoc[fields] en de xref:personen:features/fields/fout-cases.adoc[fields fout cases] voor uitleg over de werking van de fields parameter met regels en voorbeelden.
 
 === Filteren van datum- en waardetabelvelden
 
@@ -31,10 +31,10 @@ en de volgende waardetabel types:
 * Waardetabel
 * AdellijkeTitelPredicaatType
 
-Als je één of meer velden van deze types vraagt, dan worden altijd alle velden geleverd. Lees link:/personen/features/fields[hier] hoe de volgende regels precies worden toegepast:
+Als je één of meer velden van deze types vraagt, dan worden altijd alle velden geleverd. Lees xref:personen:features/fields/index.adoc[hier] hoe de volgende regels precies worden toegepast:
 
-* link:/personen/features/fields/tabelwaarde[Regel: Het vragen van één of meerdere velden van een 'waardetabel' veld levert alle velden van het 'waardetabel' veld]
-* link:/personen/features/fields/datum[Regel: Het vragen van één of meerdere velden van een 'datum' veld levert alle velden van het 'datum' veld]
+* xref:personen:features/fields/tabelwaarde.adoc[Regel: Het vragen van één of meerdere velden van een 'waardetabel' veld levert alle velden van het 'waardetabel' veld]
+* xref:personen:features/fields/datum.adoc[Regel: Het vragen van één of meerdere velden van een 'datum' veld levert alle velden van het 'datum' veld]
 
 === Standaard geleverde velden
 
@@ -47,7 +47,7 @@ Als onderstaande velden van toepassing zijn worden ze automatisch geleverd:
 * verificatie
 * indicatieVastgesteldVerblijftNietOpAdres
 
-link:/personen/documentatie/meegeleverde-gegevens[Automatisch geleverde velden] mag je NIET vragen met de fields parameter. Doe je dat toch, dan krijg je een foutmelding.
+xref:personen:meegeleverde-gegevens.adoc[Automatisch geleverde velden] mag je NIET vragen met de fields parameter. Doe je dat toch, dan krijg je een foutmelding.
 
 === Filteren van verblijfplaatsvelden
 
@@ -60,8 +60,8 @@ Als jouw organisatie of applicatie uitsluitend geautoriseerd is voor verblijfpla
 
 Meer informatie over het gebruik van de __verblijfplaatsBinnenland__ fields alias vind je in de featurebeschrijving van:
 
-* link:/personen/features/verblijfplaats/fields-alias[verblijfplaats fields alias]
-* link:/personen/features/verblijfplaats/fields-alias/fout-cases[verblijfplaats fields alias fout cases]
+* xref:personen:features/verblijfplaats/fields-alias/index.adoc[verblijfplaats fields alias]
+* xref:personen:features/verblijfplaats/fields-alias/fout-cases.adoc[verblijfplaats fields alias fout cases]
 
 === Filteren van adresregelvelden
 
@@ -74,12 +74,12 @@ Als jouw organisatie of applicatie niet geautoriseerd is voor het vragen van adr
 
 Meer informatie over het gebruik van de __adresseringBinnenland__ fields alias vind je in de featurebeschrijving van:
 
-* link:/personen/features/adressering/adresregels/fields-alias[adresregels fields alias]
-* link:/personen/features/adressering/adresregels/fields-alias/fout-cases[adresregels fields alias fout cases]
+* xref:personen:features/adressering/adresregels/fields-alias/index.adoc[adresregels fields alias]
+* xref:personen:features/adressering/adresregels/fields-alias/fout-cases.adoc[adresregels fields alias fout cases]
 
 === Filteren van partnervelden
 
-Als je partners van een persoon vraagt, worden alleen de gevraagde gegevens van de actuele partner(s) geleverd. Dat zijn partner(s) met een niet ontbonden huwelijk of geregistreerd partnerschap met de persoon. Heeft de persoon alleen ontbonden huwelijk/geregistreerd partnerschappen, dan worden de gevraagde gegevens geleverd van de partner met het meest recent ontbonden huwelijk of partnerschap. Lees meer over het vragen van partnergegevens in link:/personen/features/partner/overzicht[partnervelden vragen met fields]
+Als je partners van een persoon vraagt, worden alleen de gevraagde gegevens van de actuele partner(s) geleverd. Dat zijn partner(s) met een niet ontbonden huwelijk of geregistreerd partnerschap met de persoon. Heeft de persoon alleen ontbonden huwelijk/geregistreerd partnerschappen, dan worden de gevraagde gegevens geleverd van de partner met het meest recent ontbonden huwelijk of partnerschap. Lees meer over het vragen van partnergegevens in xref:personen:features/partner/overzicht.adoc[partnervelden vragen met fields]
 
 === Filteren van nationaliteitvelden
 
@@ -91,8 +91,8 @@ De {apiname} Personen kent de volgende nationaliteit types:
 * VastgesteldNietNederlander
 * Onbekend
 
-De {apiname} Personen levert uitsluitend gegevens van actuele nationaliteiten. Dat zijn nationaliteiten die niet beëindigd zijn. Lees meer in link:/personen/features/nationaliteit/overzicht[nationaliteitvelden vragen met fields].
+De {apiname} Personen levert uitsluitend gegevens van actuele nationaliteiten. Dat zijn nationaliteiten die niet beëindigd zijn. Lees meer in xref:personen:features/nationaliteit/overzicht.adoc[nationaliteitvelden vragen met fields].
 
 === Filteren van verblijfstitelvelden
 
-Als je velden van de verblijfstitel vraagt, krijg je alleen antwoord als er een verblijfstitel is die niet is beëindigd. Gegevens van een verblijfstitel worden ook niet geleverd als de aanduiding gelijk is aan 'geen verblijfstitel (meer)'. Lees meer in link:/personen/features/verblijfstitel/overzicht[verblijfstitelvelden vragen met fields].
+Als je velden van de verblijfstitel vraagt, krijg je alleen antwoord als er een verblijfstitel is die niet is beëindigd. Gegevens van een verblijfstitel worden ook niet geleverd als de aanduiding gelijk is aan 'geen verblijfstitel (meer)'. Lees meer in xref:personen:features/verblijfstitel/overzicht.adoc[verblijfstitelvelden vragen met fields].
