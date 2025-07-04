@@ -16,33 +16,23 @@ personen (BRP). De {apiname} heeft drie functies:
 3. *Verblijfplaatshistorie*: voor het opvragen van de
    verblijfplaats(en) van een persoon in een periode of op een peildatum.
 
-De {apiname} levert naast persoonsgegevens uit de BRP ook:
+De {apiname} levert naast persoonsgegevens uit de BRP ook xref:informatieproducten.adoc[informatieproducten]:
 
-* link:./concepten/informatieproducten[informatieproducten]:
-  - *link:./personen/documentatie/informatieproducten/adressering[Adressering]*:
-    *aanschrijfwijze*, *aanhef*, een verwijzing naar een *persoon in de
-    lopende tekst* van een brief, en *adresregels* die passen in een
-    envelopvenster.
-  - *link:./bewoning/documentatie[Bewoning]*: wie er samen
-    in een woning woonde gedurende een periode, of op een peildatum.
-  - *link:./personen/documentatie/informatieproducten/gezag[Gezag]*:
-    gezagsrelaties van alle minderjarigen en gezagshouders, ook als er geen
-    aantekening is in het gezagsregister.
-  - *link:./personen/documentatie/informatieproducten/leeftijd[Leeftijd]*
-    (in jaren).
-  - *link:./personen/documentatie/informatieproducten/volledige-naam[Volledige
-    naam]*: met adellijke titels en predicaten, zonder gebruik van de naam
-    van de partner.
-  - *link:./personen/documentatie/informatieproducten/voorletters[Voorletters]*.
+* xref:personen:informatieproducten/adressering/index.adoc[Adressering]: *aanschrijfwijze*, *aanhef*, een verwijzing naar een *persoon in de lopende tekst* van een brief, en *adresregels* die passen in een envelopvenster.
+* xref:bewoning:documentatie[Bewoning]: wie er samen in een woning woonde gedurende een periode, of op een peildatum.
+* xref:personen:informatieproducten/gezag.adoc[Gezag]: gezagsrelaties van alle minderjarigen en gezagshouders, ook als er geen aantekening is in het gezagsregister.
+* xref:personen:informatieproducten/leeftijd.adoc[Leeftijd]: (in jaren).
+* xref:personen:informatieproducten/volledige-naam.adoc[Volledige naam]: met adellijke titels en predicaten, zonder gebruik van de naam van de partner.
+* xref:personen:informatieproducten/voorletters.adoc[Voorletters].
 
 == Getting Started
 
 Als developer kun je direct aan de slag. Lees in de
-link:./getting-started[Getting Started] hoe je zo snel mogelijk een
+xref:getting-started.adoc[Getting Started] hoe je zo snel mogelijk een
 eerste succesvolle API call doet.
 
 De {apiname} eerst uitproberen? Gebruik de
-link:./how-tos/lokaal-testen[lokaal testen gids] om je eerste API call
+xref:lokaal-testen.adoc[lokaal testen gids] om je eerste API call
 te doen!
 
 == Voorwaarden
