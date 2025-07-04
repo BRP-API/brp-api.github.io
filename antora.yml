@@ -5,6 +5,7 @@ nav:
 - modules/ROOT/nav.adoc
 - modules/personen/nav.adoc
 - modules/bewoning/nav.adoc
+- modules/historie/nav.adoc
 asciidoc:
   attributes:
     apiname: BRP API
