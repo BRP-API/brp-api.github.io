@@ -15,21 +15,3 @@
 ** xref:rest-principes.adoc[REST-principes]
 
 * REFERENCE
-
-.Personen
-* xref:personen:releasenotes.adoc[Releasenotes]
-* xref:personen:specificatie.adoc[Specificatie]
-* Documentatie
-** xref:personen:standaardwaarden.adoc[Standaardwaarden]
-** xref:personen:meegeleverde-gegevens.adoc[Meegeleverde gegevens]
-** Informatieproducten
-*** xref:personen:informatieproducten/adressering/index.adoc[Adressering]
-*** xref:personen:informatieproducten/gezag.adoc[Gezag]
-*** xref:personen:informatieproducten/leeftijd.adoc[Leeftijd]
-*** xref:personen:informatieproducten/volledige-naam.adoc[Volledige naam]
-*** xref:personen:informatieproducten/voorletters.adoc[Voorletters]
-**** xref:personen:features/voorletters/index.adoc[Afleidingsregels]
-
-.Bewoning
-* xref:bewoning:releasenotes.adoc[Releasenotes]
-* xref:bewoning:specificatie.adoc[Specificatie]

@@ -3,6 +3,8 @@ version: ~
 title: BRP API
 nav: 
 - modules/ROOT/nav.adoc
+- modules/personen/nav.adoc
+- modules/bewoning/nav.adoc
 asciidoc:
   attributes:
     apiname: BRP API
