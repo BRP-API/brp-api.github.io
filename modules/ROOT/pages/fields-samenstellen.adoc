@@ -64,7 +64,7 @@
 
 	<p>Bij het gebruik van de BRP API moet in de fields parameter worden opgegeven welke gegevens je wilt ontvangen.</p>
 	<p>Hieronder bieden we een tool om de waarde voor de fields parameter samen te stellen. Hiervoor selecteer je elk veld dat je wilt ontvangen.</p>
-	<p>Meer details over hoe fields werkt lees je in <a href="https://brp-api.github.io/devportal-poc/brp-api/personen-zoeken-en-raadplegen.html#_zoek_personen">personen zoeken en raadplegen</a>.</p>
+	<p>Meer details over hoe fields werkt lees je in <a href="https://brp-api.github.io/devportal-poc/brp-api/personen-zoeken-en-raadplegen#_zoek_personen">personen zoeken en raadplegen</a>.</p>
 
 	<h2>1. Selecteer het zoektype</h2>
 	<p>Met fields mag je alleen vragen om gegevens die bij het vraagtype teruggegeven kunnen worden. Daarom selecteer je eerst het type vraag dat je wilt doen.</p>
