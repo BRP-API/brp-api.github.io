@@ -3,7 +3,7 @@
 Informatieproducten zijn bewerkingen van de door gemeenten en RNI loketten verzamelde gegevens tot een product dat direct voorziet in een klantbehoefte. De {apiname} kent de volgende informatieproducten:
 
 * xref:personen:informatieproducten/adressering/index.adoc[Adressering]: *aanschrijfwijze*, *aanhef*, een verwijzing naar een *persoon in de lopende tekst* van een brief, en *adresregels* die passen in een envelopvenster.
-* xref:bewoning:documentatie[Bewoning]: wie er samen in een woning woonde gedurende een periode, of op een peildatum.
+* xref:bewoning:documentatie.adoc[Bewoning]: wie er samen in een woning woonde gedurende een periode, of op een peildatum.
 * xref:personen:informatieproducten/gezag.adoc[Gezag]: gezagsrelaties van alle minderjarigen en gezagshouders, ook als er geen aantekening is in het gezagsregister.
 * xref:personen:informatieproducten/leeftijd.adoc[Leeftijd]: (in jaren).
 * xref:personen:informatieproducten/volledige-naam.adoc[Volledige naam]: met adellijke titels en predicaten, zonder gebruik van de naam van de partner.
