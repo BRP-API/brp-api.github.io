@@ -10,17 +10,20 @@ Dan kun je de netwerkverbinding, de toegangsbeveiliging en de communicatie met d
 * TLS met PKIO certificaat met OIN: het PKIO certificaat met OIN voor de proefomgeving kun je ook gebruiken in de productieomgeving. Gebruikt jouw API Gateway al een PKIO certificaat voor een ander product van RvIG? Dan kun je dat certificaat opnieuw gebruiken. Heb je een aparte API Gateway voor test en productie? Dan zijn aparte certificaten vereist.
 
 Voor je de API kunt gebruiken moet je een token vragen. Voor het aanvragen heb je nodig:
+
 * Client-id: deze ontvang je van RvIG
 * Client-secret: deze ontvang je van RvIG
 * afnemersindicatie: dit is het nummer dat hoort bij je autorisatiebesluit. Dit kun je link:https://publicaties.rvig.nl/Landelijke_tabellen/Zoekpagina_tabel_35_autorisatietabel[hier opzoeken].
 * OIN: zit in het PKI overheidscertificaat dat je gebruikt bij het aansluiten.
 
 == Stap 1: Stuur certificaat
+
 * stuur het publieke deel van het PKIO certificaat met OIN naar: tbrp.api@rvig.nl en geef jouw contactpersoon op.
 * jouw contactpersoon ontvangt separaat een client ID en een client secret. Deze mogen alleen bekend zijn bij jouw API Gateway.
 
 == Stap 2: Configureer jouw Gateway
 Belangrijke informatie voor de configuratie van jouw Gateway:
+
 * sluit aan via DigiNetwerk
 * URL voor aanvraag van het token: https://auth.npr.idm.diginetwerk.net/nidp/oauth/nam/token
 * URL BRP API Personen: https://apigw.npr.idm.diginetwerk.net/lap/api/brp/personen
@@ -78,6 +81,7 @@ Test jouw applicatie met link:https://www.rvig.nl/testsetpersoonslijstenproefomg
 == Aansluiten productie-omgeving
 
 == Voorwaarden
+
 * een door jouw gemandateerde ondertekend link:/how-tos/convenant[convenant]
 * een link:https://publicaties.rvig.nl/Besluiten_en_modelautorisaties/Besluiten/BRP_besluiten[BRP autorisatiebesluit] en een aanvullend autorisatiebesluit voor informatieproducten (niet voor gemeenten)
 * aansluiten mag uitsluitend met een API Gateway
@@ -85,11 +89,13 @@ Test jouw applicatie met link:https://www.rvig.nl/testsetpersoonslijstenproefomg
 * TLS met PKIO certificaat/certificaten met OIN: het PKIO certificaat met OIN voor de proefomgeving kun je ook gebruiken in de productieomgeving. Heb je een aparte API Gateway voor test en productie? Dan zijn aparte certificaten vereist.
 
 == Stap 1: Stuur certificaat
+
 * stuur het publieke deel van het PKIO certificaat met OIN naar: tbrp.api@rvig.nl en geef jouw contactpersoon op.
 * jouw contactpersoon ontvangt separaat een client ID en een client secret. Deze mogen alleen bekend zijn bij jouw API Gateway.
 
 == Stap 2: Configureer jouw Gateway
 Belangrijke informatie voor de configuratie van jouw Gateway:
+
 * sluit aan via DigiNetwerk
 * URL voor aanvraag van het token: https://auth.idm.diginetwerk.net/nidp/oauth/nam/token
 * URL BRP API Personen: https://apigw.idm.diginetwerk.net/api/brp/personen
