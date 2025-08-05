@@ -32,6 +32,7 @@ docker-compose -f docker-compose-mock.yml up -d
 ----
 
 De {apiname} Personen mock is nu te benaderen via de url: *http://localhost:5001/haalcentraal/api/brp/personen*
+
 * Valideer dat de {apiname} mock draait met behulp van het volgende curl statement:
 
 [source,shell]
@@ -65,6 +66,7 @@ kubectl apply -f .k8s/brppersonenmock-deployment.yaml \
 ----
 
 De {apiname} Personen mock is nu te benaderen via de url: *http://localhost:5001/haalcentraal/api/brp/personen*
+
 * Valideer dat de {apiname} Personen mock draait met behulp van het volgende curl statement:
 
 [source,shell]
