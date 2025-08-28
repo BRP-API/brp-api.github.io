@@ -61,7 +61,7 @@ Verblijfplaatshistorie en Bewoning.
 In Q2 wordt het informatieproduct gezag verder verbeterd. Het percentage kinderen met de uitspraak "gezag niet te bepalen" wordt verder verlaagd. Dat doen we door gezag te bepalen voor een deel van de minderjarigen die in het buitenland zijn geboren, of in het buitenland hebben gewoond. Hiervoor wordt een breaking change doorgevoerd op het informatieproduct gezag. Dit is afgestemd met alle afnemers die in productie gebruik maken van gezag. Met hen is afgesproken dat zij v2.6 blijven gebruiken totdat zij zijn overgestapt op v2.7. Zij ontvangen hierover bericht zodra v2.7 in productie is. 
 
 De vierde functie van de {apiname} is in ontwikkeling. De
-{apiname} Notificaties is dit jaar gepland voor gebruik door
+{apiname} Notificaties is halverwege 2026 gepland voor gebruik door
 gemeenten.
 
 == Contact
