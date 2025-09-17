@@ -1,17 +1,17 @@
 // brp-api
-* xref:overview.adoc[Overview]
-* xref:getting-started.adoc[Getting Started]
+* xref:overview.adoc[Overzicht]
+* xref:getting-started.adoc[Aan de slag]
 
-* How-tos
+* Handleidingen
 ** xref:personen-zoeken-en-raadplegen.adoc[Personen zoeken en raadplegen]
 ** xref:personen-response-filteren.adoc[Personen response filteren]
 ** xref:fields-samenstellen.adoc[Fields samenstellen]
 ** xref:lokaal-testen.adoc[Lokaal testen]
 ** xref:aansluiten.adoc[Aansluiten]
 
-* Concepts
+* Concepten
 ** xref:informatieproducten.adoc[Informatieproducten]
 ** xref:gemeente-als-verstrekker.adoc[Gemeente als verstrekker]
 ** xref:rest-principes.adoc[REST-principes]
 
-* REFERENCE
+* Referenties
