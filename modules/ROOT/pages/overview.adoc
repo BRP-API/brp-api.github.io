@@ -59,7 +59,7 @@ Verblijfplaatshistorie en Bewoning.
 == Planning en Roadmap
 
 De vierde functie van de {apiname} is in ontwikkeling. De
-{apiname} Gebeurtenissen Notificaties is halverwege 2026 gepland voor gebruik door
+{apiname} Gebeurtenissen is halverwege 2026 gepland voor gebruik door
 gemeenten.
 
 == Contact
