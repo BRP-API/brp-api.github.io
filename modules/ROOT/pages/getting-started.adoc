@@ -1,4 +1,4 @@
-= Getting Started
+= Aan de slag
 
 Gemeenten en andere organisaties met een autorisatiebesluit kunnen zich aanmelden voor deelname aan het Experiment dataminimalisatie. Stuur een mail naar mailto:{rvig-email}[{rvig-email}] voor een kennismakingsgesprek en onboarding.
 
