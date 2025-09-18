@@ -25,7 +25,7 @@ De {apiname} levert naast persoonsgegevens uit de BRP ook xref:informatieproduct
 * xref:personen:informatieproducten/volledige-naam.adoc[Volledige naam]: met adellijke titels en predicaten, zonder gebruik van de naam van de partner.
 * xref:personen:informatieproducten/voorletters.adoc[Voorletters].
 
-== Getting Started
+== Aan de slag
 
 Als developer kun je direct aan de slag. Lees in de
 xref:getting-started.adoc[Getting Started] hoe je zo snel mogelijk een
