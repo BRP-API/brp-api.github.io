@@ -1,6 +1,6 @@
 = Testen op de Proefomgeving
 
-Heb je jouw client applicatie gerealiseerd met behulp van de xref:lokaal-testen[BRP API mock], en ben je toe aan de acceptatietest op de omgeving van RvIG?  
+Heb je jouw client applicatie gerealiseerd met behulp van de xref:lokaal-testen.adoc[BRP API mock], en ben je toe aan de acceptatietest op de omgeving van RvIG?  
 Dan kun je de netwerkverbinding, de toegangsbeveiliging en de communicatie met de API testen in de Proefomgeving. Iedere afnemer van RvIG/ gemeente mag maximaal één aansluiting op BRP API proefomgeving realiseren.
 
 == Voorwaarden
