@@ -82,7 +82,7 @@ Test jouw applicatie met link:https://www.rvig.nl/testsetpersoonslijstenproefomg
 
 == Voorwaarden
 
-* een door jouw gemandateerde ondertekend link:/how-tos/convenant[convenant]
+* een door jouw gemandateerde ondertekend convenant
 * een link:https://publicaties.rvig.nl/Besluiten_en_modelautorisaties/Besluiten/BRP_besluiten[BRP autorisatiebesluit] en een aanvullend autorisatiebesluit voor informatieproducten (niet voor gemeenten)
 * aansluiten mag uitsluitend met een API Gateway
 * aansluiting op link:https://www.logius.nl/domeinen/infrastructuur/diginetwerk/aansluiten[DigiNetwerk]
