@@ -1,6 +1,6 @@
 = Testen op de Proefomgeving
 
-Heb je jouw client applicatie gerealiseerd met behulp van de link:./lokaal-testen[BRP API mock], en ben je toe aan de acceptatietest op de omgeving van RvIG?  
+Heb je jouw client applicatie gerealiseerd met behulp van de xref:lokaal-testen[BRP API mock], en ben je toe aan de acceptatietest op de omgeving van RvIG?  
 Dan kun je de netwerkverbinding, de toegangsbeveiliging en de communicatie met de API testen in de Proefomgeving. Iedere afnemer van RvIG/ gemeente mag maximaal één aansluiting op BRP API proefomgeving realiseren.
 
 == Voorwaarden
@@ -13,7 +13,7 @@ Voor je de API kunt gebruiken moet je een token vragen. Voor het aanvragen heb j
 
 * Client-id: deze ontvang je van RvIG
 * Client-secret: deze ontvang je van RvIG
-* afnemersindicatie: dit is het nummer dat hoort bij je autorisatiebesluit. Dit kun je link:https://publicaties.rvig.nl/Landelijke_tabellen/Zoekpagina_tabel_35_autorisatietabel[hier opzoeken].
+* afnemersindicatie: dit is het nummer dat hoort bij je autorisatiebesluit. Dit kun je link:https://publicaties.rvig.nl/zoekpagina-tabel-35-autorisatietabel[hier opzoeken].
 * OIN: zit in het PKI overheidscertificaat dat je gebruikt bij het aansluiten.
 
 == Stap 1: Stuur certificaat
@@ -83,7 +83,7 @@ Test jouw applicatie met link:https://www.rvig.nl/testsetpersoonslijstenproefomg
 == Voorwaarden
 
 * een door jouw gemandateerde ondertekend convenant
-* een link:https://publicaties.rvig.nl/Besluiten_en_modelautorisaties/Besluiten/BRP_besluiten[BRP autorisatiebesluit] en een aanvullend autorisatiebesluit voor informatieproducten (niet voor gemeenten)
+* een link:https://publicaties.rvig.nl/zoeken[BRP autorisatiebesluit] en een aanvullend autorisatiebesluit voor informatieproducten (niet voor gemeenten)
 * aansluiten mag uitsluitend met een API Gateway
 * aansluiting op link:https://www.logius.nl/domeinen/infrastructuur/diginetwerk/aansluiten[DigiNetwerk]
 * TLS met PKIO certificaat/certificaten met OIN: het PKIO certificaat met OIN voor de proefomgeving kun je ook gebruiken in de productieomgeving. Heb je een aparte API Gateway voor test en productie? Dan zijn aparte certificaten vereist.
