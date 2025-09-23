@@ -39,19 +39,23 @@ Protocollering is een verplichte vorm van logging om een burger inzicht te geven
 
 * over wie gegevens zijn verstrekt;
 * datum en tijd van de verstrekking;
-* het taaksysteem/de ambtenaar met een bepaalde taakautorisatie die de verstrekking heeft ontvangen;
 * welke gegevens zijn verstrekt;
-* aan welk binnengemeentelijk orgaan de verstrekking plaatsvond.
+* aan welk binnengemeentelijk orgaan de verstrekking plaatsvond;
+* het taaksysteem en/of de ambtenaar met een bepaalde taakautorisatie die de verstrekking heeft ontvangen. 
 
 Dit kan bijvoorbeeld door ieder request voor zowel zoeken als raadplegen onweerlegbaar vast te leggen met:
 
 * een timestamp
 * het token dat de identiteit, het orgaan en claims van de eindgebruiker bevat
-* de BSN's van de personen die in het antwoord voorkomen. _Let op! het kan voorkomen dat jouw binnengemeentelijke afnemer het BSN niet vraagt. Zorg dus dat het BSN in het request van jouw API Gateway aan RvIG xref:personen-response-filteren[altijd gevraagd] wordt!_ Dit kun je regelen in jouw API Gateway als intermediate endpoint.
+* de BSN's van de personen die in het antwoord voorkomen.
 
-Eventueel kun je de logging verrijken met informatie uit je verwerkingsregister om burgerverzoeken in het kader van de AVG zo informatief mogelijk te maken.
+Er zijn twee dingen waar je op moet letten:
 
-Door de API Gateway centraal te laten loggen is opsporing van misbruik gemakkelijker en hoef je straks niet meer te protocolleren in de afnemende taakapplicatie.
+* het kan voorkomen dat jouw binnengemeentelijke afnemer het BSN niet vraagt. Zorg dus dat het BSN in het request van jouw API Gateway aan RvIG xref:personen-response-filteren[altijd gevraagd] wordt!_ Dit kun je regelen in jouw API Gateway als intermediate endpoint.
+* als je alleen het taaksyssteem en niet de identiteit van de ambtenaar centraal protocolleert, kun je weliswaar alle AVG inzageverzoeken met de centrale protocolleringsgegevens beantwoorden, maar geen onderzoek doen naar de rechtmatigheid van bevragingen. Zorg in dat geval altijd voor logging in het taaksysteem waaruit blijkt welke ambtenaar de bevraging heeft gedaan. Door de API Gateway ook de indentiteit van de ambtenaar centraal te laten loggen is opsporing van misbruik gemakkelijker en hoef je straks niet meer te protocolleren in de afnemende taakapplicatie.
+
+Eventueel kun je de logging verrijken met informatie over wettelijke taken en doelbinding uit je verwerkingsregister om burgerverzoeken in het kader van de AVG zo informatief mogelijk te maken.
+
 Voor het centraal verzamelen, opslaan en analyseren van de logging, en het maken van protocolleringsoverzichten, kun je bijvoorbeeld gebruik maken van een product als de ELK Stack (Elastic search, Logstash en Kibana), Splunk, LogRhythm, etc.
 
 == Identity Provider (IP)
