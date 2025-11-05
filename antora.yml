@@ -16,7 +16,6 @@ asciidoc:
     base-url: /Haal-Centraal-BRP-bevragen
     pages-base-url: https://BRP-API.github.io
     repo-url: https://github.com/BRP-API/Haal-Centraal-BRP-bevragen
-    dev-branch-url: https://github.com/BRP-API/Haal-Centraal-BRP-bevragen/blob/develop
     personen-spec-url: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bevragen/master/specificatie/resolved/openapi.yaml
     bewoning-spec-url: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bewoning/master/specificatie/resolved/openapi.yaml
     verblijfplaatshistorie-spec-url: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-historie-bevragen/master/specificatie/genereervariant/openapi.yaml
