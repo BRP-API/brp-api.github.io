@@ -25,7 +25,7 @@ De {apiname} levert naast persoonsgegevens uit de BRP ook xref:informatieproduct
 * xref:personen:informatieproducten/volledige-naam.adoc[Volledige naam]: met adellijke titels en predicaten, zonder gebruik van de naam van de partner.
 * xref:personen:informatieproducten/voorletters.adoc[Voorletters].
 
-== Getting Started
+== Aan de slag
 
 Als developer kun je direct aan de slag. Lees in de
 xref:getting-started.adoc[Getting Started] hoe je zo snel mogelijk een
@@ -58,11 +58,11 @@ Verblijfplaatshistorie en Bewoning.
 
 == Planning en Roadmap
 
-In Q2 wordt het informatieproduct gezag verder verbeterd. Het percentage kinderen met de uitspraak "gezag niet te bepalen" wordt verder verlaagd. Dat doen we door gezag te bepalen voor een deel van de minderjarigen die in het buitenland zijn geboren, of in het buitenland hebben gewoond. Hiervoor wordt een breaking change doorgevoerd op het informatieproduct gezag. Dit is afgestemd met alle afnemers die in productie gebruik maken van gezag. Met hen is afgesproken dat zij v2.6 blijven gebruiken totdat zij zijn overgestapt op v2.7. Zij ontvangen hierover bericht zodra v2.7 in productie is. 
-
 De vierde functie van de {apiname} is in ontwikkeling. De
-{apiname} Notificaties is halverwege 2026 gepland voor gebruik door
+{apiname} Gebeurtenissen is halverwege 2026 gepland voor gebruik door
 gemeenten.
+
+Daarnaast werken we aan een demo-omgeving voor het uitproberen van de {apiname}. Deze is representatiever dan de mock voor het lokaal uitproberen van de {apiname}.
 
 == Contact
 
