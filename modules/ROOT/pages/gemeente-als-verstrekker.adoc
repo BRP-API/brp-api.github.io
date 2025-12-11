@@ -7,11 +7,11 @@ De gemeente mag de {apiname} gebruiken om de BRP-V te **raadplegen**, met het do
 +
   * uitsluitend geautoriseerde gebruikers van taakapplicaties toegang te geven.
   * gebruikers uitsluitend toegang te geven tot gegevens waarvoor zij zijn geautoriseerd.
-. transparant zijn over de verwerking van persoonsgegevens
+  * transparant zijn over de verwerking van persoonsgegevens
 +
   * door alle bevragingen te protocolleren/loggen
   * door een burger inzicht te geven welke persoonsgegevens verwerkt zijn voor welke doeleinden, als die burger daar om vraagt.
-. toezicht houden op de rechtmatige verwerking van persoonsgegevens en onrechtmatig gebruik opsporen.
+  * toezicht houden op de rechtmatige verwerking van persoonsgegevens en onrechtmatig gebruik opsporen.
 
 == Centrale regie op beveiliging
 Om veilig te kunnen werken met de {apiname} moet je drie zaken regelen:
