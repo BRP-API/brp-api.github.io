@@ -64,6 +64,8 @@ gemeenten.
 
 Daarnaast werken we aan een demo-omgeving voor het uitproberen van de {apiname}. Deze is representatiever dan de mock voor het lokaal uitproberen van de {apiname}.
 
+Let op! de depricated gemaakte gegevens in de BRP API Personen worden per 1 april 2026 definitief niet meer geleverd.
+
 == Contact
 
 * Storing melden? +
