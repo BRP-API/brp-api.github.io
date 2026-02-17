@@ -11,9 +11,10 @@ De API op de probeeromgeving vereist - net als in productie - dat een OAuth toke
 
 We hebben een Postman project klaargezet waarmee je snel aan de slag kunt met de Personen API. 
 
-https://elements.getpostman.com/redirect?entityId=6707821-5940172f-a50a-4a66-b61b-b3bb63fb0287&entityType=collection&workspaceId=fbc0d981-545f-4f19-9ef3-f126d4b4d522[image::https://run.pstmn.io/button.svg[alt="Run In Postman", style="width: 128px; height: 32px;"]
+link:https://elements.getpostman.com/redirect?entityId=6707821-5940172f-a50a-4a66-b61b-b3bb63fb0287&entityType=collection&workspaceId=fbc0d981-545f-4f19-9ef3-f126d4b4d522[image:https://run.pstmn.io/button.svg[Run in Postman, width=128, height=32]]
 
 Om dit te laten werken op de probeeromgeving moet je in Postman de volgende waarden invullen bij Variables:
+
 * tokerserviceUrl: https://probeerbrpapi.rvig.nl/realms/brp-api/protocol/openid-connect/token
 * baseUrl: https://probeerbrpapi.rvig.nl/api/brp
 * client_id: *dit ontvang je van ons als je toegang hebt aangevraagd*
@@ -67,6 +68,7 @@ De testdata op de probeeromgeving is in principe gelijk aan de https://www.rvig.
 De testdata op de probeeromgeving wordt niet bijgehouden, de testdata op de proefomgeving van RvIG wijzigt wel regelmatig. Om die reden kan (zal) de testdata voor sommige personen op de probeeromgeving afwijken van de testset van de proefomgeving.
 
 Enkele voorbeelden waarmee je de API kunt uitproberen:
+
 * persoon met immigratie, vreemde nationaliteit en verblijfstitel: burgerservicenummer "999995017"
 * overleden persoon: burgerservicenummer "999992077"
 * persoon in RNI (geëmigreerd naar het buitenland): burgerservicenummer "999993483"
