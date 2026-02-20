@@ -12,6 +12,6 @@ Maak een verbeter issue aan: https://github.com/BRP-API/Haal-Centraal-BRP-bevrag
 
 Heb je een vraag? Neem contact op met:
 
-* Product Owner: Cathy Dingemanse, {po-email}
+* Product Owner: {po-naam}, {po-email}
 * Developer en customer zero: Melvin Lee, {cz-email}
 * Tester: Frank Samwel, {tester-email}
