@@ -1,0 +1,238 @@
+= Probeer de gebeurtenissen API
+
+Met de gebeurtenissen API kun je bepaalde personen volgen op specifieke typen gebeurtenissen.
+
+== Korte beschrijving
+
+Een "gebeurtenis" is dat er iets gebeurt bij een persoon, naar aanleiding waarvan je een proces moet starten of actie moet uitvoeren. 
+Bijvoorbeeld wanneer een minderjarige die in behandeling is bij Jeugdzorg naar een andere gemeente verhuist, moet het dossier worden overgedragen naar de nieuwe gemeente en vervolgens worden gesloten.
+
+Vaak is er bij een gebeurtenis ook iets gewijzigd in de gegevens van de persoon. Bijvoorbeeld bij de gebeurtenis "verhuisd.intergemeentelijk" is het adres van de persoon gewijzigd en ook de gemeente van inschrijving. Dit kan je dan opvragen in de BRP personen API.
+
+In de API noemen we het volgen van een persoon op een soort gebeurtenis een "abonnement". Een abonnement is dus de combinatie van een persoon (burgerservicenummer) en het type gebeurtenis waarin je geïnteresseerd bent.
+
+In de API kun je op een zelf te kiezen moment opvragen of er gebeurtenissen hebben plaatsgevonden op je abonnementen. Je mag hier zelf de frequentie en het moment voor kiezen, bijvoorbeeld één keer per dag of elk uur.
+
+In de API kunnen abonnementen worden beheerd en gebeurtenissen worden gevraagd per dienst of taakapplicatie. Het idee daarachter is dat niet elke dienst, taak of applicatie dezelfde personen (clienten) heeft en niet in dezelfde gebeurtenissen geïnteresseerd is.
+Bijvoorbeeld Jeugdzorg zal alleen doelbinding hebben om minderjarige clienten en hun ouders te volgen. Sociale Zaken zal alleen clienten die een uitkering hebben volgen.
+
+In de API noemen we een dienst of taakapplicatie die abonnementen zet en gebeurtenissen vraagt een "abonnee".
+
+De abonnee geeft bij het vragen van gebeurtenissen de laatste ontvangen (verwerkte) gebeurtenis op om alleen gebeurtenissen te ontvangen die de abonnee nog niet gelezen heeft. Hier is de abonnee zelf in controle wanneer en welke gebeurtenissen worden ontvangen. De abonnee is er daarmee ook verantwoordelijk voor om te zorgen dat deze alle gebeurtenissen ontvangt en correct verwerkt.
+
+== Hoe gebruik ik de API
+
+De API is ontworpen voor het doorlopen van de volgende stappen:
+. de gemeente (als afnemer) meldt een taakapplicatie aan als abonnee. Zie <<Registreer een abonnee>>.
+. de abonnee neemt abonnementen op clienten voor de gebeurtenistypes waar ze doelbinding voor hebben. Zie <<Abonneer op een gebeurtenistype van een persoon>>.
+. de abonnee vraagt (met een bepaalde frequentie) ongelezen gebeurtenissen op. Zie <<Vraag gebeurtenissen>>.
+. de abonnee herhaalt de vorige stap tot alle gebeurtenissen gelezen zijn.
+. de abonnee verwerkt de gebeurtenissen en vraagt desgewenst de gewijzigde gegevens van de persoon op in de BRP API /personen of /verblijfplaatshistorie.
+. de abonnee voegt nieuwe abonnementen toe wanneer ze een nieuwe client hebben waar ze gebeurtenissen op willen ontvangen.
+. de abonnee beëindigt abonnementen voor een persoon wanneer de persoon geen client meer is. Zie <<Stop een abonnement>>.
+
+Om in de probeeromgeving te zorgen dat je ook daadwerkelijk gebeurtenissen ontvangt, kun je wijzigingen sturen. Doe dit na het zetten van het abonnement, maar voor het opvragen van gebeurtenissen. Zie <<Stuur een wijziging>>.
+
+== De API uitproberen met Postman
+
+We hebben een Postman project klaargezet waarmee je snel aan de slag kunt met de Gebeurtenissen API. 
+
+link:https://elements.getpostman.com/redirect?entityId=6707821-5940172f-a50a-4a66-b61b-b3bb63fb0287&entityType=collection&workspaceId=fbc0d981-545f-4f19-9ef3-f126d4b4d522[image:https://run.pstmn.io/button.svg[Run in Postman, width=128, height=32]]
+
+In het project staan een aantal voorbeeldberichten.
+
+Om dit te laten werken op de probeeromgeving moet je in Postman de volgende waarden invullen bij Variables:
+
+* tokerserviceUrl: https://probeerbrpapi.rvig.nl/realms/brp-api/protocol/openid-connect/token
+* baseUrl: https://probeerbrpapi.rvig.nl/api/brp
+* client_id: *dit ontvang je van ons als je je hebt aangemeld als deelnemer van het API Lab*
+* client_secret: *dit ontvang je van ons als je je hebt aangemeld als deelnemer van het API Lab*
+* scope: *dit ontvang je van ons als je je hebt aangemeld als deelnemer van het API Lab*
+* resourceServer: ResourceServer02
+* burgerservicenummer: vul hier een burgerservicenummer van een testpersoon *dit ontvang je van ons als je je hebt aangemeld als deelnemer van het API Lab* of vervang {{burgerservicenummer}} in de requests die je stuurt met een van de test-burgerservicenummers die je ontvangt.
+
+== Specificaties
+
+De Open API specificaties van de gebeurtenissen API vind je hier: link:https://...................
+
+== Authenticatie
+
+Om de API te kunnen gebruiken moet je een OAuth token meesturen met elk request.
+
+Om op de probeeromgeving een token aan te vragen stuur je een request zoals deze:
+```
+curl --location -–request POST 'https://probeerbrpapi.rvig.nl/realms/brp-api/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id={{client-id die je van ons ontvangt als je toegang hebt aangevraagd}}' \
+--data-urlencode 'client_secret={{client-secret die je van ons ontvangt als je toegang hebt aangevraagd}}' \
+--data-urlencode 'scope={{scope die je van ons ontvangt als je toegang hebt aangevraagd}}' \
+--data-urlencode 'resourceServer=ResourceServer02'
+```
+
+Hier moet je alles wat tussen dubbele accolades staat vervangen door de inloggegevens die je hebt ontvangen.
+ 
+Je krijgt dan als antwoord een application/json bericht dat er zo uitziet (maar dan met een echte access token in plaats van allemaal X-en):
+```
+{
+  "access_token": "XXXXXXX-XXX.XXX-XXX-XXXX-XXXX-XXXX.XXXXXXXX-XXXXXXXX-XXXXXXX-XXXXXX",
+  "token_type": "bearer",
+  "expires_in": 3599,
+  "scope": "{{scope}}"
+}
+```
+
+Het token dat je moet meesturen met elk request staat in het antwoord in "access_token".
+
+== Registreer een abonnee
+
+Voor een applicatie de gebeurtenissen API kan gebruiken voor het zetten van abonnementen en opvragen van gebeurtenissen, moet je de deze als abonnee registreren.
+
+Om op de probeeromgeving een abonnee te registreren, stuur je een request zoals deze:
+```
+curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}}' \
+--data '{
+  "type": "RegistreerAbonnee",
+  "abonneeNaam": "{{naam van de abonnee}}"
+}'
+```
+
+* Vervang hierin {{token}} met het access token dat je eerder hebt gevraagd.
+* Vervang hierin {{naam van de abonnee}} met de naam van de abonnee (de naam van de dienst of taakapplicatie).
+
+== Abonneer op een gebeurtenistype van een persoon
+
+Om op de probeeromgeving een abonnement te nemen, stuur je een request zoals deze:
+```
+curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees/{{naam van de abonnee}}/abonnementen' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}}' \
+--data '{
+  "type": "AbonneerOpGebeurtenisTypeVanPersoon",
+  "gebeurtenisType": "{{gebeurtenis type}}",
+  "burgerservicenummer": "{{burgerservicenummer}}"
+}'
+```
+
+* Vervang hierin {{naam van de abonnee}} met de naam van de abonnee (de naam van de dienst of taakapplicatie).
+* Vervang hierin {{token}} met het access token dat je eerder hebt gevraagd.
+* Vervang hierin {{burgerservicenummer}}. Je hebt van ons een lijst met burgerservicenummers ontvangen die je hiervoor kunt gebruiken.
+* Vervang hierin {{gebeurtenis type}} met het type gebeurtenis dat je wilt ontvangen. Op dit moment zijn er drie typen gebeurtenis waarop je kunt abonneren:
+** nl.brp.verhuisd.intergemeentelijk
+** nl.brp.verhuisd.naar-buitenland
+** nl.brp.overleden
+
+== Vraag gebeurtenissen
+
+Om op de probeeromgeving gebeurtenissen te ontvangen, stuur je een request zoals deze:
+```
+curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees/{{naam van de abonnee}}/gebeurtenissen?cursor={{gebeurtenis id}}&limit={{aantal gebeurtenissen}}' \
+--header 'Authorization: {{token}}'
+```
+
+* Vervang hierin {{naam van de abonnee}} met de naam van de abonnee (de naam van de dienst of taakapplicatie).
+* Vervang hierin {{token}} met het access token dat je eerder hebt gevraagd.
+* Vervang hierin {{gebeurtenis id}} met het id van de laatst gelezen gebeurtenissen om alleen gebeurtenissen te ontvangen die je nog niet gezien hebt. Laat deze parameter weg om alle gebeurtenissen te krijgen.
+* Vervang hierin {{aantal gebeurtenissen}} om het maximaal aantal te ontvangen gebeurtenissen per request op te geven. De default waarde hiervoor is 10. Laat deze parameter weg om de eerste 10 gebeurtenissen (na de cursor) te ontvangen.
+
+== Stop een abonnement
+
+Om op de probeeromgeving een abonnement te beëindigen, stuur je een request zoals deze:
+```
+curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees/{{naam van de abonnee}}/abonnementen' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}}' \
+--data '{
+  "type": "ZegOpAbonnementenOpPersoon",
+  "gebeurtenisType": "{{gebeurtenis type}}",
+  "burgerservicenummer": "{{burgerservicenummer}}"
+}'
+```
+
+* Vervang hierin {{naam van de abonnee}} met de naam van de abonnee (de naam van de dienst of taakapplicatie).
+* Vervang hierin {{token}} met het access token dat je eerder hebt gevraagd.
+* Vervang hierin {{burgerservicenummer}} van de persoon waar je het abonnement van wilt beëindigen. Je hebt van ons een lijst met burgerservicenummers ontvangen die je hiervoor kunt gebruiken.
+* Vervang hierin {{gebeurtenis type}} met het type gebeurtenis dat je wilt beëindigen voor de persoon.
+
+Het beëindigen van een abonnement is een POST request naar dezelfde url die je gebruikt voor het nemen van een abonnement. In de body bij "type" vul je de waarde "ZegOpAbonnementenOpPersoon" om het abonnement op te zeggen.
+
+== Stuur een wijziging
+
+In de probeeromgeving is het mogelijk om wijzigingen te sturen, zodat je zelf kan bepalen welke gebeurtenissen je krijgt in je tests.
+
+dit doet twee dingen:
+Er ontstaat een nieuwe gebeurtenis, die je kunt opvragen met de gebeurtenissen API
+De gegevens wijzigen in de BRP, zodat je in de personen API de gewijzigde gegevens kunt raadplegen
+
+We kennen nu drie soorten wijzigingen:
+- AangifteVanAdreswijziging: hiermee kan je de gebeurtenis nl.brp.verhuisd.intergemeentelijk maken
+- AangifteVanVertrekNaarBuitenland: hiermee kan je de gebeurtenis nl.brp.verhuisd.naar-buitenland maken
+- AangifteVanOverlijden: hiermee kan je de gebeurtenis nl.brp.overleden maken
+
+Met de wijziging vul je ook de nieuwe gegevens met de wijziging mee.
+
+Om op de probeeromgeving een gebeurtenis verhuisd.intergemeentelijk te initiëren, stuur je een request zoals deze:
+```
+curl --location 'https://probeerbrpapi.rvig.nl/api/brp/personen/aangiftes' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}}' \
+--data '{
+  "type": "AangifteVanAdreswijziging",
+  "burgerservicenummer": "{{burgerservicenummer}}",
+  "adresseerbaarObjectIdentificatie": "{{adresseerbaar object identificatie}}",
+  "verhuisdatum": "{{datum}}"
+}'
+```
+
+* Vervang hierin {{token}} met het access token dat je eerder hebt gevraagd.
+* Vervang hierin {{burgerservicenummer}} van de persoon waar de wijziging betrekking op heeft. Alleen als je eerst een abonnement hebt genomen op deze gebeurtenis voor deze persoon zul je de gebeurtenis ontvangen.
+* Vervang hierin {{datum}} met de datum dat de persoon op het nieuwe adres is ingeschreven. Dit is een datum in formaat yyyy-mm-dd (bijvoorbeeld "2026-04-09").
+* Vervang hierin {{adresseerbaar object identificatie}} door de adresseerbaar object identificatie van het adres waarnaar de persoon verhuist. 
+** Dit moet een identificatie zijn die al bestaat in de probeeromgeving. Bijvoorbeel 0014010011076306, 0034011440028001, 0091010000033261.
+** Alleen wanneer het nieuwe adres in een andere gemeente ligt dan het huidige adres van de persoon, zal dit leiden tot de gebeurtenis verhuisd.intergemeentelijk. Ligt het in dezelfde gemeente, dan ontstaat er geen gebeurtenis.
+** Je kan aan de eerste 4 cijfers in de adresseerbaar object identificatie zien in welke gemeente die ligt. Vergelijk dat met de huidige gemeente van inschrijving van de persoon (dit kan je opvragen met de BRP API /personen).
+
+
+Om op de probeeromgeving een gebeurtenis verhuisd.naar-buitenland te initiëren, stuur je een request zoals deze:
+```
+curl --location 'https://probeerbrpapi.rvig.nl/api/brp/personen/aangiftes' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}}' \
+--data '{
+  "type": "AangifteVanVertrekNaarBuitenland",
+  "burgerservicenummer": "{{burgerservicenummer}}",
+  "regel1": "{{regel 1 van het buitenlandse adres}}",
+  "regel2": "{{regel 2 van het buitenlandse adres}}",
+  "regel3": "{{regel 3 van het buitenlandse adres}}",
+  "landCode": "{{landcode}}",
+  "datumEmigratie": "{{datum}}"
+}'
+```
+
+* Vervang hierin {{token}} met het access token dat je eerder hebt gevraagd.
+* Vervang hierin {{burgerservicenummer}} van de persoon waar de wijziging betrekking op heeft. Alleen als je eerst een abonnement hebt genomen op deze gebeurtenis voor deze persoon zul je de gebeurtenis ontvangen.
+* Vervang hierin {{datum}} met de datum dat de persoon is vertrokken. Dit is een datum in formaat yyyy-mm-dd (bijvoorbeeld "2026-04-09").
+* Vervang hierin {{regel 1 van het buitenlandse adres}}, {{regel 2 van het buitenlandse adres}} en {{regel 2 van het buitenlandse adres}} met de adresregels van het buitenlandse adres. Wanneer het buitenlandse adres op twee regels past, kan de derde regel worden weggelaten.
+* Vervang hierin {{landcode}} met een code die voorkomt in de https://publicaties.rvig.nl/media/13286/download[landentabel]. Wanneer je wilt opgeven dat de persoon is vertrokken met onbekende verblijfplaats, dan vul je alleen bij "landCode" de waarde "0000" en laat je "regel1", "regel2" en "regel3" weg uit het request.
+
+Om op de probeeromgeving een gebeurtenis overleden te initiëren, stuur je een request zoals deze:
+```
+curl --location 'https://probeerbrpapi.rvig.nl/api/brp/personen/aangiftes' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}}' \
+--data '{
+  "type": "AangifteVanOverlijden",
+  "burgerservicenummer": "{{burgerservicenummer}}",
+  "plaats": "{{plaats}}",
+  "landCode": "{{landcode}}",
+  "datumOverlijden": "{{datum}}"
+}'
+```
+
+* Vervang hierin {{token}} met het access token dat je eerder hebt gevraagd.
+* Vervang hierin {{burgerservicenummer}} van de persoon waar de wijziging betrekking op heeft. Alleen als je eerst een abonnement hebt genomen op deze gebeurtenis voor deze persoon zul je de gebeurtenis ontvangen.
+* Vervang hierin {{datum}} met de datum dat de persoon is overleden. Dit is een datum in formaat yyyy-mm-dd (bijvoorbeeld "2026-04-09").
+* Vervang hierin {{plaats}} met de gemeentecode in de https://publicaties.rvig.nl/media/13284/download.[gemeententabel] of de plaatsnaam (bijvoorbeeld "London" of "Berlin") wanneer het een buitenlandse verblijfplaats betreft.
+* Vervang hierin {{landcode}} met een code die voorkomt in de https://publicaties.rvig.nl/media/13286/download[landentabel]. Wanneer de persoon in Nederland is overleden, vul je "6030". Wanneer je wilt opgeven dat de persoon is vertrokken met onbekende verblijfplaats, dan vul je alleen bij "landCode" de waarde "0000" en laat je "regel1", "regel2" en "regel3" weg uit het request.
