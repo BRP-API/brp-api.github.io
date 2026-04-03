@@ -53,7 +53,9 @@ Om dit te laten werken op de probeeromgeving moet je in Postman de volgende waar
 
 == Specificaties
 
-De Open API specificaties van de gebeurtenissen API vind je hier: link:https://...................
+Bekijk de specificaties in link:{specificatie.adoc}[ReDoc].
+
+De Open API specificaties van de gebeurtenissen API kan je hier downloaden: link:{https://raw.githubusercontent.com/BRP-API/brp-api-gebeurtenissen/6a11f6a7d67f6266ce986ec0e8f49bfe6ca4c43c/specificaties/abonnementen-en-bevragen/resolved/openapi.yaml}[OAS3 BRP-API Gebeurtenissen,role=external,window=_blank]. Genereer hiermee consumercode.
 
 == Authenticatie
 
@@ -134,7 +136,7 @@ curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees/{{naam van de ab
 
 * Vervang hierin {{naam van de abonnee}} met de naam van de abonnee (de naam van de dienst of taakapplicatie).
 * Vervang hierin {{token}} met het access token dat je eerder hebt gevraagd.
-* Vervang hierin {{gebeurtenis id}} met het id van de laatst gelezen gebeurtenissen om alleen gebeurtenissen te ontvangen die je nog niet gezien hebt. Laat deze parameter weg om alle gebeurtenissen te krijgen.
+* Vervang hierin {{gebeurtenis id}} met het id van de laatst gelezen gebeurtenis om alleen gebeurtenissen te ontvangen die je nog niet gezien hebt. Laat deze parameter weg om alle gebeurtenissen te krijgen.
 * Vervang hierin {{aantal gebeurtenissen}} om het maximaal aantal te ontvangen gebeurtenissen per request op te geven. De default waarde hiervoor is 10. Laat deze parameter weg om de eerste 10 gebeurtenissen (na de cursor) te ontvangen.
 
 == Stop een abonnement
@@ -145,8 +147,19 @@ curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees/{{naam van de ab
 --header 'Content-Type: application/json' \
 --header 'Authorization: {{token}}' \
 --data '{
-  "type": "ZegOpAbonnementenOpPersoon",
+  "type": "ZegOpAbonnementOpGebeurtenisTypeVanPersoon",
   "gebeurtenisType": "{{gebeurtenis type}}",
+  "burgerservicenummer": "{{burgerservicenummer}}"
+}'
+```
+
+Of om alle abonnementen van een persoon te beëindigen, stuur je een request zoals deze:
+```
+curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees/{{naam van de abonnee}}/abonnementen' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}}' \
+--data '{
+  "type": "ZegOpAbonnementenOpPersoon",
   "burgerservicenummer": "{{burgerservicenummer}}"
 }'
 ```
@@ -156,7 +169,7 @@ curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees/{{naam van de ab
 * Vervang hierin {{burgerservicenummer}} van de persoon waar je het abonnement van wilt beëindigen. Je hebt van ons een lijst met burgerservicenummers ontvangen die je hiervoor kunt gebruiken.
 * Vervang hierin {{gebeurtenis type}} met het type gebeurtenis dat je wilt beëindigen voor de persoon.
 
-Het beëindigen van een abonnement is een POST request naar dezelfde url die je gebruikt voor het nemen van een abonnement. In de body bij "type" vul je de waarde "ZegOpAbonnementenOpPersoon" om het abonnement op te zeggen.
+Het beëindigen van een abonnement is een POST request naar dezelfde url die je gebruikt voor het nemen van een abonnement. De waarde in de body bij "type" bepaalt wat de API hier doet.
 
 == Stuur een wijziging
 
