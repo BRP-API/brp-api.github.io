@@ -53,9 +53,9 @@ Om dit te laten werken op de probeeromgeving moet je in Postman de volgende waar
 
 == Specificaties
 
-Bekijk de specificaties in link:{specificatie.adoc}[ReDoc].
+Bekijk de specificaties in xref:gebeurtenissen/specificatie.adoc[ReDoc].
 
-De Open API specificaties van de gebeurtenissen API kan je hier downloaden: link:{https://raw.githubusercontent.com/BRP-API/brp-api-gebeurtenissen/6a11f6a7d67f6266ce986ec0e8f49bfe6ca4c43c/specificaties/abonnementen-en-bevragen/resolved/openapi.yaml}[OAS3 BRP-API Gebeurtenissen,role=external,window=_blank]. Genereer hiermee consumercode.
+De Open API specificaties van de gebeurtenissen API kan je hier downloaden: link:https://raw.githubusercontent.com/BRP-API/brp-api-gebeurtenissen/refs/heads/feat/26-intergemeentelijk-verhuisd/specificaties/abonnementen-en-bevragen/resolved/openapi.yaml[OAS3 BRP-API Gebeurtenissen,role=external,window=_blank]. Genereer hiermee consumercode.
 
 == Authenticatie
 
@@ -180,9 +180,10 @@ Er ontstaat een nieuwe gebeurtenis, die je kunt opvragen met de gebeurtenissen A
 De gegevens wijzigen in de BRP, zodat je in de personen API de gewijzigde gegevens kunt raadplegen
 
 We kennen nu drie soorten wijzigingen:
-- AangifteVanAdreswijziging: hiermee kan je de gebeurtenis nl.brp.verhuisd.intergemeentelijk maken
-- AangifteVanVertrekNaarBuitenland: hiermee kan je de gebeurtenis nl.brp.verhuisd.naar-buitenland maken
-- AangifteVanOverlijden: hiermee kan je de gebeurtenis nl.brp.overleden maken
+
+* AangifteVanAdreswijziging: hiermee kan je de gebeurtenis nl.brp.verhuisd.intergemeentelijk maken
+* AangifteVanVertrekNaarBuitenland: hiermee kan je de gebeurtenis nl.brp.verhuisd.naar-buitenland maken
+* AangifteVanOverlijden: hiermee kan je de gebeurtenis nl.brp.overleden maken
 
 Met de wijziging vul je ook de nieuwe gegevens met de wijziging mee.
 
@@ -247,5 +248,5 @@ curl --location 'https://probeerbrpapi.rvig.nl/api/brp/personen/aangiftes' \
 * Vervang hierin {{token}} met het access token dat je eerder hebt gevraagd.
 * Vervang hierin {{burgerservicenummer}} van de persoon waar de wijziging betrekking op heeft. Alleen als je eerst een abonnement hebt genomen op deze gebeurtenis voor deze persoon zul je de gebeurtenis ontvangen.
 * Vervang hierin {{datum}} met de datum dat de persoon is overleden. Dit is een datum in formaat yyyy-mm-dd (bijvoorbeeld "2026-04-09").
-* Vervang hierin {{plaats}} met de gemeentecode in de https://publicaties.rvig.nl/media/13284/download.[gemeententabel] of de plaatsnaam (bijvoorbeeld "London" of "Berlin") wanneer het een buitenlandse verblijfplaats betreft.
+* Vervang hierin {{plaats}} met de gemeentecode in de https://publicaties.rvig.nl/media/13284/download[gemeententabel] of de plaatsnaam (bijvoorbeeld "London" of "Berlin") wanneer het een buitenlandse verblijfplaats betreft.
 * Vervang hierin {{landcode}} met een code die voorkomt in de https://publicaties.rvig.nl/media/13286/download[landentabel]. Wanneer de persoon in Nederland is overleden, vul je "6030". Wanneer je wilt opgeven dat de persoon is vertrokken met onbekende verblijfplaats, dan vul je alleen bij "landCode" de waarde "0000" en laat je "regel1", "regel2" en "regel3" weg uit het request.
