@@ -23,6 +23,7 @@ De abonnee geeft bij het vragen van gebeurtenissen de laatste ontvangen (verwerk
 == Hoe gebruik ik de API
 
 De API is ontworpen voor het doorlopen van de volgende stappen:
+
 . de gemeente (als afnemer) meldt een taakapplicatie aan als abonnee. Zie <<Registreer een abonnee>>.
 . de abonnee neemt abonnementen op clienten voor de gebeurtenistypes waar ze doelbinding voor hebben. Zie <<Abonneer op een gebeurtenistype van een persoon>>.
 . de abonnee vraagt (met een bepaalde frequentie) ongelezen gebeurtenissen op. Zie <<Vraag gebeurtenissen>>.
