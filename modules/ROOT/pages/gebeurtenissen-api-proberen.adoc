@@ -50,7 +50,10 @@ Om dit te laten werken op de probeeromgeving moet je in Postman de volgende waar
 * client_secret: *dit ontvang je van ons als je je hebt aangemeld als deelnemer van het API Lab*
 * scope: *dit ontvang je van ons als je je hebt aangemeld als deelnemer van het API Lab*
 * resourceServer: ResourceServer02
-* burgerservicenummer: vul hier een burgerservicenummer van een testpersoon *dit ontvang je van ons als je je hebt aangemeld als deelnemer van het API Lab* of vervang {{burgerservicenummer}} in de requests die je stuurt met een van de test-burgerservicenummers die je ontvangt.
+* burgerservicenummer: vul hier een burgerservicenummer van een testpersoon *dit ontvang je van ons als je je hebt aangemeld als deelnemer van het API Lab* of vervang {{burgerservicenummer}} in de requests die je stuurt met een van de test-burgerservicenummers die je ontvangt
+* abonneeNaam: vul hier een naam in die de applicatie of het proces dat je automatiseert identificeert (maximaal 8 tekens, alleen kleine letters, cijfers en koppeltekens)
+
+Je kan in de verschillende requests ook verschillende abonnees en/of verschillende burgerservicenummers gebruiken. Wijzig dan {{abonneeNaam}} en/of {{burgerservicenummer}} in de gewenste waarde.
 
 == Specificaties
 
