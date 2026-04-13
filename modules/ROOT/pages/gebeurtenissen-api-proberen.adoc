@@ -100,7 +100,6 @@ curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: {{token}}' \
 --data '{
-  "type": "RegistreerAbonnee",
   "abonneeNaam": "{{naam van de abonnee}}"
 }'
 ```
@@ -208,7 +207,7 @@ curl --location 'https://probeerbrpapi.rvig.nl/api/brp/personen/aangiftes' \
 * Vervang hierin {{burgerservicenummer}} van de persoon waar de wijziging betrekking op heeft. Alleen als je eerst een abonnement hebt genomen op deze gebeurtenis voor deze persoon zul je de gebeurtenis ontvangen.
 * Vervang hierin {{datum}} met de datum dat de persoon op het nieuwe adres is ingeschreven. Dit is een datum in formaat yyyy-mm-dd (bijvoorbeeld "2026-04-09").
 * Vervang hierin {{adresseerbaar object identificatie}} door de adresseerbaar object identificatie van het adres waarnaar de persoon verhuist. 
-** Dit moet een identificatie zijn die al bestaat in de probeeromgeving. Bijvoorbeel 0014010011076306, 0034011440028001, 0091010000033261.
+** Dit moet een identificatie zijn die al bestaat in de probeeromgeving. Bijvoorbeeld 0014010011076306, 0034011440028001, 0091010000033261.
 ** Alleen wanneer het nieuwe adres in een andere gemeente ligt dan het huidige adres van de persoon, zal dit leiden tot de gebeurtenis verhuisd.intergemeentelijk. Ligt het in dezelfde gemeente, dan ontstaat er geen gebeurtenis.
 ** Je kan aan de eerste 4 cijfers in de adresseerbaar object identificatie zien in welke gemeente die ligt. Vergelijk dat met de huidige gemeente van inschrijving van de persoon (dit kan je opvragen met de BRP API /personen).
 
