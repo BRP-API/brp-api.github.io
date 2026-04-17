@@ -58,7 +58,7 @@ Verblijfplaatshistorie en Bewoning.
 
 == Planning en Roadmap
 
-De vierde functie van de {apiname} is in ontwikkeling: de {apiname} Gebeurtenissen. Deze is voorlopig alleen beschikbaar voor gemeenten.
+De vierde functie van de {apiname} is in ontwikkeling: de {apiname} Gebeurtenissen. Deze is na livegang voorlopig alleen beschikbaar voor gemeenten.
 
 Daarnaast werken we aan een demo-omgeving voor het uitproberen van de {apiname}. Deze is representatiever dan de mock voor het lokaal uitproberen van de {apiname}.
 
