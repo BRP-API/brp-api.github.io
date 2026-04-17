@@ -58,9 +58,8 @@ Verblijfplaatshistorie en Bewoning.
 
 == Planning en Roadmap
 
-De vierde functie van de {apiname} is in ontwikkeling. De
-{apiname} Gebeurtenissen is halverwege 2026 gepland voor gebruik door
-gemeenten.
+De vierde functie van de {apiname}is - eerst voor gemeenten - in ontwikkeling: de
+{apiname} Gebeurtenissen.
 
 Daarnaast werken we aan een demo-omgeving voor het uitproberen van de {apiname}. Deze is representatiever dan de mock voor het lokaal uitproberen van de {apiname}.
 
