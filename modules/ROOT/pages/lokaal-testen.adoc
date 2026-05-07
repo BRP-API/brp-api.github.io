@@ -31,13 +31,13 @@ Optioneel kun je de volgende tools ook op de lokale machine installeren:
 docker compose -f docker-compose-mock.yml up -d
 ----
 
-De {apiname} Personen mock is nu te benaderen via de url: *http://localhost:5001/haalcentraal/api/brp/personen*
+De {apiname} Personen mock is nu te benaderen via de url: *http://localhost:5010/haalcentraal/api/brp/personen*
 
 * Valideer dat de {apiname} Personen mock draait met behulp van het volgende curl statement:
 
 [source,shell]
 ----
-curl --location --request POST 'http://localhost:5001/haalcentraal/api/brp/personen' \
+curl --location --request POST 'http://localhost:5010/haalcentraal/api/brp/personen' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "type": "RaadpleegMetBurgerservicenummer",
@@ -65,13 +65,13 @@ kubectl apply -f .k8s/personenmock-deployment.yaml \
               -f .k8s/personenmock-service.yaml
 ----
 
-De {apiname} Personen mock is nu te benaderen via de url: *http://localhost:5001/haalcentraal/api/brp/personen*
+De {apiname} Personen mock is nu te benaderen via de url: *http://localhost:5010/haalcentraal/api/brp/personen*
 
 * Valideer dat de {apiname} Personen mock draait met behulp van het volgende curl statement:
 
 [source,shell]
 ----
-curl --location --request POST 'http://localhost:5001/haalcentraal/api/brp/personen' \
+curl --location --request POST 'http://localhost:5010/haalcentraal/api/brp/personen' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "type": "RaadpleegMetBurgerservicenummer",
