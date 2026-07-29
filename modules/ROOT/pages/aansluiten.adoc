@@ -1,13 +1,13 @@
 = Testen op de Proefomgeving
 
 Heb je jouw client applicatie gerealiseerd met behulp van de xref:lokaal-testen.adoc[BRP API mock], en ben je toe aan de acceptatietest op de omgeving van RvIG?  
-Dan kun je de netwerkverbinding, de toegangsbeveiliging en de communicatie met de API testen in de Proefomgeving. Iedere afnemer van RvIG/ gemeente mag maximaal één aansluiting op BRP API proefomgeving realiseren.
+Dan kun je de netwerkverbinding, de toegangsbeveiliging en de communicatie met de API testen in de Proefomgeving. Iedere afnemer van RvIG / gemeente mag maximaal één aansluiting op BRP API proefomgeving realiseren. Voor de aansluiting op de proefomgeving is nog geen convenant nodig.
 
 == Voorwaarden
 
 * aansluiten mag alleen met met een API Gateway
 * aansluiting op link:https://www.logius.nl/domeinen/infrastructuur/diginetwerk/aansluiten[DigiNetwerk]
-* TLS met PKIO certificaat met OIN: het PKIO certificaat met OIN voor de proefomgeving kun je ook gebruiken in de productieomgeving. Gebruikt jouw API Gateway al een PKIO certificaat voor een ander product van RvIG? Dan kun je dat certificaat opnieuw gebruiken. Heb je een aparte API Gateway voor test en productie? Dan zijn aparte certificaten vereist.
+* TLS met PKIO certificaat met OIN: het PKIO certificaat met OIN voor de proefomgeving kun je ook gebruiken in de productieomgeving. Gebruikt jouw API Gateway al een PKIO certificaat voor een ander product van RvIG? Dan kun je dat certificaat opnieuw gebruiken. Heb je een aparte API Gateway voor test en productie? Dan zijn aparte certificaten vereist. Dit komt omdat we geen clientcertificaten installeren, Bij iedere transactie wordt het certificaat en het OIN gecontroleerd op geldigheid.
 
 Voor je de API kunt gebruiken moet je een token vragen. Voor het aanvragen heb je nodig:
 
@@ -16,10 +16,10 @@ Voor je de API kunt gebruiken moet je een token vragen. Voor het aanvragen heb j
 * afnemersindicatie: dit is het nummer dat hoort bij je autorisatiebesluit. Dit kun je link:https://publicaties.rvig.nl/zoekpagina-tabel-35-autorisatietabel[hier opzoeken].
 * OIN: zit in het PKI overheidscertificaat dat je gebruikt bij het aansluiten.
 
-== Stap 1: Stuur certificaat
+== Stap 1: Stuur aanvraag client credentials voor de proefomgeving naar info@rvig.nl
 
-* stuur het publieke deel van het PKIO certificaat met OIN naar: tbrp.api@rvig.nl en geef jouw contactpersoon op.
-* jouw contactpersoon ontvangt separaat een client ID en een client secret. Deze mogen alleen bekend zijn bij jouw API Gateway.
+* Vermeld daarbij het juiste OIN in het gebruikte PKIO certificaat en geef jouw contactpersoon op met naam, e-mail adres en mobiel nummer.
+* Jouw contactpersoon ontvangt binnen 2 weken een client ID en een client secret. Deze mogen alleen bekend zijn bij jouw API Gateway.
 
 == Stap 2: Configureer jouw Gateway
 Belangrijke informatie voor de configuratie van jouw Gateway:
@@ -56,7 +56,7 @@ Je krijgt dan als antwoord een application/json bericht dat er zo uitziet:
 }
 ----
 
-Het token die in "access_token" stuur je mee met elk request aan de API door deze in te vullen in de request header "Authorization", voorafgegaan door "Bearer ". Let op dat er 1 spatie staat tussen "Bearer" en het token en er geen spatie of ander teken staat na het token!
+Het token in "access_token" stuur je mee met elk request aan de API door deze in te vullen in de request header "Authorization", voorafgegaan door "Bearer ". Let op dat er 1 spatie staat tussen "Bearer" en het token en er geen spatie of ander teken staat na het token!
 De token is beperkt geldig en kun je gedurende de geldigheidsperiode voor meerdere API requests gebruiken. In "expires_in" staat hoe lang (in seconden) het token geldig is.
 
 == Stap 4: Stuur een request
@@ -76,7 +76,7 @@ curl --location -–request POST 'https://apigw.npr.idm.diginetwerk.net/lap/api/
 ----
 
 == Stap 5: Test jouw client applicatie
-Test jouw applicatie met link:https://www.rvig.nl/testsetpersoonslijstenproefomgevingBRPV[deze testset]. Samen beoordelen we de aansluiting. Geslaagd? Dan kun je een aansluiting op de productieomgeving aanvragen.
+Test jouw applicatie met link:https://www.rvig.nl/testsetpersoonslijstenproefomgevingBRPV[deze testset] . Geslaagd? Dan kun je een aansluiting op de productieomgeving aanvragen.
 
 == Aansluiten productie-omgeving
 
@@ -86,12 +86,13 @@ Test jouw applicatie met link:https://www.rvig.nl/testsetpersoonslijstenproefomg
 * een link:https://publicaties.rvig.nl/zoeken[BRP autorisatiebesluit] en een aanvullend autorisatiebesluit voor informatieproducten (niet voor gemeenten)
 * aansluiten mag uitsluitend met een API Gateway
 * aansluiting op link:https://www.logius.nl/domeinen/infrastructuur/diginetwerk/aansluiten[DigiNetwerk]
-* TLS met PKIO certificaat/certificaten met OIN: het PKIO certificaat met OIN voor de proefomgeving kun je ook gebruiken in de productieomgeving. Heb je een aparte API Gateway voor test en productie? Dan zijn aparte certificaten vereist.
+* TLS met PKIO certificaat/certificaten met OIN: het PKIO certificaat met OIN voor de proefomgeving kun je ook gebruiken in de productieomgeving. Heb je een aparte API Gateway voor test en productie? Dan zijn aparte certificaten vereist. Dit komt omdat we geen clientcertificaten installeren, Bij iedere transactie wordt het certificaat en het OIN gecontroleerd op geldigheid.
 
-== Stap 1: Stuur certificaat
+== Stap 1: Vraag de aansluiting op de productieomgeving aan via info@rvig.nl. Je ontvangt dan een concept Convenant.
 
-* stuur het publieke deel van het PKIO certificaat met OIN naar: tbrp.api@rvig.nl en geef jouw contactpersoon op.
-* jouw contactpersoon ontvangt separaat een client ID en een client secret. Deze mogen alleen bekend zijn bij jouw API Gateway.
+* Vermeld daarbij het juiste OIN in het gebruikte PKIO certificaat en geef jouw contactpersoon op met naam, e-mail adres en mobiel nummer.
+* Het convenant moet door burgemeester, gemeente secretaris of gemandateerde ondertekend worden en naar info@rvig.nl gezonden. Stuur een mandaat besluit mee indien getekend door een gemandateerde. Na controle door RvIG kunnen de client credentials worden uitgegeven.
+* Jouw contactpersoon ontvangt binnen 2 weken een client ID en een client secret. Deze mogen alleen bekend zijn bij jouw API Gateway.
 
 == Stap 2: Configureer jouw Gateway
 Belangrijke informatie voor de configuratie van jouw Gateway:
