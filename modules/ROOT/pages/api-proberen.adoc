@@ -5,7 +5,7 @@ Je kan de functionaliteit van de API uitproberen, maar de aansluiting en autoris
 
 == Toegang vragen
 
-De API op de probeeromgeving vereist - net als in productie - dat een OAuth token wordt meegestuurd. Hiervoor heb je client credentials nodig. Vraag deze aan door een e-mail te sturen naar mailto:{po-email}[{po-naam}]. Geef in die e-mail aan voor welke organisatie je credentials wilt en geef je contactgegevens op. Die gebruiken we om je te informeren over belangrijke wijzigingen. gepland onderhoud, enz.
+De API op de probeeromgeving vereist - net als in productie - dat een OAuth token wordt meegestuurd. Hiervoor heb je client credentials nodig. Vraag deze aan door een e-mail te sturen naar info@rvig.nl. Geef in die e-mail aan voor welke organisatie je credentials wilt en geef je contactgegevens op. Die gebruiken we om je te informeren over belangrijke wijzigingen. gepland onderhoud, enz.
 
 == De API uitproberen met Postman
 
