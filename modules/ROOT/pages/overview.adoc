@@ -60,7 +60,7 @@ Verblijfplaatshistorie en Bewoning.
 
 De vierde functie van de {apiname} is in ontwikkeling: de {apiname} Gebeurtenissen. Deze is na livegang voorlopig alleen beschikbaar voor gemeenten.
 
-Daarnaast werken we aan een demo-omgeving voor het uitproberen van de {apiname}. Deze is representatiever dan de mock voor het lokaal uitproberen van de {apiname}.
+Er is ook een probeeromgeving beschikbaar via internet voor het uitproberen van de {apiname}. Deze is representatiever dan de mock voor het lokaal uitproberen van de {apiname}. Toegang kun je aanvragen via info@rvig.nl.
 
 == Contact
 
@@ -76,10 +76,8 @@ een bug issue aan]
 deze portal?
 https://github.com/BRP-API/Haal-Centraal-BRP-bevragen/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=[Maak
 een verbeter issue aan]
-* Heb je een vraag? Neem contact op met:
-** Product Owner: {po-naam}, {po-email}
-** Developer en customer zero: Melvin Lee, {cz-email}
-** Tester: Frank Samwel, {tester-email}
+* Heb je een vraag? Neem contact op met info@rvig.nl onder vermelding BRP API
+
 
 == Licentie
 
