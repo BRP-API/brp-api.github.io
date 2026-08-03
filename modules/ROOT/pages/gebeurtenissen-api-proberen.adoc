@@ -103,7 +103,7 @@ curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: {{token}}' \
 --data '{
-  "abonneeNaam": "{{naam van de abonnee}}"
+  "naam": "{{naam van de abonnee}}"
 }'
 ```
 
@@ -184,7 +184,7 @@ curl --location 'https://probeerbrpapi.rvig.nl/api/brp/abonnees/{{naam van de ab
 --header 'Content-Type: application/json' \
 --header 'Authorization: {{token}}' \
 --data '{
-  "type": "AbonneerPersoonOpGroep",
+  "type": "ZegOpAbonnementVanPersoonOpGroep",
   "groep": "{{naam van de groep}}",
   "burgerservicenummer": "{{burgerservicenummer}}"
 }'
