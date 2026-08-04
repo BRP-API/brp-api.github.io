@@ -27,13 +27,13 @@ De abonnee geeft bij het vragen van gebeurtenissen de laatste ontvangen (verwerk
 
 De API is ontworpen voor het doorlopen van de volgende stappen:
 
-. de gemeente (als afnemer) meldt een taakapplicatie aan als abonnee, Vervolgens voegt de gemeente daar een of meerdere groepen aan toe en voegt per groep de gebeurtenistypes toe waar de abonnee voor deze groep doelbinding voor heeft. Zie <<Registreer een abonnee>>.
-. de abonnee neemt abonnementen op clienten voor een groep. Zie <<Abonneer op een persoon>>.
+. de gemeente (als afnemer) meldt een taakapplicatie aan als abonnee, voegt daar een of meerdere groepen aan toe en voegt per groep de gebeurtenistypes toe waar de abonnee voor deze groep doelbinding voor heeft. Zie <<Registreer een abonnee>>.
+. de abonnee neemt abonnementen op personen voor een groep. Zie <<Abonneer op een persoon>>.
 . de abonnee vraagt (met een bepaalde frequentie) ongelezen gebeurtenissen op. Zie <<Vraag gebeurtenissen>>.
-. de abonnee herhaalt de vorige stap tot alle gebeurtenissen gelezen zijn.
+. als er meer ongelezen gebeurtenissen zijn dan in één request kunnen worden beantwoord, herhaalt de abonnee de vorige stap tot alle gebeurtenissen gelezen zijn.
 . de abonnee verwerkt de gebeurtenissen en vraagt desgewenst de gewijzigde gegevens van de persoon op in de BRP API /personen of /verblijfplaatshistorie.
-. de abonnee voegt nieuwe abonnementen toe wanneer ze een nieuwe client hebben waar ze gebeurtenissen op willen ontvangen.
-. de abonnee beëindigt abonnementen voor een persoon wanneer de persoon geen client meer is. Zie <<Stop een abonnement>>.
+. de abonnee voegt een nieuw abonnement toe wanneer er een nieuwe persoon (client) is waar ze gebeurtenissen op moeten ontvangen.
+. de abonnee beëindigt het abonnement voor een persoon wanneer de abonnee geen gebeurtenissen over de persoon meer nodig heeft (de persoon geen client meer is). Zie <<Stop een abonnement>>.
 
 Om in de probeeromgeving te zorgen dat je ook daadwerkelijk gebeurtenissen ontvangt, kun je wijzigingen sturen. Doe dit na het zetten van het abonnement, maar voor het opvragen van gebeurtenissen. Zie <<Stuur een wijziging>>.
 
