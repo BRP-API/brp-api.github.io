@@ -9,7 +9,7 @@ nav:
 asciidoc:
   attributes:
     apiname: BRP API
-    po-email: maarten.woldring@rvig.nl
+    po-email: Jacques.Oosterveen@rvig.nl
     cz-email: melvin.lee@rvig.nl
     tester-email: frank.samwel@rvig.nl
     main-branch-url: https://github.com/BRP-API/Haal-Centraal-BRP-bevragen/blob/master
@@ -23,6 +23,6 @@ asciidoc:
     proef-proxy-url: https://proefomgeving.haalcentraal.nl
     persoon-fields-csv-url: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bevragen/master/features/fields-filtered-Persoon.csv
     persoon-beperkt-fields-csv-url: https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-bevragen/master/features/fields-filtered-PersoonBeperkt.csv
-    po-naam: Maarten Woldring
+    po-naam: Jacques Oosterveen
     rvig-email: info@rvig.nl
     organisation-url: http://www.rvig.nl
